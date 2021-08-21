@@ -91,7 +91,7 @@ $ source activate deepcad
 $ python script.py train
 ```
 
-Parameters can be modified  as required in **script.py**.
+The network snapshot after each training epoch will be automatically saved in *./pth/*. Parameters can be modified  as required in **script.py**.
 
 ```
 os.system('python train.py --datasets_folder DataForPytorch --n_epochs 40 --GPU 0,1 --batch_size 2 --img_h 150 --img_w 150 --img_s 150 --train_datasets_size 3500')  
@@ -107,9 +107,9 @@ os.system('python train.py --datasets_folder DataForPytorch --n_epochs 40 --GPU 
 
 ### Test
 
-A pre-trained model (.pth file and .yaml file) has been uploaded to *./pth/ModelForPytorch* and will be downloaded together
+A pre-trained model (.pth file and .yaml file) has been uploaded to *./pth/ModelForPytorch* and will be downloaded together with the code.
 
-Run the **script.py** to start the test process. Parameters saved in the .yaml file will be automatically loaded.
+Run the **script.py** to start the test process. Parameters saved in the .yaml file will be automatically loaded. Test results will be be automatically saved in *./results/*
 ```
 $ source activate deepcad
 $ python script.py test
