@@ -1,4 +1,4 @@
-# DeepCAD: Deep self-supervised learning for calcium imaging denoising
+# DeepCAD: 
 
 <img src="images/logo.PNG" width="800" align="middle">
 
@@ -7,8 +7,6 @@
 - [Overview](#overview)
 - [Directory structure](#directory-structure)
 - [Pytorch code](#pytorch-code)
-- [Fiji plugin](#fiji-plugin)
-- [Results](#results)
 - [License](./LICENSE)
 - [Citation](#citation)
 
@@ -43,18 +41,8 @@ DeepCAD
 |---|---|---ModelForPytorch
 |---|---|---|---model.pth
 |---|---results
-|---|---|--- # Intermediate and final results#
-|---DeepCAD_Fiji
-|---|---DeepCAD_Fiji_plugin
-|---|---|---DeepCAD-0.3.0 #executable jar file/.jar#
-|---|---DeepCAD_java #java source code of DeepCAD Fiji plugin#
-|---|---DeepCAD_tensorflow #Tensorflow implementation compatible with Fiji plugin#
+|---|---|--- # test results#
 ```
-- **DeepCAD_pytorch** is the [Pytorch](https://pytorch.org/) implementation of DeepCAD.
-- **DeepCAD_Fiji** is a user-friendly [Fiji](https://imagej.net/Fiji) plugin. This plugin is easy to install and convenient to use. Researchers without expertise in computer science and machine learning can learn to use it in a very short time. 
-  - **DeepCAD_Fiji_plugin** contains the executable .jar file that can be installed on Fiji. 
-  - **DeepCAD_java** is the java source code of our Fiji plugin based on [CSBDeep](https://csbdeep.bioimagecomputing.com). 
-  - **DeepCAD_tensorflow** is the [Tensorflow](https://www.tensorflow.org/) implementation of DeepCAD, which is used for training models compatible with the Fiji plugin. 
 
 ## Pytorch code
 
@@ -142,29 +130,6 @@ $ os.system('python test.py --denoise_model --datasets_folder --test_datasize')
 --img_h, --img_w, --img_s: patch size in three dimensions
 --gap_h, --gap_w, --gap_s: the spacing to extract test patches from the input stack(s)
 ```
-
-## Fiji plugin
-
-To ameliorate the difficulty of using our deep self-supervised learning-based method, we developed a user-friendly Fiji plugin, which is easy to install and convenient to use (has been tested on a Windows desktop with Intel i9 CPU and 128G RAM). Researchers without expertise in computer science and machine learning can manage it in a very short time. **Tutorials** on installing and using the plugin has been moved to [**this page**](https://github.com/cabooster/DeepCAD/tree/master/DeepCAD_Fiji).
-
-<img src="https://github.com/cabooster/DeepCAD/blob/master/images/fiji.png" width="1000" align="middle">
-
-
-## Results
-
-### 1. The performance of DeepCAD on denoising two-photon calcium imaging of neurite activities.
-
-<img src="images/dendrite.png" width="800" align="middle">
-
-### 2. The performance of DeepCAD on denoising two-photon calcium imaging of large neuronal populations.
-
-<img src="images/soma.png" width="800" align="middle">
-
-### 3. Cross-system validation.
-
-<img src="images/cross-system.png" width="800" align="middle">
-
-Denoising performance of DeepCAD on three two-photon laser-scanning microscopes (2PLSMs) with different system setups. **Our system** was equipped with alkali PMTs (PMT1001, Thorlabs) and a 25×/1.05 NA commercial objective (XLPLN25XWMP2, Olympus). The **standard 2PLSM** was equipped with a GaAsP PMT (H10770PA-40, Hamamatsu) and a 25×/1.05 NA commercial objective (XLPLN25XWMP2, Olympus). The **two-photon mesoscope** was equipped with a GaAsP PMT (H11706-40, Hamamatsu) and a 2.3×/0.6 NA custom objective. The same pre-trained model was used for processing these data. 
 
 ## Citation
 
