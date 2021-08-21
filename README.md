@@ -78,6 +78,7 @@ $ conda install -c conda-forge matplotlib pyyaml tifffile scikit-image
 ```
 $ git clone git://github.com/cabooster/DeepCAD-RT
 $ cd DeepCAD-RT
+$ rm datasets/DataForPytorch/DownloadedData & rm pth/ModelForPytorch/DownloadedModel
 ```
 
 ### Training
