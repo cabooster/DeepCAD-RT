@@ -55,7 +55,7 @@ DeepCAD
 
 ## Pytorch code
 
-### Our Environment 
+### Our environment 
 
 * Ubuntu 16.04 
 * Python 3.6
@@ -94,18 +94,15 @@ $ python script.py train
 Parameters can be modified  as required in **script.py**.
 
 ```
-$ os.system('python train.py --datasets_folder --img_h --img_w --img_s --gap_h --gap_w --gap_s --n_epochs --GPU --normalize_factor --train_datasets_size --select_img_num')
+os.system('python train.py --datasets_folder DataForPytorch --n_epochs 40 --GPU 0,1 --batch_size 2 --img_h 150 --img_w 150 --img_s 150 --train_datasets_size 3500')  
 
 @parameters
 --datasets_folder: the folder containing your training data (one or more stacks)
---img_h, --img_w, --img_s: patch size in three dimensions
---gap_h, --gap_w, --gap_s: the spacing to extract training patches from the input stack(s)
 --n_epochs: the number of training epochs
---GPU: specify the GPU used for training
---lr: learning rate, please use the default value
---normalize_factor: a constant for image normalization
---training_datasets_size: the number of patches you extracted for training
---select_img_num: the number of slices used for training.
+--GPU: specify GPU(s) used for training. The format should be something like '0', '0,1', '1,2,3'...
+--batch_size: batch size (should be equal to the number of GPUs) 
+--img_h, --img_w, --img_s: patch size in three dimensions
+--training_datasets_size: the number of training patches extracted from the input stack(s).
 ```
 
 ### Test
@@ -121,14 +118,12 @@ $ python script.py test
 Parameters can be modified  as required in **script.py**. All models in the `--denoise_model` folder will be tested and manual inspection should be made for **model screening**.
 
 ```
-$ os.system('python test.py --denoise_model --datasets_folder --test_datasize')
+os.system('python test.py --denoise_model ModelForPytorch --datasets_folder DataForPytorch --GPU 0,1 --batch_size 2 --test_datasize 300')
 
 @parameters
 --denoise_model: the folder containing all the pre-trained models.
 --datasets_folder: the folder containing the testing data (one or more stacks).
---test_datasize: the number of frames used for testing
---img_h, --img_w, --img_s: patch size in three dimensions
---gap_h, --gap_w, --gap_s: the spacing to extract test patches from the input stack(s)
+--test_datasize: the number of frames used for testing. If this number is larger than input frame numbers, all frames will be tested
 ```
 
 ## Citation
