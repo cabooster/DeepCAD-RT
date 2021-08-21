@@ -35,7 +35,7 @@ DeepCAD
 |---|---buildingblocks.py
 |---|---utils.py
 |---|---datasets
-|---|---|---DataForPytorch #project_name#
+|---|---|---DataForPytorch # project_name #
 |---|---|---|---data.tif
 |---|---pth
 |---|---|---ModelForPytorch
