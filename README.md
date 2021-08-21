@@ -84,7 +84,7 @@ $ cd DeepCAD-RT
 
 ### Training
 
-Download the demo data(.tif file) [[DataForPytorch](https://drive.google.com/drive/folders/1w9v1SrEkmvZal5LH79HloHhz6VXSPfI_)] and put it into *DeepCAD_pytorch/datasets/DataForPytorch.*.
+Download the demo data(.tif file) [[DataForPytorch](https://drive.google.com/drive/folders/1w9v1SrEkmvZal5LH79HloHhz6VXSPfI_)] and put it into *./datasets/DataForPytorch*.
 
 Run the **script.py** to start training.
 
@@ -93,7 +93,7 @@ $ source activate deepcad
 $ python script.py train
 ```
 
-Parameters can be modified  as required in **script.py**. If your GPU is running out of memory, you can use smaller `img_h`, `img_w`, `img_s` and `gap_h`, `gap_h`, `gap_s`.
+Parameters can be modified  as required in **script.py**.
 
 ```
 $ os.system('python train.py --datasets_folder --img_h --img_w --img_s --gap_h --gap_w --gap_s --n_epochs --GPU --normalize_factor --train_datasets_size --select_img_num')
@@ -112,10 +112,9 @@ $ os.system('python train.py --datasets_folder --img_h --img_w --img_s --gap_h -
 
 ### Test
 
-Download our pre-trained model (.pth file and .yaml file) [[ModelForPytorch](https://drive.google.com/drive/folders/12LEFsAopTolaRyRpJtFpzOYH3tBZMGUP)] and put it into *DeepCAD_pytorch/pth/ModelForPytorch*.
+A pre-trained model (.pth file and .yaml file) has been uploaded to *./pth/ModelForPytorch* and will be downloaded together
 
-Run the **script.py** to start the test process. Parameters saved in the .yaml file will be automatically loaded. If your GPU is running out of memory, you can use smaller `img_h`, `img_w`, `img_s` and `gap_h`, `gap_h`, `gap_s`.
-
+Run the **script.py** to start the test process. Parameters saved in the .yaml file will be automatically loaded.
 ```
 $ source activate deepcad
 $ python script.py test
