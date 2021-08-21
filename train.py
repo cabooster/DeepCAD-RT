@@ -30,8 +30,8 @@ parser.add_argument('--output_dir', type=str, default='./results', help="output 
 parser.add_argument('--datasets_folder', type=str, default='train', help="A folder containing files for training")
 parser.add_argument('--datasets_path', type=str, default='datasets', help="dataset root path")
 parser.add_argument('--pth_path', type=str, default='pth', help="pth file root path")
-parser.add_argument('--select_img_num', type=int, default=10000, help='select the number of images used for training')
-parser.add_argument('--train_datasets_size', type=int, default=1200, help='datasets size for training')
+parser.add_argument('--select_img_num', type=int, default=100000, help='select the number of images used for training')
+parser.add_argument('--train_datasets_size', type=int, default=4000, help='datasets size for training')
 opt = parser.parse_args()
 
 # default image gap is 0.75*image_dim
