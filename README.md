@@ -82,7 +82,7 @@ $ cd DeepCAD-RT
 
 ### Training
 
-Download the demo data(.tif file) [[DataForPytorch](https://drive.google.com/drive/folders/1w9v1SrEkmvZal5LH79HloHhz6VXSPfI_)] and put it into *./datasets/DataForPytorch/*
+Download the demo data(.tif file, 5.9 GB) [[DataForPytorch](https://drive.google.com/drive/folders/1w9v1SrEkmvZal5LH79HloHhz6VXSPfI_)] and put it into *./datasets/DataForPytorch/*
 
 Run the **script.py** to start training.
 
