@@ -55,30 +55,24 @@ DeepCAD
 * Ubuntu 16.04 
 * Python 3.6
 * Pytorch >= 1.3.1
-* NVIDIA GPU (24 GB Memory) + CUDA
+* NVIDIA GPU + CUDA (11.1)
 
 ### Environment configuration
 
-* Create a virtual environment and install Pytorch. In the 4th step, please select the correct Pytorch version that matches your CUDA version from https://pytorch.org/get-started/previous-versions/
+* Create a virtual environment, install Pytorch and other dependencies. In the 3rd step, please select the correct Pytorch version that matches your CUDA version from https://pytorch.org/get-started/previous-versions/
 
 ```
 $ conda create -n deepcad python=3.6
 $ source activate deepcad
-$ pip install torch==1.3.1
-$ conda install pytorch torchvision cudatoolkit -c pytorch 
+$ conda install pytorch==1.8.0 torchvision==0.9.0 cudatoolkit=11.1 -c pytorch -c conda-forge
+$ conda install -c conda-forge matplotlib pyyaml tifffile  
 ```
 
-* Install other dependencies
-
-```
-$ conda install -c anaconda matplotlib opencv scikit-learn scikit-image
-$ conda install -c conda-forge h5py pyyaml tensorboardx tifffile
-```
 ### Download the source code
 
 ```
-$ git clone git://github.com/cabooster/DeepCAD
-$ cd DeepCAD/DeepCAD_pytorch/
+$ git clone git://github.com/cabooster/DeepCAD-RT
+$ cd DeepCAD-RT
 ```
 
 ### Training
