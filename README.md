@@ -2,15 +2,14 @@
 
 <img src="images/logo.PNG" width="800" align="middle">
 
-:triangular_flag_on_post: This is the **upgraded version** of the original [DeepCAD Pytorch code](https://github.com/cabooster/DeepCAD). We have made extensive updates and the new features including:
-- More stable performance
-- Much faster processing speed 
-- Much lower memory cost 
-- Improved pre- and post processing
-- Multi-GPU acceleration
-- Less parameters
-- ...
-
+:triangular_flag_on_post: **This is the upgraded version of the original [DeepCAD Pytorch code](https://github.com/cabooster/DeepCAD). We have made extensive updates and the new features including:**
+- **More stable performance**
+- **Much faster processing speed**
+- **Much lower memory cost**
+- **Improved pre- and post processing**
+- **Multi-GPU acceleration**
+- **Less parameters**
+- **...**
 ## Contents
 
 - [Overview](#overview)
