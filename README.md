@@ -65,7 +65,7 @@ DeepCAD
 $ conda create -n deepcad python=3.6
 $ source activate deepcad
 $ conda install pytorch==1.8.0 torchvision==0.9.0 cudatoolkit=11.1 -c pytorch -c conda-forge
-$ conda install -c conda-forge matplotlib pyyaml tifffile  
+$ conda install -c conda-forge matplotlib pyyaml tifffile scikit-image
 ```
 
 ### Download the source code
