@@ -1,4 +1,6 @@
-# DeepCAD: 
+# DeepCAD-RT: Deep self-supervised learning for calcium imaging denoising
+
+This is the **upgraded version** of [the original DeepCAD code](https://github.com/cabooster/DeepCAD).
 
 <img src="images/logo.PNG" width="800" align="middle">
 
