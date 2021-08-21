@@ -10,7 +10,7 @@
 - Multi-GPU acceleration
 - Less parameters
 - ...
-- 
+
 ## Contents
 
 - [Overview](#overview)
