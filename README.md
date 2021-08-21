@@ -115,7 +115,7 @@ $ source activate deepcad
 $ python script.py test
 ```
 
-Parameters can be modified  as required in **script.py**. All models in the `--denoise_model` folder will be tested and manual inspection should be made for **model screening**.
+All models in the `--denoise_model` folder will be tested and manual inspection should be made for **model screening**. Parameters can be modified  as required in **script.py**. 
 
 ```
 os.system('python test.py --denoise_model ModelForPytorch --datasets_folder DataForPytorch --GPU 0,1 --batch_size 2 --test_datasize 300')
