@@ -55,12 +55,12 @@ DeepCAD
 
 ## Pytorch code
 
-### Environment 
+### Our Environment 
 
 * Ubuntu 16.04 
 * Python 3.6
 * Pytorch 1.8.0
-* NVIDIA GPU + CUDA (11.1)
+* NVIDIA GPU (GeForce RTX 3090) + CUDA (11.1)
 
 ### Environment configuration
 
