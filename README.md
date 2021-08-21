@@ -64,7 +64,7 @@ DeepCAD
 
 ### Environment configuration
 
-* Create a virtual environment, install Pytorch and other dependencies. In the 3rd step, please select the correct Pytorch version that matches your CUDA version from https://pytorch.org/get-started/previous-versions/
+* Create a virtual environment, install Pytorch and other dependencies. In the 3rd step, please select the correct Pytorch version that matches your CUDA version from https://pytorch.org/get-started/previous-versions/.
 
 ```
 $ conda create -n deepcad python=3.6
