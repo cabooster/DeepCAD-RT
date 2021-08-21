@@ -55,8 +55,6 @@ DeepCAD
 
 ## Pytorch code
 
-**This PyTorch code is the recommended implementation of DeepCAD.**
-
 ### Environment 
 
 * Ubuntu 16.04 
