@@ -108,7 +108,7 @@ os.system('python train.py --datasets_folder DataForPytorch --n_epochs 40 --GPU 
 
 ### Test
 
-Run the **script.py** to start the test process. A pre-trained model has been uploaded to *./pth/ModelForPytorch*. Parameters saved in the .yaml file will be automatically loaded. Test results will be be automatically saved in *./results/*
+Run the **script.py** to start the test process. A pre-trained model of our dataset has been uploaded to *./pth/ModelForPytorch*. Parameters saved in the .yaml file will be automatically loaded. Test results will be be automatically saved in *./results/*
 ```
 $ source activate deepcad
 $ python script.py test
