@@ -6,7 +6,7 @@
 - **More stable performance**
 - **Much faster processing speed**
 - **Much lower memory cost**
-- **Improved pre- and post processing**
+- **Improved pre- and post-processing**
 - **Multi-GPU acceleration**
 - **Less parameters**
 - **...**
