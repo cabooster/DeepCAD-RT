@@ -63,9 +63,7 @@ DeepCAD
 * NVIDIA GPU (GeForce RTX 3090) + CUDA (11.1)
 
 ### Environment configuration
-
 * Create a virtual environment, install Pytorch and other dependencies. In the 3rd step, please select the correct Pytorch version that matches your CUDA version from https://pytorch.org/get-started/previous-versions/.
-
 ```
 $ conda create -n deepcad python=3.6
 $ source activate deepcad
@@ -74,7 +72,7 @@ $ conda install -c conda-forge matplotlib pyyaml tifffile scikit-image
 ```
 
 ### Download the source code
-
+* These commands are used for downloading the source code and removing unnecessary placeholder files.
 ```
 $ git clone git://github.com/cabooster/DeepCAD-RT
 $ cd DeepCAD-RT
