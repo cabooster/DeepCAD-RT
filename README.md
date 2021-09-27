@@ -95,7 +95,7 @@ The network snapshot after each training epoch will be automatically saved in *.
 ```
 os.system('python train.py --datasets_folder DataForPytorch --n_epochs 40 --GPU 0 --batch_size 1 --img_h 150 --img_w 150 --img_s 150 --train_datasets_size 3500')  
 
-@parameters
+@arguments
 --datasets_folder: the folder containing your training data (one or more stacks)
 --n_epochs: the number of training epochs
 --GPU: specify GPU(s) used for training. The format should be something like '0', '0,1', '1,2,3'...
@@ -117,7 +117,7 @@ All models in the `--denoise_model` folder will be tested and manual inspection 
 ```
 os.system('python test.py --denoise_model ModelForPytorch --datasets_folder DataForPytorch --GPU 0 --batch_size 1 --test_datasize 300')
 
-@parameters
+@arguments
 --denoise_model: the folder containing all the pre-trained models.
 --datasets_folder: the folder containing the testing data (one or more stacks).
 --test_datasize: the number of frames used for testing. If this number is larger than input frame numbers, all frames will be tested
