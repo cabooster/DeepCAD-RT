@@ -28,7 +28,7 @@ Calcium imaging is inherently susceptible to detection noise especially when ima
 DeepCAD is based on the insight that a deep learning network for image denoising can achieve satisfactory convergence even the target image used for training is another corrupted sampling of the same scene [[paper link]](https://arxiv.org/abs/1803.04189). We explored the temporal redundancy of calcium imaging and found that any two consecutive frames can be regarded as two independent samplings of the same underlying firing pattern. A single low-SNR stack is sufficient to be a complete training set for DeepCAD. Furthermore, to boost its performance on 3D temporal stacks, the input and output data are designed to be 3D volumes rather than 2D frames to fully incorporate the abundant information along time axis.
 
 For more details, please see the companion paper where the method first appeared: 
-["*Reinforcing neuron extraction and spike inference in calcium imaging using deep self-supervised denoising*"](https://www.nature.com/articles/s41592-021-01225-0).
+["*Reinforcing neuron extraction and spike inference in calcium imaging using deep self-supervised denoising*, **Nature Methods** (2021)"](https://www.nature.com/articles/s41592-021-01225-0).
 
 ## Directory structure
 
@@ -72,7 +72,7 @@ $ conda install -c conda-forge matplotlib pyyaml tifffile scikit-image
 ```
 
 ### Download the source code
-* These commands are used for downloading the source code and removing unnecessary placeholder files.
+* The 3rd step is used to remove unnecessary placeholder files.
 ```
 $ git clone git://github.com/cabooster/DeepCAD-RT
 $ cd DeepCAD-RT
