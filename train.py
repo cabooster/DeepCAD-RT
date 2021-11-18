@@ -15,7 +15,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--n_epochs", type=int, default=40, help="number of training epochs")
 parser.add_argument('--GPU', type=str, default='0,1', help="the index of GPU you will use for computation")
 
-parser.add_argument('--batch_size', type=int, default=1, help="batch size")
+parser.add_argument('--batch_size', type=int, default=2, help="batch size")
 parser.add_argument('--img_w', type=int, default=150, help="the width of image patch")
 parser.add_argument('--img_h', type=int, default=150, help="the height of image patch")
 parser.add_argument('--img_s', type=int, default=150, help="the length of image patch")
