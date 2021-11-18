@@ -16,9 +16,9 @@ parser.add_argument("--n_epochs", type=int, default=40, help="number of training
 parser.add_argument('--GPU', type=str, default='0,1', help="the index of GPU you will use for computation")
 
 parser.add_argument('--batch_size', type=int, default=2, help="batch size")
-parser.add_argument('--img_w', type=int, default=150, help="the width of image sequence")
-parser.add_argument('--img_h', type=int, default=150, help="the height of image sequence")
-parser.add_argument('--img_s', type=int, default=150, help="the slices of image sequence")
+parser.add_argument('--img_w', type=int, default=150, help="the width of image patch")
+parser.add_argument('--img_h', type=int, default=150, help="the height of image patch")
+parser.add_argument('--img_s', type=int, default=150, help="the length of image patch")
 
 parser.add_argument('--lr', type=float, default=0.00005, help='initial learning rate')
 parser.add_argument("--b1", type=float, default=0.5, help="Adam: bata1")
