@@ -7,7 +7,7 @@ import argparse
 import time
 import datetime
 from network import Network_3D_Unet
-from data_process import train_preprocess_lessMemoryMulStacks, shuffle_datasets_lessMemory, trainset
+from data_process import train_preprocess_lessMemoryMulStacks, trainset
 from utils import save_yaml
 
 #############################################################################################################################################
@@ -34,7 +34,8 @@ parser.add_argument('--select_img_num', type=int, default=100000, help='select t
 parser.add_argument('--train_datasets_size', type=int, default=4000, help='datasets size for training')
 opt = parser.parse_args()
 
-# default image gap is 0.75*image_dim
+# default image gap is 0.5*image_dim
+# opt.gap_s (image gap) is the distance between two adjacent patches
 opt.gap_s=int(opt.img_s*0.5)
 opt.gap_w=int(opt.img_w*0.5)
 opt.gap_h=int(opt.img_h*0.5)
@@ -58,9 +59,8 @@ os.environ["CUDA_VISIBLE_DEVICES"] = str(opt.GPU)
 batch_size = opt.batch_size
 lr = opt.lr
 
-name_list, noise_img, coordinate_list = train_preprocess_lessMemoryMulStacks(opt)
+name_list, noise_img_all, coordinate_list, stack_index = train_preprocess_lessMemoryMulStacks(opt)
 # print('name_list -----> ',name_list)
-
 ########################################################################################################################
 L1_pixelwise = torch.nn.L1Loss()
 L2_pixelwise = torch.nn.MSELoss()
@@ -90,8 +90,7 @@ time_start=time.time()
 
 # start training
 for epoch in range(0, opt.n_epochs):
-    name_list = shuffle_datasets_lessMemory(name_list)
-    train_data = trainset(name_list, coordinate_list, noise_img)
+    train_data = trainset(name_list, coordinate_list, noise_img_all,stack_index)
     trainloader = DataLoader(train_data, batch_size=batch_size, shuffle=True, num_workers=4)
     for iteration, (input, target) in enumerate(trainloader):
         input=input.cuda()
