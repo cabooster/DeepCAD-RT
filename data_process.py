@@ -7,13 +7,16 @@ import torch
 from torch.utils.data import Dataset
 
 class trainset(Dataset):
-    def __init__(self,name_list,coordinate_list,noise_img):
+    def __init__(self,name_list,coordinate_list,noise_img_all,stack_index):
         self.name_list = name_list
         self.coordinate_list=coordinate_list
-        self.noise_img = noise_img
+        self.noise_img_all = noise_img_all
+        self.stack_index = stack_index
 
     def __getitem__(self, index):
         #fn = self.images[index]
+        stack_index = self.stack_index[index]
+        noise_img = self.noise_img_all[stack_index]
         single_coordinate = self.coordinate_list[self.name_list[index]]
         init_h = single_coordinate['init_h']
         end_h = single_coordinate['end_h']
@@ -21,15 +24,16 @@ class trainset(Dataset):
         end_w = single_coordinate['end_w']
         init_s = single_coordinate['init_s']
         end_s = single_coordinate['end_s']
-        input = self.noise_img[init_s:end_s:2, init_h:end_h, init_w:end_w]
-        target = self.noise_img[init_s + 1:end_s:2, init_h:end_h, init_w:end_w]
+        input = noise_img[init_s:end_s:2, init_h:end_h, init_w:end_w]
+        target = noise_img[init_s + 1:end_s:2, init_h:end_h, init_w:end_w]
+        
         input=torch.from_numpy(np.expand_dims(input, 0))
         target=torch.from_numpy(np.expand_dims(target, 0))
-        #target = self.target[index]
         return input, target
 
     def __len__(self):
         return len(self.name_list)
+
 
 class testset(Dataset):
     def __init__(self,name_list,coordinate_list,noise_img):
@@ -53,6 +57,7 @@ class testset(Dataset):
 
     def __len__(self):
         return len(self.name_list)
+
 
 def singlebatch_test_save(single_coordinate,output_image,raw_image):
     stack_start_w = int(single_coordinate['stack_start_w'])
@@ -110,27 +115,6 @@ def multibatch_test_save(single_coordinate,id,output_image,raw_image):
 
     return aaaa,bbbb,stack_start_w,stack_end_w,stack_start_h,stack_end_h,stack_start_s,stack_end_s
 
-def shuffle_datasets(train_raw, train_GT, name_list):
-    index_list = list(range(0, len(name_list)))
-    # print('index_list -----> ',index_list)
-    random.shuffle(index_list)
-    random_index_list = index_list
-    # print('index_list -----> ',index_list)
-    new_name_list = list(range(0, len(name_list)))
-    train_raw = np.array(train_raw)
-    # print('train_raw shape -----> ',train_raw.shape)
-    train_GT = np.array(train_GT)
-    # print('train_GT shape -----> ',train_GT.shape)
-    new_train_raw = train_raw
-    new_train_GT = train_GT
-    for i in range(0,len(random_index_list)):
-        # print('i -----> ',i)
-        new_train_raw[i,:,:,:] = train_raw[random_index_list[i],:,:,:]
-        new_train_GT[i,:,:,:] = train_GT[random_index_list[i],:,:,:]
-        new_name_list[i] = name_list[random_index_list[i]]
-    # new_train_raw = np.expand_dims(new_train_raw, 4)
-    # new_train_GT = np.expand_dims(new_train_GT, 4)
-    return new_train_raw, new_train_GT, new_name_list
 
 def train_preprocess(args):
     img_h = args.img_h
@@ -351,9 +335,10 @@ def train_preprocess_lessMemoryMulStacks(args):
     im_folder = args.datasets_path + '//' + args.datasets_folder
 
     name_list = []
-    # train_raw = []
     coordinate_list={}
-
+    stack_index = []
+    noise_im_all = []
+    ind = 0;
     print('\033[1;31mImage list for training -----> \033[0m')
     stack_num = len(list(os.walk(im_folder, topdown=False))[-1][-1])
     print('Total number -----> ', stack_num)
@@ -367,8 +352,9 @@ def train_preprocess_lessMemoryMulStacks(args):
         # print('noise_im shape -----> ',noise_im.shape)
         # print('noise_im max -----> ',noise_im.max())
         # print('noise_im min -----> ',noise_im.min())
-        noise_im = (noise_im-noise_im.min()).astype(np.float32)/args.normalize_factor
-
+        noise_im = (noise_im-noise_im.min()).astype(np.float32)/args.normalize_factor 
+        noise_im_all.append(noise_im)
+        
         whole_w = noise_im.shape[2]
         whole_h = noise_im.shape[1]
         whole_s = noise_im.shape[0]
@@ -397,18 +383,9 @@ def train_preprocess_lessMemoryMulStacks(args):
                     name_list.append(patch_name)
                     # print(' single_coordinate -----> ',single_coordinate)
                     coordinate_list[patch_name] = single_coordinate
-    return  name_list, noise_im, coordinate_list
-
-def shuffle_datasets_lessMemory(name_list):
-    index_list = list(range(0, len(name_list)))
-    # print('index_list -----> ',index_list)
-    random.shuffle(index_list)
-    random_index_list = index_list
-    # print('index_list -----> ',index_list)
-    new_name_list = list(range(0, len(name_list)))
-    for i in range(0,len(random_index_list)):
-        new_name_list[i] = name_list[random_index_list[i]]
-    return new_name_list
+                    stack_index.append(ind)
+        ind = ind + 1;
+    return  name_list, noise_im_all, coordinate_list, stack_index
 
 def test_preprocess_lessMemoryPadding (args):
     img_h = args.img_h
@@ -726,8 +703,3 @@ def test_preprocess_lessMemoryNoTail_chooseOne (args, N):
                 coordinate_list[patch_name] = single_coordinate
 
     return  name_list, noise_im, coordinate_list
-
-
-    # stack_start_w ,stack_end_w ,patch_start_w ,patch_end_w ,
-    # stack_start_h ,stack_end_h ,patch_start_h ,patch_end_h ,
-    # stack_start_s ,stack_end_s ,patch_start_s ,patch_end_s
