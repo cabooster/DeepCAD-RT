@@ -1,0 +1,26 @@
+title:               Deepcad-RT
+url:                 https://star-811.github.io
+baseurl:             /Deepcad-RT-page
+
+markdown:            kramdown
+highlighter:         rouge
+
+exclude:             ['*.sublime-*', 'README.md', 'LICENSE', 'Gemfile', 'Gemfile.lock', 'vendor/bundle']
+
+permalink:           pretty
+paginate:            5
+
+
+sass:
+  sass_dir:          _sass
+  style:             :compressed
+
+author:
+  name:              BBNC
+  url:               nicoelayda.github.io
+  email:             nico@elayda.com
+
+plugins:
+  - jekyll-coffeescript
+  - jekyll-paginate
+  - jekyll-gist

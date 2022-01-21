@@ -1,0 +1,30 @@
+/**
+  * _mixins.scss
+  * Mixins used for convenience in typing styles
+  */
+
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} { @content; }
+  @keyframes #{$name} { @content; } 
+}
+
+@mixin hacks() {
+  // Transforms need to be block-level to work
+  display: inline-block;
+  vertical-align: middle;
+
+  // Improve aliasing on mobile/tablet devices
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
+  // Improve performance on mobile/tablet devices
+  @include prefix(transform, translateZ(0));
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}

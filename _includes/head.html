@@ -1,0 +1,22 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    {% if page.title == "Home" %}
+      {{ site.title }}
+    {% else %}
+      {{ page.title }} &middot; {{ site.title }}
+    {% endif %}
+  </title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Source+Code+Pro:400,700" type="text/css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" type="text/css">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}/favicon.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ site.baseurl }}/apple-touch-icon.png">
+  
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/atom.xml">
+</head>

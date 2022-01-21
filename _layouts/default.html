@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+    <nav class="nav-main">
+      <ul>
+        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/about/">about</a></li>
+        <li class="logo"><a class="hvr-ripple-out" href="{{ site.baseurl }}/">C</a></li>
+        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/tutorial/">tutorial</a></li>
+      </ul>
+    </nav>
+
+    <div class="container content">
+      <main>
+        {{ content }}
+      </main>
+
+      <footer class="footer">
+        </small>
+        <div class="ftr-links">
+          <a href="https://github.com/cabooster"><i class="fa fa-github-alt"></i></a>
+        </div>
+      </footer>
+    </div>
+
+  </body>
+</html>

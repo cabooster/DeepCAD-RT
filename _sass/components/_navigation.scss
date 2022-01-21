@@ -1,0 +1,44 @@
+/**
+  * _navigation.scss
+  * Styles for the main navigation bar on top of the page.
+  */
+
+.nav-main {
+  font-size: $font-size; // override mobile media query
+  text-align: center;
+  margin-bottom: 4rem;
+
+  @media (max-width: 38em) {
+    margin-bottom: 2rem;
+  }
+
+  ul {
+    padding: 0;
+    border-bottom-color: $nav-bottom-border-color;
+    border-bottom-width: $nav-bottom-border-width;
+    border-bottom-style: solid;
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      color: $nav-link-color;
+      display: block;
+      text-decoration: none;
+      padding: $nav-link-padding-y $nav-link-padding-x;
+    }
+  }
+
+  li.logo a {
+    color: $nav-icon-color;
+    background: $nav-icon-background-color;
+    font-weight: bold;
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 50px;
+    line-height: 1.6em;
+    margin: 0 1rem;
+    padding: 0;
+  }
+}

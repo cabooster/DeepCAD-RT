@@ -1,0 +1,70 @@
+/**
+  * _animations.scss
+  * Animation styles used by different components
+  */
+
+/* Underline Reveal (from hover.css) */
+.hvr-underline-reveal {
+  @include hacks();
+
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $nav-link-underline-color;
+    height: 2px;
+
+    @include prefix(transform, translateY(4px));
+    @include prefix(transition-property, transform);
+    @include prefix(transition-duration, 0.2s);
+    @include prefix(transition-timing-function, ease-out);
+  }
+
+  &:hover:before,
+  &:focus:before,
+  &:active:before {
+    @include prefix(transform, translateY(0));
+  }
+}
+
+/* Ripple Out (from hover.css) */
+@include keyframes(hvr-ripple-out) {
+  100% {
+    top: -(6px + 6px);
+    right: -(6px + 6px);
+    bottom: -(6px + 6px);
+    left: -(6px + 6px);
+    opacity: 0;
+  }
+}
+
+.hvr-ripple-out {
+  @include hacks();
+
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    border: $nav-icon-background-color solid 4px;
+    border-radius: 50px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    @include prefix(animation-duration, 0.5s);
+  }
+
+  &:hover:before, 
+  &:focus:before, 
+  &:active:before {
+    @include prefix(animation-name, hvr-ripple-out);
+  }
+}
