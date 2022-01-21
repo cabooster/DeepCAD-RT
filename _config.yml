@@ -1,6 +1,6 @@
 title:               Deepcad-RT
-url:                 https://star-811.github.io
-baseurl:             /Deepcad-RT-page
+url:                 https://cabooster.github.io
+baseurl:             /Deepcad-RT
 
 markdown:            kramdown
 highlighter:         rouge
