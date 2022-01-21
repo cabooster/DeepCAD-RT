@@ -1,6 +1,6 @@
 title:               DeepCAD-RT
-url:                 https://cabooster.github.io
-baseurl:             /Deepcad-RT
+url:                 https://cabooster.github.io/deepcad-rt
+baseurl:             
 markdown:            kramdown
 highlighter:         rouge
 
