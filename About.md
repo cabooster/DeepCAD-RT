@@ -3,6 +3,8 @@ layout: page
 title: About
 ---
 
+### [Project page](https://cabooster.github.io/DeepCAD-RT/) | [Paper](https://www.nature.com/articles/s41592-021-01225-0)
+
 ## Content
 
 - [Overview](#overview)
@@ -24,17 +26,19 @@ For more details, please see the companion paper where the method first appeared
 
 ## Performance
 
-**1. Universal denoising for calcium imaging in mouse, zebrafish, and Drosophila.**
+**1. Universal denoising for calcium imaging in zebrafish.**
 
-<img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/calcium_imaging.png?raw=true" width="700" align="middle">
+[![IMAGE ALT TEXT](E:\01-LYX\pipPackage\images\sv3_video.png)]( https://www.youtube.com/embed/GN0IO7bGoGg "Video Title")
 
 **2. Denoising performance of DeepCAD-RT of neutrophils in the mouse brain in vivo.** 
 
-<img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/neutrophil.png?raw=true" width="700" align="middle">
+[![IMAGE ALT TEXT](E:\01-LYX\pipPackage\images\sv8_video.png)]( https://www.youtube.com/embed/eyLPVRcEGHs "Video Title")
 
 **3. Denoising performance of DeepCAD-RT on a recently developed genetically encoded ATP sensor.**
 
-<img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/ATP.png?raw=true" width="700" align="middle">
+[![IMAGE ALT TEXT](E:\01-LYX\pipPackage\images\sv10_video.png)](https://www.youtube.com/embed/u1ejSaVvWiY "Video Title")
+
+More demo videos are demonstrated on [Gallery](https://cabooster.github.io/DeepCAD-RT/Gallery/).
 
 ## Citation
 
