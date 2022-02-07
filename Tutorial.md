@@ -198,7 +198,7 @@ xxx\trtexec.exe --onnx=deepcad_200_80.onnx --explicitBatch --saveEngine=deepcad_
 
 #### Realtime inference with ScanImage
 
-**Matlab configuration**
+Matlab configuration:
 
 1. Open Matlab.
 
@@ -219,8 +219,6 @@ xxx\trtexec.exe --onnx=deepcad_200_80.onnx --explicitBatch --saveEngine=deepcad_
    
    DeepCAD_RT 
    ```
-
-​       <img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/GUI.png?raw=true" width="600" align="middle">
 
 5. Set the parameters in GUI
 
@@ -250,7 +248,7 @@ xxx\trtexec.exe --onnx=deepcad_200_80.onnx --explicitBatch --saveEngine=deepcad_
 
    `Overlap frames between batches`: The number of overlap slice between neighboring batch. The recommend number is between 5 to 10. More overlap frames mean better performance but lower inference speed.
 
-6. After set all parameters, click  `Configure`. When you click `configure` for the first time, the initializer program will execute  automatically.
+6. After set all parameters, click  `Configure`. When you click `Configure` for the first time, the initializer program will execute  automatically.
 
 7. You can click `GRAB` in ScanImage and begin imaging.
 

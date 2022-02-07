@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-### [Project page](https://cabooster.github.io/DeepCAD-RT/) | [Paper](https://www.nature.com/articles/s41592-021-01225-0)
+### [GitHub](https://github.com/cabooster/DeepCAD-RT) | [Paper](https://www.nature.com/articles/s41592-021-01225-0)
 
 ## Content
 
