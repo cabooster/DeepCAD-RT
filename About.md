@@ -28,15 +28,15 @@ For more details, please see the companion paper where the method first appeared
 
 **1. Universal denoising for calcium imaging in zebrafish.**
 
-[![IMAGE ALT TEXT](https://github.com/cabooster/DeepCAD-RT/blob/page/images/sv3_video.png?raw=true)]( https://www.youtube.com/embed/GN0IO7bGoGg "Video Title")
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GN0IO7bGoGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
 
 **2. Denoising performance of DeepCAD-RT of neutrophils in the mouse brain in vivo.** 
 
-[![IMAGE ALT TEXT](https://github.com/cabooster/DeepCAD-RT/blob/page/images/sv8_video.png?raw=true)]( https://www.youtube.com/embed/eyLPVRcEGHs "Video Title")
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eyLPVRcEGHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **3. Denoising performance of DeepCAD-RT on a recently developed genetically encoded ATP sensor.**
 
-[![IMAGE ALT TEXT](https://github.com/cabooster/DeepCAD-RT/blob/page/images/sv10_video.png?raw=true)](https://www.youtube.com/embed/u1ejSaVvWiY "Video Title")
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kSMYJgE4M54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 More demo videos are demonstrated on [Gallery](https://cabooster.github.io/DeepCAD-RT/Gallery/).
 
