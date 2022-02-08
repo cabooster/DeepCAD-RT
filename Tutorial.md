@@ -11,43 +11,9 @@ title: DeepCAD-RT tutorial
 
 ## Content
 
-- [Directory structure](#directory-structure)
-- [Pytorch code](#pytorch-code)
-- [Matlab GUI](#matlab-gui)
-
-## Directory structure
-
-```
-DeepCAD-RT
-|---DeepCAD_RT_pytorch #Pytorch implementation of DeepCAD-RT#
-|---|---demo_train_pipeline.py
-|---|---demo_test_pipeline.py
-|---|---transfer_pth_to_onnx.py
-|---|---deepcad
-|---|---|---__init__.py
-|---|---|---utils.py
-|---|---|---network.py
-|---|---|---model_3DUnet.py
-|---|---|---data_process.py
-|---|---|---buildingblocks.py
-|---|---|---test_collection.py
-|---|---|---train_collection.py
-|---|---|---movie_display.py
-|---|---notebooks
-|---|---|---demo_train_pipeline.ipynb
-|---|---|---demo_test_pipeline.ipynb
-|---|---|---DeepCAD_RT_demo_colab.ipynb
-|---|---datasets
-|---|---|---DataForPytorch # project_name #
-|---|---|---|---data.tif
-|---|---pth
-|---|---|---ModelForPytorch
-|---|---|---|---model.pth
-|---|---|---|---model.yaml
-|---|---results
-|---|---|--- # test results#
-|---DeepCAD_RT_HA #Matlab GUI of DeepCAD-RT#
-```
+- [Python code](#python-code)
+- [Demo notebooks](#python-code)
+- [Matlab implementation for real-time processing](#matlab-gui)
 
 ## Pytorch code
 
