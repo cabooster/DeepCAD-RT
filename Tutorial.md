@@ -11,7 +11,7 @@ title: DeepCAD-RT tutorial
 
 ## Content
 
-- [Python code](#python-code)
+- [Python source code](#python-code)
 - [Demo notebooks](#python-code)
 - [Matlab implementation for real-time processing](#matlab-gui)
 
