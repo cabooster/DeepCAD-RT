@@ -7,6 +7,8 @@
 .page,
 .post {
   margin-bottom: 4em;
+ margin-left:0px;
+ margin-right:0px;
 }
 
 // Blog post or page title
@@ -18,6 +20,8 @@
 .page-title,
 .post-title {
   margin-top: 0;
+ margin-left:0px;
+ margin-right:0px;
 }
 
 // Meta data line below post title
@@ -25,5 +29,7 @@
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
+ margin-left:0px;
+ margin-right:0px;
   color: $post-date-color;
 }
