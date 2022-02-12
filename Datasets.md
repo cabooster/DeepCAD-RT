@@ -1,43 +1,46 @@
 ---
 layout: page
-title: About
+title: Datasets
 ---
 
 ## Content
 
 - [Overview](#overview)
-- [Performance](#performance)
+- [Download links](#download-links)
 - [Citation](#citation)
 
 ## Overview
 
-<img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/schematic.png?raw=true" width="400" align="right">
+The data used for training and validation of DeepCAD-RT are made publicly available here. These data were captured by our customized two-photon microscope with two strictly synchronized detection path. The signal intensity of the high-SNR path is 10-fold higher than that of the low-SNR path. We provided 8 groups of recordings with various imaging depths, excitation power, and structures. All data are listed in the table below. You can download these data directly by clicking the `hyperlinks` appended in the 'AMP' column.
 
-Calcium imaging is inherently susceptible to detection noise especially when imaging with high frame rate or under low excitation dosage. However, calcium transients are highly dynamic, non-repetitive activities and a firing pattern cannot be captured twice. Clean images for supervised training of deep neural networks are not accessible. Here, we present DeepCAD, a **deep** self-supervised learning-based method for **ca**lcium imaging **d**enoising. Using our method, detection noise can be effectively removed and the accuracy of neuron extraction and spike inference can be highly improved.
+## Download links
 
-DeepCAD is based on the insight that a deep learning network for image denoising can achieve satisfactory convergence even the target image used for training is another corrupted sampling of the same scene [[paper link]](https://arxiv.org/abs/1803.04189). We explored the temporal redundancy of calcium imaging and found that any two consecutive frames can be regarded as two independent samplings of the same underlying firing pattern. A single low-SNR stack is sufficient to be a complete training set for DeepCAD. Furthermore, to boost its performance on 3D temporal stacks, the input and output data are designed to be 3D volumes rather than 2D frames to fully incorporate the abundant information along time axis.
+| No.  | Structures                                                | FOV (V×H)<sup>a</sup> | Frame rate | Imaging depth<sup>b</sup> |                      Power<sup>c</sup>                       | AMP<sup>d</sup> |
+| :--: | --------------------------------------------------------- | --------------------- | :--------: | :-----------------------: | :----------------------------------------------------------: | :-------------: |
+|  1   | Mouse dendritic spines                                    | 550×575 μm            |   30 Hz    |           40 μm           |                            50 mW                             |  [1]()/[10]()   |
+|  2   | Zebrafish telencephalic neurons (local region)            | 550×575 μm            |   30 Hz    |          100 μm           |                              mW                              |  [1]()/[10]()   |
+|  3   | Zebrafish telencephalic neurons (multiple regions)        | 550×575 μm            |   30 Hz    |          120 μm           |                              mW                              |  [1]()/[10]()   |
+|  4   | Drosophila mushroom body                                  | 550×575 μm            |   30 Hz    |          140 μm           |                              mW                              |  [1]()/[10]()   |
+|  5   | Mouse brain neutrophils                                   | 550×575 μm            |   30 Hz    |          160 μm           |                           0.25 mW                            |  [1]()/[10]()   |
+|  6   | Mouse brain neutrophils (3D imaging)                      | 550×575 μm            |   30 Hz    | 15-45 μm (2 μm per step)  |                           0.07 mW                            |  [1]()/[10]()   |
+|  7   | Extracellular ATP release in the mouse brain              | 550×575 μm            |   15 Hz    |           20 μm           |                           0.65 mW                            |  [1]()/[10]()   |
+|  8   | Extracellular ATP release in the mouse brain (3D imaging) | 550×575 μm            |   30 Hz    | 10-70 μm (2 μm per step)  |                            0.1 mW                            |  [1]()/[10]()   |
+|  9   |                                                           | 550×575 μm            |   30 Hz    |          150 μm           | [66](https://cloud.tsinghua.edu.cn/f/6be0ae5bfd2c439aa96d/?dl=1)/[99](https://cloud.tsinghua.edu.cn/f/d938acf4472841cc9d7c/?dl=1) mW |       10        |
+|  10  |                                                           | 550×575 μm            |   30 Hz    |          170 μm           | [99](https://cloud.tsinghua.edu.cn/f/f94e5f874fcf428b81f3/?dl=1) mW |       10        |
+|  11  |                                                           | 550×575 μm            |   30 Hz    |           80 μm           | [66](https://cloud.tsinghua.edu.cn/f/427de2eba72348d28a8e/?dl=1)/[99](https://cloud.tsinghua.edu.cn/f/5255b5709dec498783b9/?dl=1) mW |       10        |
+|  12  |                                                           | 550×575 μm            |   30 Hz    |          110 μm           | [66](https://cloud.tsinghua.edu.cn/f/8b1a56b4e13c43999697/?dl=1)/[99](https://cloud.tsinghua.edu.cn/f/f18c6fc9f6e745a4a26a/?dl=1) mW |       10        |
+|  13  |                                                           | 550×575 μm            |   30 Hz    |          185 μm           | [99](https://cloud.tsinghua.edu.cn/f/9dac2e30cf604809a833/?dl=1)/[132](https://cloud.tsinghua.edu.cn/f/d5550a6041a94b6282ca/?dl=1) mW |       10        |
+|  14  |                                                           | 550×575 μm            |   30 Hz    |          210 μm           | [99](https://cloud.tsinghua.edu.cn/f/fda8bc14755a4f14b4ef/?dl=1)/[132](https://cloud.tsinghua.edu.cn/f/7a9e1cd0b1ab4effa02c/?dl=1) mW |       10        |
 
-For more details, please see the companion paper where the method first appeared: 
-["*Reinforcing neuron extraction and spike inference in calcium imaging using deep self-supervised denoising*".](https://www.nature.com/articles/s41592-021-01225-0)
-
-
-
-## Performance
-
-**1. Universal denoising for calcium imaging in mouse, zebrafish, and Drosophila.**
-
-<img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/calcium_imaging.png?raw=true" width="700" align="middle">
-
-**2. Denoising performance of DeepCAD-RT of neutrophils in the mouse brain in vivo.** 
-
-<img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/neutrophil.png?raw=true" width="700" align="middle">
-
-**3. Denoising performance of DeepCAD-RT on a recently developed genetically encoded ATP sensor.**
-
-<img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/ATP.png?raw=true" width="700" align="middle">
+```
+a.	FOV: field-of-view; V: vertical length; H: horizontal length.
+b.	Depth: imaging depth below the pia mater.
+c.	Two different excitation powers were used in each experiment for data diversity.
+d.	AMP: the amplifier gain of the two PMTs.
+```
 
 ## Citation
 
-If you use this code please cite the companion paper where the original method appeared: 
+If you use our datasets please cite the companion paper: 
 
 Li, X., Zhang, G., Wu, J. et al. Reinforcing neuron extraction and spike inference in calcium imaging using deep self-supervised denoising. Nat Methods (2021). [https://doi.org/10.1038/s41592-021-01225-0](https://www.nature.com/articles/s41592-021-01225-0)

@@ -11,11 +11,11 @@ title: DeepCAD-RT tutorial
 
 ## Content
 
-- [Python source code](#python-code)
-- [Demo notebooks](#python-code)
-- [Matlab implementation for real-time processing](#matlab-gui)
+- [Python source code](#python-source-code)
+- [Demo notebooks](#demo-notebooks)
+- [Matlab implementation for real-time processing](#matlab-implementation-for-real-time processing)
 
-## Pytorch code
+## Python source code
 
 ### Our environment 
 
@@ -26,14 +26,19 @@ title: DeepCAD-RT tutorial
 
 ### Environment configuration
 
-* Create a virtual environment, install Pytorch and DeepCAD package. In the 3rd step, please select the correct Pytorch version that matches your CUDA version from https://pytorch.org/get-started/previous-versions/.
+1. Create a virtual environment and install Pytorch for GPU implement. In the 3rd step, please select the correct Pytorch version that matches your CUDA version from https://pytorch.org/get-started/previous-versions/.
 
-```
-$ conda create -n deepcadrt python=3.6
-$ conda activate deepcadrt
-$ pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
-$ pip install deepcad
-```
+   ```
+   $ conda create -n deepcadrt python=3.6
+   $ conda activate deepcadrt
+   $ pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
+   ```
+
+2. We make pip installable realeases of DeepCAD, here is the [pypi](https://pypi.org/project/deepcad/). You can install it by simply entering following command:
+
+   ```
+   $ pip install deepcad
+   ```
 
 ### Download the source code
 
@@ -44,28 +49,28 @@ $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
 
 ### Demos
 
-- Python file: 
+To try out the python file, please activate deepcadrt conda environment:
 
-  To try out the python file, please activate deepcadrt conda environment:
+```
+$ conda activate deepcadrt
+$ cd DeepCAD-RT/DeepCAD_RT_pytorch/
+```
 
-  ```
-  $ conda activate deepcadrt
-  $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
-  ```
+To  train your own DeepCAD-RT network, we recommend to start with the demo file `demo_train_pipeline.py`  in `DeepCAD_RT_pytorch` subfolder. You can try our demo files directly or edit some parameter appropriate to your hardware or data.
 
-  To  train your own DeepCAD-RT network, we recommend to start with the demo file `demo_train_pipeline.py`  in `DeepCAD_RT_pytorch` subfolder. You can try our demo files directly or edit some parameter appropriate to your hardware or data.
+**Example training**
 
-  **Example training**
+```
+python demo_train_pipeline.py
+```
 
-  ```
-  python demo_train_pipeline.py
-  ```
+**Example testing**
 
-  **Example test**
+```
+python demo_test_pipeline.py
+```
 
-  ```
-  python demo_test_pipeline.py
-  ```
+## Demo notebooks
 
 - Jupyter notebooks: 
 
@@ -81,7 +86,7 @@ $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
 
   You can also run Cellpose in google colab with a GPU: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STAR-811/DeepCAD-RT/blob/main/DeepCAD_RT_pytorch/notebooks/DeepCAD_RT_demo_colab.ipynb)
 
-## Matlab GUI
+## Matlab implementation for real-time processing
 
 To achieve real-time denoising during imaging process, DeepCAD-RT is implemented on GPU with Nvidia TensorRT and delicately-designed time sequence to further accelerate the inference speed and decrease memory cost. We developed a user-friendly Matlab GUI for DeepCAD-RT , which is easy to install and convenient to use (has been tested on a Windows desktop with Intel i9 CPU and 128G RAM).  
 
