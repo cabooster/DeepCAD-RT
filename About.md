@@ -36,9 +36,11 @@ For more details, please see the companion paper where the method first appeared
 
 <center><b>Denoising performance of DeepCAD-RT on a recently developed genetically encoded ATP sensor</b></center>
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/kSMYJgE4M54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/kSMYJgE4M54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
-More demo videos are demonstrated on [Gallery](https://cabooster.github.io/DeepCAD-RT/Gallery/).
+<center>More demo videos are demonstrated on <a href='https://cabooster.github.io/DeepCAD-RT/Gallery/'>Gallery</a></center>
+
+
 
 ## Citation
 

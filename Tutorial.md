@@ -200,7 +200,7 @@ Matlab configuration:
 
    `Frames number`: Frame number of the noisy image you set in ScanImage interface. This parameter will update automatically when you click `Configure`. 
 
-   <img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/scanimage_parameter.png?raw=true" width="250" align="middle">
+   <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/scanimage_parameter.png?raw=true" width="250" align="middle"></center>
 
    **Attention: You should set frames number before you click `Configure`.**
 
