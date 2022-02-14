@@ -38,7 +38,14 @@ For more details, please see the companion paper where the method first appeared
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/kSMYJgE4M54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
+
+
+
 <center>More demo videos are demonstrated on <a href='https://cabooster.github.io/DeepCAD-RT/Gallery/'>Gallery</a></center>
+
+
+
+
 
 
 
@@ -49,8 +56,6 @@ If you use this code please cite the companion paper where the original method a
 Li, X., Zhang, G., Wu, J. et al. Reinforcing neuron extraction and spike inference in calcium imaging using deep self-supervised denoising. Nat Methods (2021). [https://doi.org/10.1038/s41592-021-01225-0](https://www.nature.com/articles/s41592-021-01225-0)
 
 
-
-<p><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/thu.jpg?raw=true" width="80"><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/thu-auto.jpg?raw=true" width="80"></p>
 
 
 
