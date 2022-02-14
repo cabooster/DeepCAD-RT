@@ -13,7 +13,7 @@ title: About
 
 ## Overview
 
-<img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/schematic.png?raw=true" width="400" align="right">
+<img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/schematic.png?raw=true" width="400" align="center">
 
 Calcium imaging is inherently susceptible to detection noise especially when imaging with high frame rate or under low excitation dosage. However, calcium transients are highly dynamic, non-repetitive activities and a firing pattern cannot be captured twice. Clean images for supervised training of deep neural networks are not accessible. Here, we present DeepCAD, a **deep** self-supervised learning-based method for **ca**lcium imaging **d**enoising. Using our method, detection noise can be effectively removed and the accuracy of neuron extraction and spike inference can be highly improved.
 
@@ -45,3 +45,12 @@ More demo videos are demonstrated on [Gallery](https://cabooster.github.io/DeepC
 If you use this code please cite the companion paper where the original method appeared: 
 
 Li, X., Zhang, G., Wu, J. et al. Reinforcing neuron extraction and spike inference in calcium imaging using deep self-supervised denoising. Nat Methods (2021). [https://doi.org/10.1038/s41592-021-01225-0](https://www.nature.com/articles/s41592-021-01225-0)
+
+
+
+
+
+<div nowrap align="center"><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/thu.jpg?raw=true" width="80" align="middle"><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/thu-auto.jpg?raw=true" width="80" align="middle"></div>
+
+
+
