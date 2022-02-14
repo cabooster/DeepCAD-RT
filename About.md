@@ -50,7 +50,7 @@ Li, X., Zhang, G., Wu, J. et al. Reinforcing neuron extraction and spike inferen
 
 
 
-<div nowrap align="center"><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/thu.jpg?raw=true" width="80" align="middle"><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/thu-auto.jpg?raw=true" width="80" align="middle"></div>
+
 
 
 
