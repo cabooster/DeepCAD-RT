@@ -3,9 +3,8 @@ layout: page
 title: Gallery
 ---
 
-### Denoising performance of DeepCAD-RT on mouse spines
-
-<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_mouse.png?raw=true" width="600" align="middle"></center>
+<center><h3>Denoising performance of DeepCAD-RT on mouse spines </h3>
+<img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_mouse.png?raw=true" width="600" align="middle"></center>
 
 
 
@@ -13,13 +12,12 @@ title: Gallery
 
 
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/oH5L7AxUxOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/oH5L7AxUxOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 
 
-### Denoising performance of DeepCAD-RT on zebrafish 
-
-<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_zebra.png?raw=true" width="600" align="middle"></center>
+<center><h3>Denoising performance of DeepCAD-RT on zebrafish</h3>
+<img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_zebra.png?raw=true" width="600" align="middle"></center>
 
 
 
@@ -27,13 +25,14 @@ title: Gallery
 
 
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/GN0IO7bGoGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/GN0IO7bGoGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 
 
-### Denoising performance of DeepCAD-RT on drosophila
 
-<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_drosophila.png?raw=true" width="600" align="middle"></center>
+
+<center><h3>Denoising performance of DeepCAD-RT on drosophila</h3>
+    <img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_drosophila.png?raw=true" width="600" align="middle"></center>
 
 
 
@@ -41,19 +40,13 @@ title: Gallery
 
 
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/K2MSZdkKzi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/K2MSZdkKzi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 
 
 
 
-
-
-### Denoising performance of DeepCAD-RT on neutrophil in 3D
-
-
-
-<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_NP.png?raw=true" width="600" align="middle"></center>
+<center><h3>Denoising performance of DeepCAD-RT on neutrophil in 3D</h3><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_NP.png?raw=true" width="600" align="middle"></center>
 
 
 
@@ -61,13 +54,14 @@ title: Gallery
 
 
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/eyLPVRcEGHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-
-### Denoising performance of DeepCAD-RT on ATP in 3D
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/eyLPVRcEGHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 
 
-<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_ATP.png?raw=true" width="600" align="middle"></center>
+
+
+<center><h3>Denoising performance of DeepCAD-RT on ATP in 3D</h3>
+    <img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_ATP.png?raw=true" width="600" align="middle"></center>
 
 
 
