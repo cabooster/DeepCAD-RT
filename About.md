@@ -13,7 +13,7 @@ title: About
 
 ## Overview
 
-<img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/schematic.png?raw=true" width="400" align="center">
+<center><img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/schematic.png?raw=true" width="600" align="middle" /></center>
 
 Calcium imaging is inherently susceptible to detection noise especially when imaging with high frame rate or under low excitation dosage. However, calcium transients are highly dynamic, non-repetitive activities and a firing pattern cannot be captured twice. Clean images for supervised training of deep neural networks are not accessible. Here, we present DeepCAD, a **deep** self-supervised learning-based method for **ca**lcium imaging **d**enoising. Using our method, detection noise can be effectively removed and the accuracy of neuron extraction and spike inference can be highly improved.
 
@@ -28,7 +28,7 @@ For more details, please see the companion paper where the method first appeared
 
 **1. Universal denoising for calcium imaging in zebrafish.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GN0IO7bGoGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/GN0IO7bGoGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </center>
 
 **2. Denoising performance of DeepCAD-RT of neutrophils in the mouse brain in vivo.** 
 
@@ -48,9 +48,7 @@ Li, X., Zhang, G., Wu, J. et al. Reinforcing neuron extraction and spike inferen
 
 
 
-
-
-
+<div nowrap align="center"><p><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/thu.jpg?raw=true" width="80" align="middle"><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/thu-auto.jpg?raw=true" width="80" align="middle"></p></div>
 
 
 
