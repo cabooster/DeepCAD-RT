@@ -90,8 +90,9 @@ python demo_test_pipeline.py
 
 To achieve real-time denoising during imaging process, DeepCAD-RT is implemented on GPU with Nvidia TensorRT and delicately-designed time sequence to further accelerate the inference speed and decrease memory cost. We developed a user-friendly Matlab GUI for DeepCAD-RT , which is easy to install and convenient to use (has been tested on a Windows desktop with Intel i9 CPU and 128G RAM).  
 
+<center><img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/GUI.png?raw=true" width="600" align="middle"></center> 
 
-​              <img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/GUI.png?raw=true" width="600" align="middle">   
+
 
 ### Required environment
 
@@ -227,5 +228,5 @@ Matlab configuration:
 
 ### Demo video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/u1ejSaVvWiY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/u1ejSaVvWiY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </center>
 

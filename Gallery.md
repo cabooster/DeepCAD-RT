@@ -5,7 +5,7 @@ title: Gallery
 
 ### Denoising performance of DeepCAD-RT on mouse spines
 
-<img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_mouse.png?raw=true" width="600" align="middle">
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_mouse.png?raw=true" width="600" align="middle"></center>
 
 
 
@@ -13,14 +13,13 @@ title: Gallery
 
 
 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oH5L7AxUxOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/oH5L7AxUxOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 
 
 ### Denoising performance of DeepCAD-RT on zebrafish 
 
-<img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_zebra.png?raw=true" width="600" align="middle">
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_zebra.png?raw=true" width="600" align="middle"></center>
 
 
 
@@ -28,13 +27,13 @@ title: Gallery
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GN0IO7bGoGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/GN0IO7bGoGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 
 
 ### Denoising performance of DeepCAD-RT on drosophila
 
-<img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_drosophila.png?raw=true" width="600" align="middle">
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_drosophila.png?raw=true" width="600" align="middle"></center>
 
 
 
@@ -42,7 +41,7 @@ title: Gallery
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/K2MSZdkKzi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/K2MSZdkKzi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 
 
@@ -54,7 +53,7 @@ title: Gallery
 
 
 
-<img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_NP.png?raw=true" width="600" align="middle">
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_NP.png?raw=true" width="600" align="middle"></center>
 
 
 
@@ -62,13 +61,13 @@ title: Gallery
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eyLPVRcEGHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/eyLPVRcEGHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 ### Denoising performance of DeepCAD-RT on ATP in 3D
 
 
 
-<img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_ATP.png?raw=true" width="600" align="middle">
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_ATP.png?raw=true" width="600" align="middle"></center>
 
 
 
@@ -76,4 +75,4 @@ title: Gallery
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kSMYJgE4M54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/kSMYJgE4M54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>

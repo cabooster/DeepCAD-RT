@@ -26,17 +26,17 @@ For more details, please see the companion paper where the method first appeared
 
 ## Performance
 
-**1. Universal denoising for calcium imaging in zebrafish.**
+<center><b>Universal denoising for calcium imaging in zebrafish.</b></center>
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/GN0IO7bGoGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </center>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/GN0IO7bGoGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </center><br>
 
-**2. Denoising performance of DeepCAD-RT of neutrophils in the mouse brain in vivo.** 
+<center><b>Denoising performance of DeepCAD-RT of neutrophils in the mouse brain in vivo</b></center>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eyLPVRcEGHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eyLPVRcEGHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
 
-**3. Denoising performance of DeepCAD-RT on a recently developed genetically encoded ATP sensor.**
+<center><b>Denoising performance of DeepCAD-RT on a recently developed genetically encoded ATP sensor</center></b>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kSMYJgE4M54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kSMYJgE4M54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
 
 More demo videos are demonstrated on [Gallery](https://cabooster.github.io/DeepCAD-RT/Gallery/).
 
@@ -48,7 +48,7 @@ Li, X., Zhang, G., Wu, J. et al. Reinforcing neuron extraction and spike inferen
 
 
 
-<div nowrap align="center"><p><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/thu.jpg?raw=true" width="80" align="middle"><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/thu-auto.jpg?raw=true" width="80" align="middle"></p></div>
+<p><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/thu.jpg?raw=true" width="80" align="middle"><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/thu-auto.jpg?raw=true" width="80" align="middle"></p>
 
 
 
