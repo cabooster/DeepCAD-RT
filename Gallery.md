@@ -17,7 +17,7 @@ title: Gallery
 
 
 
-<hr size="20px" noshade=false />
+<hr size="10px" color=#B8B8B8 noshade=true />
 
 <center>
     <h2>2. DeepCAD-RT massively improves the imaging SNR of neuronal population recordings in the zebrafish brain</h2></center><br>
@@ -72,7 +72,7 @@ title: Gallery
 
 <center><h2>5. DeepCAD-RT reveals the ATP (Adenosine 5’-triphosphate) dynamics of astrocytes in 3D after laser-induced brain injury</h2></center><br>
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/kSMYJgE4M54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/kSMYJgE4M54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_ATP.png?raw=true" width="850" align="middle"></center>
 
