@@ -5,7 +5,7 @@ title: Gallery
 
 
 
-<center><h2>1. DeepCAD-RT enhances the in vivo recording of calcium transients in dendritic spines </h2></center>
+<center><h2>1. DeepCAD-RT enhances the in vivo recording of calcium transients in dendritic spines </h2></center><br>
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/oH5L7AxUxOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> 
 
@@ -17,9 +17,10 @@ title: Gallery
 
 
 
-<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color=#987cb9 SIZE=3>
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color=#987cb9 SIZE=3></HR>
 
-<center><h2>2. DeepCAD-RT massively improves the imaging SNR of neuronal population recordings in the zebrafish brain</h2>
+<center>
+<h2>2. DeepCAD-RT massively improves the imaging SNR of neuronal population recordings in the zebrafish brain</h2>
 <img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_zebra.png?raw=true" width="700" align="middle"></center>
 
 
