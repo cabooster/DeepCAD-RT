@@ -17,7 +17,7 @@ title: Gallery
 
 
 
-<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color=#987cb9 SIZE=3></HR>
+<hr>
 
 <center>
 <h2>2. DeepCAD-RT massively improves the imaging SNR of neuronal population recordings in the zebrafish brain</h2>
