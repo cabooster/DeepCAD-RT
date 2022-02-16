@@ -22,7 +22,7 @@ title: Gallery
 <center>
     <h2>2. DeepCAD-RT massively improves the imaging SNR of neuronal population recordings in the zebrafish brain</h2></center><br>
 
-<center><iframe width="680" height="315" src="https://www.youtube.com/embed/GN0IO7bGoGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><iframe width="690" height="350" src="https://www.youtube.com/embed/GN0IO7bGoGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_zebra.png?raw=true" width="700" align="middle"></center>
 
@@ -38,7 +38,7 @@ title: Gallery
 
 <center><h2>3. DeepCAD-RT enhances the neuronal population imaging of Drosophila mushroom body</h2></center><br>
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/K2MSZdkKzi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+<center><iframe width="680" height="350" src="https://www.youtube.com/embed/K2MSZdkKzi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_drosophila.png?raw=true" width="700" align="middle"></center>
 
