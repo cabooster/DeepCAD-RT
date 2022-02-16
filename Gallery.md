@@ -5,24 +5,21 @@ title: Gallery
 
 
 
-<center><h3>1. DeepCAD-RT enhances the in vivo recording of calcium transients in dendritic spines </h3></center>
+<center><h2>1. DeepCAD-RT enhances the in vivo recording of calcium transients in dendritic spines </h2></center>
 
-
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/oH5L7AxUxOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>   
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/oH5L7AxUxOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> 
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_mouse.png?raw=true" width="700" align="middle"></center>
 
 
 
-*[Imaging calcium transients in dendritic spines of a mouse expressing genetically encoded GCaMP6f calcium indicator. One example frame is shown for the raw low-SNR recording (top), DeepCAD-RT denoised recording (middle), and synchronized high-SNR recording with 10-fold SNR (bottom). Magnified views of the yellow boxed region showing calcium dynamics of two spatially adjacent dendritic branches. Scale bar, 20 μm for the whole field-of-view (FOV) and 5 μm for magnified views. ]* 
+*Imaging calcium transients in dendritic spines of a mouse expressing genetically encoded GCaMP6f calcium indicator. One example frame is shown for the raw low-SNR recording (top), DeepCAD-RT denoised recording (middle), and synchronized high-SNR recording with 10-fold SNR (bottom). Magnified views of the yellow boxed region showing calcium dynamics of two spatially adjacent dendritic branches. Scale bar, 20 μm for the whole field-of-view (FOV) and 5 μm for magnified views.* 
 
 
 
+<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color=#987cb9 SIZE=3>
 
-
-
-
-<center><h3>2. DeepCAD-RT massively improves the imaging SNR of neuronal population recordings in the zebrafish brain</h3>
+<center><h2>2. DeepCAD-RT massively improves the imaging SNR of neuronal population recordings in the zebrafish brain</h2>
 <img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_zebra.png?raw=true" width="700" align="middle"></center>
 
 
@@ -52,7 +49,7 @@ title: Gallery
 
 
 
-<center><h3>4. DeepCAD-RT reveals the 3D migration of neutrophils in vivo after acute brain injury</h3><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_NP.png?raw=true" width="750" align="middle"></center>
+<center><h3>4. DeepCAD-RT reveals the 3D migration of neutrophils in vivo after acute brain injury</h3><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_NP.png?raw=true" width="800" align="middle"></center>
 
 
 
@@ -67,7 +64,7 @@ title: Gallery
 
 
 <center><h3>5. DeepCAD-RT reveals the ATP (Adenosine 5’-triphosphate) dynamics of astrocytes in 3D after laser-induced brain injury</h3>
-    <img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_ATP.png?raw=true" width="750" align="middle"></center>
+    <img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_ATP.png?raw=true" width="800" align="middle"></center>
 
 
 
