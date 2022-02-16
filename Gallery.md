@@ -38,7 +38,7 @@ title: Gallery
 
 <center><h2>3. DeepCAD-RT enhances the neuronal population imaging of Drosophila mushroom body</h2></center><br>
 
-<center><iframe width="680" height="350" src="https://www.youtube.com/embed/K2MSZdkKzi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+<center><iframe width="680" height="350" src="https://www.youtube.com/embed/K2MSZdkKzi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_drosophila.png?raw=true" width="700" align="middle"></center>
 
@@ -56,7 +56,7 @@ title: Gallery
 
 <center><h2>4. DeepCAD-RT reveals the 3D migration of neutrophils in vivo after acute brain injury</h2></center>
 
-<center><iframe width="850" height="400" src="https://www.youtube.com/embed/eyLPVRcEGHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+<center><iframe width="850" height="400" src="https://www.youtube.com/embed/eyLPVRcEGHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_NP.png?raw=true" width="850" align="middle"></center>
 
@@ -72,7 +72,7 @@ title: Gallery
 
 <center><h2>5. DeepCAD-RT reveals the ATP (Adenosine 5’-triphosphate) dynamics of astrocytes in 3D after laser-induced brain injury</h2></center><br>
 
-<center><iframe width="850" height="400" src="https://www.youtube.com/embed/kSMYJgE4M54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+<center><iframe width="850" height="400" src="https://www.youtube.com/embed/kSMYJgE4M54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_ATP.png?raw=true" width="850" align="middle"></center>
 
