@@ -126,7 +126,7 @@ Before inference, you should transfer pth model to ONNX model, then transfer ONN
 
    **pth model to ONNX model:**
 
-1. Go to `DeepCAD-RT/DeepCAD_RT_pytorch/` directory and activate `deepcadrt` conda environment. 
+1. Go to `DeepCAD-RT/DeepCAD_RT_pytorch/` directory and activate `deepcadrt` conda environment [[Configuration tutorial for conda environment](#python-source-code)].  
 
    ```
    $ conda activate deepcadrt
