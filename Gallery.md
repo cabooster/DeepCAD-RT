@@ -40,7 +40,7 @@ title: Gallery
 
 <center><iframe width="680" height="350" src="https://www.youtube.com/embed/K2MSZdkKzi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_drosophila.png?raw=true" width="700" align="middle"></center>
+<p><right><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_drosophila.png?raw=true" width="700" align="right"></right><br><br><br>snapshot<br><br><br><br><br></p>
 
 
 
