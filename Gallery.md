@@ -36,11 +36,12 @@ title: Gallery
 
 
 
-<center><h2>3. DeepCAD-RT enhances the neuronal population imaging of Drosophila mushroom body</h2></center><br>
+<center>
+    <h2>3. DeepCAD-RT enhances the neuronal population imaging of Drosophila mushroom body</h2></center><br>
 
-<p><right><iframe width="790" height="400" src="https://www.youtube.com/embed/K2MSZdkKzi4" title="YouTube video player" align="right" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>&nbsp;&nbsp;</right><br><br><br><br><br><br><p style="text-align:right;">video&nbsp;&nbsp;&nbsp;   </p><br><br><br><br><br><br><br><br></p>
+<center><iframe width="690" height="350" src="https://www.youtube.com/embed/K2MSZdkKzi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-<p><right><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_drosophila.png?raw=true" width="800" align="right"></right><br><br><br><br><br><br><p style="text-align:center;">snapshot   </p><br><br><br><br><br><br><br><br></p>
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_drosophila.png?raw=true" width="700" align="middle"></center>
 
 
 
