@@ -48,8 +48,11 @@ We constructed a lightweight network and compressed the model parameters by <b>9
 We augmented the training data by <b>12-fold</b> to alleviate the data dependency and make the method still tractable with <b>a small amount of data</b>.
 <br><h3>Hardware deployment:</h3>
 We optimized the hardware deployment and achieved an overall improvement of a <b>27-fold</b> reduction in running memory and a <b>20-fold</b> acceleration in inference speed, which supports real-time image denoising incorporated with the microscope acquisition system. 
-  
-   <p>
+ <br>
+  <p>
+  To achieve real-time processing during imaging acquisition, we made a program interface to incorporate DeepCAD-RT into our image acquisition software (Scanimage 5.7, Vidrio Technologies). For further acceleration and memory conservation, the inference of DeepCAD-RT was optimally deployed on GPU with TensorRT (NVIDIA), programmed in C++ for best hardware interaction, and then compiled in Matlab (MathWorks). Three parallel threads were designed for imaging, data processing, and display. The schedule for multi-thread programming is depicted in the following figure. The real-time implementation of DeepCAD-RT has been packaged as a free plugin with a user-friendly interface, and it could also be called by a Matlab script.
+  </p>
+  <p>
   <br><br><center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad5.png?raw=true" width="950" align="middle" /></center>
    </p>
   
