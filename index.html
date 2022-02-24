@@ -24,7 +24,7 @@ Noise is an ineluctable obstacle in scientific observation. For fluorescence mic
     <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad1.png?raw=true" width="1050" align="middle" /></center>
     </p>
   
-<a href="https://www.nature.com/articles/s41592-021-01225-0"><img style="float: left; padding: 10px; PADDING-RIGHT: 30px;" alt="paper thumbnail" src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad3.png?raw=true" width=210></a>
+<a href="https://www.nature.com/articles/s41592-021-01225-0"><img style="float: left; padding: 10px; PADDING-RIGHT: 30px;" alt="paper thumbnail" src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad3.png?raw=true" width=260></a>
 <h3>DeepCAD</h3>
 <h4>Paper</h4>
 <p><a href="https://www.nature.com/articles/s41592-021-01225-0">Nature Methods</a>,  2021. </p>
@@ -49,7 +49,10 @@ We augmented the training data by <b>12-fold</b> to alleviate the data dependenc
 <br><h3>Hardware deployment:</h3>
 We optimized the hardware deployment and achieved an overall improvement of a <b>27-fold</b> reduction in running memory and a <b>20-fold</b> acceleration in inference speed, which supports real-time image denoising incorporated with the microscope acquisition system. 
  <br>
+  
   <p>
+    <center><h2>Real-time implementation </h2></center>
+
   To achieve real-time processing during imaging acquisition, we made a program interface to incorporate DeepCAD-RT into our image acquisition software (Scanimage 5.7, Vidrio Technologies). For further acceleration and memory conservation, the inference of DeepCAD-RT was optimally deployed on GPU with TensorRT (NVIDIA), programmed in C++ for best hardware interaction, and then compiled in Matlab (MathWorks). Three parallel threads were designed for imaging, data processing, and display. The schedule for multi-thread programming is depicted in the following figure. The real-time implementation of DeepCAD-RT has been packaged as a free plugin with a user-friendly interface, and it could also be called by a Matlab script.
   </p>
   <p>
