@@ -13,7 +13,19 @@ title: About
 
 ## Introduction
 
-<center><img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/schematic.png?raw=true" width="600" align="middle" /></center>
+### Background
+
+**Among the challenges of fluorescence microscopy, poor imaging signal-to-noise ratio (SNR) caused by limited photon budget lingeringly stands in the central position.** The causes of this photon-limited challenge are as follows:
+
+- Firstly, the low photon yield of fluorescent indicators and their low concentration in labeled cells result in the lack of photons at the source. 
+
+- Secondly, although using higher excitation power is a straightforward way to increase fluorescence photons, living systems are too fragile to tolerate high excitation dosage. Extensive experiments have shown that illumination-induced photobleaching, phototoxicity, and tissue heating will disturb crucial cellular processes including cell proliferation, migration, vesicle release, neuronal firing, etc. 
+- Thirdly, recording fast biological processes necessitates high imaging speed and the short dwell time further intensifies the shortage of photons. 
+- Finally, the quantum nature of photons makes the stochasticity (shot noise) of optical measurements inevitable. The intensity detected by photoelectric sensors follows a Poisson distribution parameterized with the exact photon count. In fluorescence imaging, detection noise dominated by photon shot noise exacerbates the measurement uncertainty and obstructs the veritable visualization of underlying structures, potentially altering morphological and functional interpretations that follow. 
+
+To capture enough photons for satisfactory imaging sensitivity, researchers have to sacrifice imaging speed, resolution, and even sample health.
+
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad6.png?raw=true" width="1000" align="middle" /></center>
 
 ### Abstract
 
@@ -31,17 +43,17 @@ title: About
 
 ## Performance
 
-<center><b>Universal denoising for calcium imaging in zebrafish</b></center>
+<center><h3>DeepCAD-RT massively improves the imaging SNR of neuronal population recordings in the zebrafish brain</h3></center>
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/GN0IO7bGoGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </center><br>
+<center><iframe width="850" height="450" src="https://www.youtube.com/embed/GN0IO7bGoGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </center><br>
 
-<center><b>Denoising performance of DeepCAD-RT of neutrophils in the mouse brain in vivo</b></center>
+<center><h3>DeepCAD-RT reveals the 3D migration of neutrophils in vivo after acute brain injury</h3></center>
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/eyLPVRcEGHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+<center><iframe width="850" height="450" src="https://www.youtube.com/embed/eyLPVRcEGHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
-<center><b>Denoising performance of DeepCAD-RT on a recently developed genetically encoded ATP sensor</b></center>
+<center><h3>DeepCAD-RT reveals the ATP (Adenosine 5’-triphosphate) dynamics of astrocytes in 3D after laser-induced brain injury</h3></center>
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/kSMYJgE4M54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+<center><iframe width="850" height="450" src="https://www.youtube.com/embed/kSMYJgE4M54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
 
 
 
