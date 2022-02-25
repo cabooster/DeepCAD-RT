@@ -27,7 +27,7 @@ The causes of this photon-limited challenge are as follows:
 - Recording fast biological processes necessitates high imaging speed and the **short dwell time** further intensifies the shortage of photons. 
 - The **quantum nature of photons** makes the stochasticity (shot noise<sup>*</sup>) of optical measurements inevitable. The intensity detected by photoelectric sensors follows a Poisson distribution parameterized with the exact photon count. In fluorescence imaging, detection noise dominated by photon shot noise exacerbates the measurement uncertainty and obstructs the veritable visualization of underlying structures, potentially altering morphological and functional interpretations that follow. 
 
-**In optics, shot noise describes fluctuations in the number of photons detected as they occur independently of each other. There are other noise mechanisms in optical signals that often make the contribution of shot noise appear negligible. When these noises are not present, optical detection is said to be "photon noise limited" because only shot noise is left.*
+**In optics, shot noise describes fluctuations in the number of photons detected as they occur independently of each other. There are other noise mechanisms in optical signals that often make the contribution of shot noise appear negligible. When these noises are not present, optical detection is said to be 'photon noise limited' because only shot noise is left.*
 
 
 
