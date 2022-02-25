@@ -12,7 +12,8 @@ title: DeepCAD-RT tutorial
 ## Content
 
 - [Python source code](#python-source-code)
-- [Demo notebooks](#demo-notebooks)
+- [Jupyter notebook](#jupyter-notebook)
+- [Colab notebook](#colab-notebook)
 - [Matlab implementation for real-time processing](#matlab-implementation-for-real-time-processing)
 
 ## Python source code
@@ -26,7 +27,7 @@ title: DeepCAD-RT tutorial
 
 ### Environment configuration
 
-1. Create a virtual environment and install Pytorch for GPU implement. In the 3rd step, please select the correct Pytorch version that matches your CUDA version from https://pytorch.org/get-started/previous-versions/.
+1. Create a virtual environment and install Pytorch for GPU implement. In the 3rd step, please select the correct Pytorch version that matches your CUDA version from [https://pytorch.org/get-started/previous-versions/](https://pytorch.org/get-started/previous-versions/).
 
    ```
    $ conda create -n deepcadrt python=3.6
@@ -34,7 +35,7 @@ title: DeepCAD-RT tutorial
    $ pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
    ```
 
-2. We make pip installable realeases of DeepCAD, here is the [pypi](https://pypi.org/project/deepcad/). You can install it by simply entering following command:
+2. We make a pip installable realease of DeepCAD, here is the [pypi](https://pypi.org/project/deepcad/). You can install it by simply entering following command:
 
    ```
    $ pip install deepcad
@@ -70,21 +71,25 @@ python demo_train_pipeline.py
 python demo_test_pipeline.py
 ```
 
-## Demo notebooks
+## Jupyter notebook
 
-- Jupyter notebooks: 
+The notebooks provide a simple and friendly way to implement DeepCAD-RT. They are located in the `DeepCAD_RT_pytorch/notebooks`. Before you launch the Jupyter notebooks, please configure the `deepcadrt` environment following the instruction in `Environment configuration` in [Python source code part](#python-source-code). And then, you can try out the notebook by typing following commands:
 
-  The notebooks provide a simple and friendly way to get into DeepCAD-RT. They are located in the `DeepCAD_RT_pytorch/notebooks`. To launch  the Jupyter notebooks:
+```
+$ conda activate deepcadrt
+$ cd DeepCAD-RT/DeepCAD_RT_pytorch/notebooks
+$ jupyter notebook
+```
 
-  ```
-  $ conda activate deepcadrt
-  $ cd DeepCAD-RT/DeepCAD_RT_pytorch/notebooks
-  $ jupyter notebook
-  ```
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad8.png?raw=true" width="600" align="middle"></center> 
 
-- Colab notebooks: 
+## Colab notebook
 
-  You can also run Cellpose in google colab with a GPU: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STAR-811/DeepCAD-RT/blob/main/DeepCAD_RT_pytorch/notebooks/DeepCAD_RT_demo_colab.ipynb)
+You can also run DeepCAD-RT in google colab with a GPU: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STAR-811/DeepCAD-RT-new/blob/master/DeepCAD_RT_pytorch/notebooks/DeepCAD_RT_demo_colab.ipynb)
+
+*This is a toy example with a slow rate because of the limited performance of the GPU offered by Colab. You can increase the `train_datasets_size` and `n_epochs` with a more powerful GPU, and training and testing time can be further shortened.*
+
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad7.png?raw=true" width="600" align="middle"></center> 
 
 ## Matlab implementation for real-time processing
 
