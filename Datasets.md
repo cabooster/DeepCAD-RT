@@ -7,26 +7,22 @@ The data used for training and validation of DeepCAD-RT are made publicly availa
 
 ## Download links
 
-| No.  | Title                                                        |      Events       |  Pixel size  | Frame/volume rate | Imaging Depth<sup>b</sup> | Data size |     Comments      |
-| :--: | ------------------------------------------------------------ | :---------------: | :----------: | :---------------: | :-----------------------: | :-------: | :---------------: |
-|  1   | [Synthetic calcium imaging data](https://doi.org/10.5281/zenodo.6254739) | Calcium transient | 1.020 μm/pxl |       30 Hz       |          200 μm           |    GB     | Low-SNR/high-SNR  |
-|  2   | Mouse dendritic spines                                       | Calcium transient | 0.155 μm/pxl |       30 Hz       |           40 μm           |           | Low-SNR/high-SNR  |
-|  3   | Zebrafish telencephalic neurons                              | Calcium transient | 0.254 μm/pxl |       30 Hz       |            ——             |           | Low-SNR/high-SNR  |
-|  4   | Zebrafish multiple brain regions                             | Calcium transient | 0.873 μm/pxl |       15 Hz       |            ——             |           | Low-SNR/high-SNR  |
-|  5   | Drosophila mushroom body                                     | Calcium transient | 0.254 μm/pxl |       30 Hz       |            ——             |           | Low-SNR/high-SNR  |
-|  6   | Mouse brain neutrophils                                      |  Cell migration   | 0.349 μm/pxl |       10 Hz       |           30 μm           |           | Low-SNR/high-SNR  |
-|  7   | Mouse brain neutrophils (3D)                                 |  Cell migration   | 0.310 μm/pxl |       2 Hz        |  15-45 μm (2 μm/ plane)   |           | Low-SNR, 2 colors |
-|  8   | ATP release in the mouse brain                               |   ATP dynamics    | 0.465 μm/pxl |       15 Hz       |           20 μm           |           | Low-SNR/high-SNR  |
-|  9   | ATP release in the mouse brain (3D)                          |   ATP dynamics    | 0.698 μm/pxl |       1 Hz        |   10-70 μm (2 μm/plane)   |           |      Low-SNR      |
-|  10  | Mouse neurites                                               | Calcium transient | 0.977 μm/pxl |       30 Hz       |         40-80 μm          |           | Low-SNR/high-SNR  |
-|  11  | Mouse neuronal populations                                   | Calcium transient | 0.977 μm/pxl |       30 Hz       |         90-180 μm         |           | Low-SNR/high-SNR  |
+| No.  |                            Title                             |      Events       |  Pixel size  | Frame/volume rate | Imaging Depth<sup>a</sup> | Data size |     Comments      |
+| :--: | :----------------------------------------------------------: | :---------------: | :----------: | :---------------: | :-----------------------: | :-------: | :---------------: |
+|  1   | [Synthetic calcium imaging data](https://doi.org/10.5281/zenodo.6254739) | Calcium transient | 1.020 μm/pxl |       30 Hz       |          200 μm           |  29.8 GB  | Low-SNR/high-SNR  |
+|  2   |                    Mouse dendritic spines                    | Calcium transient | 0.155 μm/pxl |       30 Hz       |           40 μm           |  21.7 GB  | Low-SNR/high-SNR  |
+|  3   |               Zebrafish telencephalic neurons                | Calcium transient | 0.254 μm/pxl |       30 Hz       |            ——             |  6.32 GB  | Low-SNR/high-SNR  |
+|  4   |               Zebrafish multiple brain regions               | Calcium transient | 0.873 μm/pxl |       15 Hz       |            ——             |  7.18 GB  | Low-SNR/high-SNR  |
+|  5   |                   Drosophila mushroom body                   | Calcium transient | 0.254 μm/pxl |       30 Hz       |            ——             |  11.1 GB  | Low-SNR/high-SNR  |
+|  6   |                   Mouse brain neutrophils                    |  Cell migration   | 0.349 μm/pxl |       10 Hz       |           30 μm           |  11.8 GB  | Low-SNR/high-SNR  |
+|  7   |                 Mouse brain neutrophils (3D)                 |  Cell migration   | 0.310 μm/pxl |       2 Hz        |  15-45 μm (2 μm/ plane)   |  27.4 GB  | Low-SNR, 2 colors |
+|  8   |                ATP release in the mouse brain                |   ATP dynamics    | 0.465 μm/pxl |       15 Hz       |           20 μm           |  6.01 GB  | Low-SNR/high-SNR  |
+|  9   |             ATP release in the mouse brain (3D)              |   ATP dynamics    | 0.698 μm/pxl |       1 Hz        |   10-70 μm (2 μm/plane)   |  46.7 GB  |      Low-SNR      |
+|  10  |                        Mouse neurites                        | Calcium transient | 0.977 μm/pxl |       30 Hz       |         40-80 μm          |  23.5 GB  | Low-SNR/high-SNR  |
+|  11  |                  Mouse neuronal populations                  | Calcium transient | 0.977 μm/pxl |       30 Hz       |         90-180 μm         |  49.9 GB  | Low-SNR/high-SNR  |
 
 ```
-a.	FOV: field-of-view; V: vertical length; H: horizontal length.
-b.	Depth: imaging depth below the brain surface. Only for mouse experiments.
-c.	Two different excitation powers were used in each experiment for data diversity.
-d.	AMP: the amplifier gain of the two PMTs.
-e. 
+a.	Depth: imaging depth below the brain surface. Only for mouse experiments. 
 ```
 
 ## Citation

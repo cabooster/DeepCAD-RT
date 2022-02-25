@@ -27,7 +27,7 @@ The causes of this photon-limited challenge are as follows:
 - Recording fast biological processes necessitates high imaging speed and the **short dwell time** further intensifies the shortage of photons. 
 - The **quantum nature of photons** makes the stochasticity (shot noise<sup>*</sup>) of optical measurements inevitable. The intensity detected by photoelectric sensors follows a Poisson distribution parameterized with the exact photon count. In fluorescence imaging, detection noise dominated by photon shot noise exacerbates the measurement uncertainty and obstructs the veritable visualization of underlying structures, potentially altering morphological and functional interpretations that follow. 
 
-**shot noise: In optics, shot noise describes the fluctuations of the number of photons detected (or simply counted in the abstract) due to their occurrence independent of each other. There are other mechanisms of noise in optical signals which often dwarf the contribution of shot noise. When these are absent, optical detection is said to be "photon noise limited" as only the shot noise remains.*
+**In optics, shot noise describes fluctuations in the number of photons detected as they occur independently of each other. There are other noise mechanisms in optical signals that often make the contribution of shot noise appear negligible. When these noises are not present, optical detection is said to be "photon noise limited" because only shot noise is left.*
 
 
 
@@ -47,22 +47,21 @@ To capture enough photons for satisfactory imaging sensitivity, researchers have
 
 ## Performance
 
-<center><h3>DeepCAD-RT massively improves the imaging SNR of neuronal population recordings in the zebrafish brain</h3></center>
+<center><h3>1. DeepCAD-RT massively improves the imaging SNR of neuronal population recordings in the zebrafish brain</h3></center>
 
-<center><iframe width="850" height="450" src="https://www.youtube.com/embed/GN0IO7bGoGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </center><br>
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_zebra.png?raw=true" width="700" align="middle"></center>
 
-<center><h3>DeepCAD-RT reveals the 3D migration of neutrophils in vivo after acute brain injury</h3></center>
+<center><h3>2. DeepCAD-RT reveals the 3D migration of neutrophils in vivo after acute brain injury</h3></center>
 
-<center><iframe width="850" height="450" src="https://www.youtube.com/embed/eyLPVRcEGHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_NP.png?raw=true" width="850" align="middle"></center>
 
-<center><h3>DeepCAD-RT reveals the ATP (Adenosine 5’-triphosphate) dynamics of astrocytes in 3D after laser-induced brain injury</h3></center>
+<center><h3>3. DeepCAD-RT reveals the ATP (Adenosine 5’-triphosphate) dynamics of astrocytes in 3D after laser-induced brain injury</h3></center>
 
-<center><iframe width="850" height="450" src="https://www.youtube.com/embed/kSMYJgE4M54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center><br>
-
-
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_ATP.png?raw=true" width="850" align="middle"></center>
 
 
-<center>More demo videos are demonstrated on <a href='https://cabooster.github.io/DeepCAD-RT/Gallery/'>Gallery</a></center>
+
+<center>More demo images and videos are demonstrated on <a href='https://cabooster.github.io/DeepCAD-RT/Gallery/'>Gallery</a></center>
 
 
 
