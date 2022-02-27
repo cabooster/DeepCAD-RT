@@ -27,7 +27,7 @@ title: DeepCAD-RT tutorial
 
 ### Environment configuration
 
-1. Create a virtual environment and install Pytorch for GPU implement. In the 3rd step, please select the correct Pytorch version that matches your CUDA version from [https://pytorch.org/get-started/previous-versions/](https://pytorch.org/get-started/previous-versions/).
+1. Create a virtual environment and install PyTorch. In the 3rd step, please select the correct Pytorch version that matches your CUDA version from [https://pytorch.org/get-started/previous-versions/](https://pytorch.org/get-started/previous-versions/).
 
    ```
    $ conda create -n deepcadrt python=3.6
@@ -35,7 +35,7 @@ title: DeepCAD-RT tutorial
    $ pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
    ```
 
-2. We make a pip installable realease of DeepCAD, here is the [pypi](https://pypi.org/project/deepcad/). You can install it by simply entering following command:
+2. We made a pip installable realease of DeepCAD [pypi](https://pypi.org/project/deepcad/). You can install it by simply entering following command:
 
    ```
    $ pip install deepcad
@@ -87,7 +87,7 @@ $ jupyter notebook
 
 ## Colab notebook
 
-You can also run DeepCAD-RT in Google Colab with a GPU: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STAR-811/DeepCAD-RT-new/blob/master/DeepCAD_RT_pytorch/notebooks/DeepCAD_RT_demo_colab.ipynb)
+We also provide a cloud-based demo implemented with Google Colab. You can run DeepCAD in your browser with a cloud GPU without configuring the environment. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STAR-811/DeepCAD-RT-new/blob/master/DeepCAD_RT_pytorch/notebooks/DeepCAD_RT_demo_colab.ipynb)
 
 *This is a toy example with a slow rate because of the limited performance of the GPU offered by Colab. You can increase the `train_datasets_size` and `n_epochs` with a more powerful GPU, and training and testing time can be further shortened.*
 
