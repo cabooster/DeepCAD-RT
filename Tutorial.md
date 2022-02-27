@@ -57,15 +57,17 @@ $ conda activate deepcadrt
 $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
 ```
 
-To  train your own DeepCAD-RT network, we recommend to start with the demo file `demo_train_pipeline.py`  in `DeepCAD_RT_pytorch` subfolder. You can try our demo files directly or edit some parameter appropriate to your hardware or data.
-
 **Example training**
+
+To  train your own DeepCAD-RT network, we recommend to start with the demo file `demo_train_pipeline.py`  in `DeepCAD_RT_pytorch` subfolder. You can try our demo files directly or edit some parameters appropriate to your hardware or data. 
 
 ```
 python demo_train_pipeline.py
 ```
 
 **Example testing**
+
+To test the denoising performance with model files, you can use our demo noisy data and correspoding model or edit some parameters to test your own model in the demo file `demo_test_pipeline.py` .
 
 ```
 python demo_test_pipeline.py
@@ -93,7 +95,7 @@ You can also run DeepCAD-RT in google colab with a GPU: [![Open In Colab](https:
 
 ## Matlab implementation for real-time processing
 
-To achieve real-time denoising during imaging process, DeepCAD-RT is implemented on GPU with Nvidia TensorRT and delicately-designed time sequence to further accelerate the inference speed and decrease memory cost. We developed a user-friendly Matlab GUI for DeepCAD-RT , which is easy to install and convenient to use (has been tested on a Windows desktop with Intel i9 CPU and 128G RAM).  
+To achieve real-time denoising during imaging process, DeepCAD-RT was implemented on GPU with Nvidia TensorRT and delicately-designed time sequence to further accelerate the inference speed and decrease memory cost. We developed a user-friendly Matlab GUI for DeepCAD-RT , which is easy to install and convenient to use. It has been tested on a Windows desktop with Intel i9 CPU and 128G RAM.  
 
 <center><img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/GUI.png?raw=true" width="600" align="middle"></center> 
 
