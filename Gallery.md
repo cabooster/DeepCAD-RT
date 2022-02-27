@@ -4,7 +4,6 @@ title: Gallery
 ---
 
 
-haha
 <center><h2>1. DeepCAD-RT enhances the in vivo recording of calcium transients in dendritic spines </h2></center><br>
 
 <center><iframe width="680" height="400" src="https://www.youtube.com/embed/oH5L7AxUxOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> 
