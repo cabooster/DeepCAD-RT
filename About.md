@@ -27,7 +27,7 @@ The causes of this photon-limited challenge are as follows:
 - Recording fast biological processes necessitates high imaging speed and the **short dwell time** further intensifies the shortage of photons. 
 - The **quantum nature of photons** makes the stochasticity (shot noise<sup>*</sup>) of optical measurements inevitable. The intensity detected by photoelectric sensors follows a Poisson distribution parameterized with the exact photon count. In fluorescence imaging, detection noise dominated by photon shot noise exacerbates the measurement uncertainty and obstructs the veritable visualization of underlying structures, potentially altering morphological and functional interpretations that follow. 
 
-**In optics, shot noise describes fluctuations in the number of photons detected as they occur independently of each other. There are other noise mechanisms in optical signals that often make the contribution of shot noise appear negligible. When these noises are not present, optical detection is said to be 'photon noise limited' because only shot noise is left.*
+**Shot noise: In optics, shot noise describes fluctuations in the number of photons detected as they occur independently of each other. There are other noise mechanisms in optical signals that often make the contribution of shot noise appear negligible. When these noises are not present, optical detection is said to be 'photon noise limited' because only shot noise is left.*
 
 
 
@@ -39,9 +39,7 @@ To capture enough photons for satisfactory imaging sensitivity, researchers have
 
 ### Our Contribution
 
-...
-
-
+We present a versatile method DeepCAD-RT to denoise fluorescence images with rapid processing speed that can be incorporated with the microscope acquisition system to achieve real-time denoising. Our method is based on deep self-supervised learning and the original low-SNR data can be directly used for training convolutional networks, making it particularly advantageous in functional imaging where the sample is undergoing fast dynamics and capturing ground-truth data is hard or impossible. We have demonstrated extensive experiments including calcium imaging in mice, zebrafish, and flies, cell migration observations, and the imaging of a new genetically encoded ATP sensor, covering both 2D single-plane imaging and 3D volumetric imaging. Qualitative and quantitative evaluations show that our method can substantially enhance fluorescence time-lapse imaging data and permit high-sensitivity imaging of biological dynamics beyond the shot-noise limit.
 
 
 

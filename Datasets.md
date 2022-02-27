@@ -3,11 +3,11 @@ layout: page
 title: Datasets
 ---
 
-The data used for training and validation of DeepCAD-RT are made publicly available here. These data were captured by a standard two-photon microscope with multi-color detection capability and a customized two-photon microscope with two strictly synchronized detection paths. The signal intensity of the high-SNR path is 10-fold higher than that of the low-SNR path. We provided 11 groups of recordings, including the synthetic calcium imaging data, recordings of *in vivo* calcium dynamics in the brains of zebrafish and *Drosophila*,  as well as volumetric imaging in the mouse brain. All data are listed in the table below. You can download these data directly by clicking the `hyperlinks` appended in the 'Title' column. 
+The data used for training and validation of DeepCAD-RT are made publicly available here. These data were captured by a standard two-photon microscope with multi-color detection capability and a customized two-photon microscope with two strictly synchronized detection paths. The signal intensity of the high-SNR path is 10-fold higher than that of the low-SNR path. We provided 11 groups of recordings, including the synthetic calcium imaging data, recordings of *in vivo* calcium dynamics in the brains of zebrafish and *Drosophila*,  as well as volumetric imaging in the mouse brain. All data are listed in the table below. You can download these data directly by clicking the `hyperlinks` appended in the `Title` column. 
 
 ## Download links
 
-| No.  |                            Title                             |      Events       |  Pixel size  | Frame/volume rate | Imaging Depth<sup>a</sup> | Data size |     Comments      |
+| No.  |                            Title                             |      Events       |  Pixel size  | Frame/volume rate | Imaging Depth<sup>*</sup> | Data size |     Comments      |
 | :--: | :----------------------------------------------------------: | :---------------: | :----------: | :---------------: | :-----------------------: | :-------: | :---------------: |
 |  1   | Synthetic calcium imaging data<a href="https://doi.org/10.5281/zenodo.6254739"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.6254739.svg" alt="DOI"></a> | Calcium transient | 1.020 μm/pxl |       30 Hz       |          200 μm           |  29.8 GB  | Low-SNR/high-SNR  |
 |  2   | Mouse dendritic spines <a href="https://doi.org/10.5281/zenodo.6275571"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.6275571.svg" alt="DOI"></a> | Calcium transient | 0.155 μm/pxl |       30 Hz       |           40 μm           |  21.7 GB  | Low-SNR/high-SNR  |
@@ -22,7 +22,7 @@ The data used for training and validation of DeepCAD-RT are made publicly availa
 |  11  |                  Mouse neuronal populations                  | Calcium transient | 0.977 μm/pxl |       30 Hz       |         90-180 μm         |  49.9 GB  | Low-SNR/high-SNR  |
 
 ```
-a.	Depth: imaging depth below the brain surface. Only for mouse experiments. 
+*Depth: imaging depth below the brain surface. Only for mouse experiments. 
 ```
 
 ## Citation

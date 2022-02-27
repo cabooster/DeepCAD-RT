@@ -50,7 +50,7 @@ $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
 
 ### Demos
 
-To try out the python file, please activate deepcadrt conda environment:
+To try out the python file, please activate `deepcadrt` conda environment:
 
 ```
 $ conda activate deepcadrt
@@ -59,7 +59,7 @@ $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
 
 **Example training**
 
-To  train your own DeepCAD-RT network, we recommend to start with the demo file `demo_train_pipeline.py`  in `DeepCAD_RT_pytorch` subfolder. You can try our demo files directly or edit some parameters appropriate to your hardware or data. 
+To  train your own DeepCAD-RT network, we recommend to start with the demo file `demo_train_pipeline.py`  in `DeepCAD_RT_pytorch` subfolder. You can try our demo files directly or edit training parameters appropriate to your hardware and data. 
 
 ```
 python demo_train_pipeline.py
@@ -67,7 +67,7 @@ python demo_train_pipeline.py
 
 **Example testing**
 
-To test the denoising performance with model files, you can use our demo noisy data and correspoding model or edit some parameters to test your own model in the demo file `demo_test_pipeline.py` .
+To test the denoising performance with pre-trained models, you can use our demo data and correspoding models or edit parameters to test your own model in the demo file `demo_test_pipeline.py` .
 
 ```
 python demo_test_pipeline.py
@@ -75,7 +75,7 @@ python demo_test_pipeline.py
 
 ## Jupyter notebook
 
-The notebooks provide a simple and friendly way to implement DeepCAD-RT. They are located in the `DeepCAD_RT_pytorch/notebooks`. Before you launch the Jupyter notebooks, please configure the `deepcadrt` environment following the instruction in `Environment configuration` in [Python source code part](#python-source-code). And then, you can try out the notebook by typing following commands:
+The notebooks `demo_train_pipeline.ipynb` and `demo_test_pipeline.ipynb` provide a simple and friendly way to implement DeepCAD-RT. They are located in the `DeepCAD_RT_pytorch/notebooks`. Before you launch the Jupyter notebooks, please configure the `deepcadrt` environment following the instruction in `Environment configuration` in the [last section](#python-source-code). And then, you can try out the notebooks by typing following commands:
 
 ```
 $ conda activate deepcadrt
@@ -87,7 +87,7 @@ $ jupyter notebook
 
 ## Colab notebook
 
-You can also run DeepCAD-RT in google colab with a GPU: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STAR-811/DeepCAD-RT-new/blob/master/DeepCAD_RT_pytorch/notebooks/DeepCAD_RT_demo_colab.ipynb)
+You can also run DeepCAD-RT in Google Colab with a GPU: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STAR-811/DeepCAD-RT-new/blob/master/DeepCAD_RT_pytorch/notebooks/DeepCAD_RT_demo_colab.ipynb)
 
 *This is a toy example with a slow rate because of the limited performance of the GPU offered by Colab. You can increase the `train_datasets_size` and `n_epochs` with a more powerful GPU, and training and testing time can be further shortened.*
 
@@ -125,11 +125,11 @@ To achieve real-time denoising during imaging process, DeepCAD-RT was implemente
 
 #### Install
 
-Download exe file in our [cloud disk](https://cloud.tsinghua.edu.cn/f/ceebcebded4249c69540/).
+Download the `.exe` file in our [cloud disk](https://cloud.tsinghua.edu.cn/f/ceebcebded4249c69540/).
 
 #### Model preparation
 
-Before inference, you should transfer pth model to ONNX model, then transfer ONNX model to Engine file. When you change your GPU, the Engine file should be rebuilt.
+Before inference, you should transfer pth model to ONNX model, and then transfer ONNX model to Engine file. When you change your GPU, the Engine file should be rebuilt.
 
    **pth model to ONNX model:**
 
@@ -153,7 +153,7 @@ Before inference, you should transfer pth model to ONNX model, then transfer ONN
 
    The recommended patch size is 200 × 200 × 80 pixels, which can achieve the optimal performance. Put the pth model and yaml file in `./pth` path.  The default name of ONNX file name is the model file name.
 
-   We also provide pre-trained ONNX model, which can be found in `./model` .  The patch size of `cal_mouse_mean_200_40_full.onnx` and `cal_mouse_mean_200_80_full.onnx` are  200 × 200 × 40 and 200 × 200 × 80, respectively. The calcium imaging data used for training these model were captured by our customized two-photon microscope on mouse spines:
+   We also provide pre-trained ONNX model, which can be found in `./model` .  The patch size of `cal_mouse_mean_200_40_full.onnx` and `cal_mouse_mean_200_80_full.onnx` are  200 × 200 × 40 pixels and 200 × 200 × 80 pixels, respectively. The calcium imaging data used for training these model were captured by our customized two-photon microscope on mouse spines:
 
 ​    *Key imaging parameters of training data:*
 
@@ -199,7 +199,7 @@ Matlab configuration:
    DeepCAD_RT 
    ```
 
-5. Set the parameters in GUI
+5. Set the parameters in GUI:
 
    `Engine file`: Engine file root path. Click `...` to browse file folder and choose the path.
 
@@ -213,27 +213,27 @@ Matlab configuration:
 
    `Display setting`: 
 
-   `Manual` mode: You can design the minimum and maximum intensity value for noisy/denoised image display.
+   `Manual` mode: You can design the minimum and maximum intensity value for noisy/denoised image displayment.
 
    `Auto` mode: The contrast of display image will be set automatically. It will be a little slower than `Manual` mode.
 
    `Advanced`: Advanced parameters setting.
 
-   `Patch size (x,y,t)`: These three parameters depend on the patch size you set when convert Pytorch model to ONNX model.
+   `Patch size (x,y,t)`: These three parameters depend on the patch size you set when you convert Pytorch model to ONNX model.
 
-   `Overlap factor`: The overlap factor between two adjacent patches. The recommend number is between 0.125 to 0.4. Larger overlap factor means better performance but lower inference speed.
+   `Overlap factor`: The overlap factor between two adjacent patches. The recommended number is between 0.125 and 0.4. Larger overlap factor means better performance but lower inference speed.
 
-   `Input batch size`: The number of frames per batch. The recommend number is between 50 to 100. It should be larger than patch size in t dimension.
+   `Input batch size`: The number of frames per batch. The recommended number is between 50 and 100. It should be larger than patch size in t dimension.
 
-   `Overlap frames between batches`: The number of overlap slice between neighboring batch. The recommend number is between 5 to 10. More overlap frames mean better performance but lower inference speed.
+   `Overlap frames between batches`: The number of overlap slice between neighboring batch. The recommended number is between 5 and 10. More overlap frames mean better performance but lower inference speed.
 
-6. After set all parameters, click  `Configure`. When you click `Configure` for the first time, the initializer program will execute  automatically.
+6. After set all parameters, please click  `Configure`. When you click `Configure` for the first time, the initializer program will execute automatically.
 
 7. You can click `GRAB` in ScanImage and begin imaging.
 
 8. Before every imaging process, you should click  `Configure`.
 
-### Demo video
+### GUI demo video
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/u1ejSaVvWiY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </center>
 
