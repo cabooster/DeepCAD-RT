@@ -27,7 +27,7 @@ title: Gallery
 
 
 
-*Time-lapse imaging of the calcium dynamics of telencephalic neurons in the zebrafish brain. Top, the original low-SNR data. Middle, DeepCAD-RT enhanced data. Bottom, high-SNR recording with 10-fold SNR. Magnified views show the neural activity of the yellow boxed region in a short period. Scale bar, 20 μm for the entire FOV and 5 μm for magnified views.*
+*Time-lapse imaging of the calcium dynamics of telencephalic neurons in the zebrafish brain (GCaMP6s). Top, the original low-SNR data. Middle, DeepCAD-RT enhanced data. Bottom, high-SNR recording with 10-fold SNR. Magnified views show the neural activity of the yellow boxed region in a short period. Scale bar, 20 μm for the entire FOV and 5 μm for magnified views.*
 
 
 
@@ -44,7 +44,7 @@ title: Gallery
 
 
 
-*Denoising performance of DeepCAD on calcium imaging of Drosophila mushroom body (GCaMP6f). The same frame is shown for the original low-SNR data (left), DeepCAD-RT denoised image (middle), and high-SNR image with 10-fold SNR (right). Magnified views show snapshots of the yellow boxed region at three moments. Scale bar, 10 μm for the whole FOV and 5 μm for magnified views.*
+*Denoising performance of DeepCAD on calcium imaging of Drosophila mushroom body (GCaMP7f). The same frame is shown for the original low-SNR data (left), DeepCAD-RT denoised image (middle), and high-SNR image with 10-fold SNR (right). Magnified views show snapshots of the yellow boxed region at three moments. Scale bar, 10 μm for the whole FOV and 5 μm for magnified views.*
 
 
 
