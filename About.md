@@ -56,7 +56,7 @@ We present a versatile method **DeepCAD-RT** to denoise fluorescence images with
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/gallery_ATP.png?raw=true" width="850" align="middle"></center>
 
 
-<center>More demo images and videos are demonstrated in <a href='https://cabooster.github.io/DeepCAD-RT/Gallery/'>Gallery</a></center>. For more details please refer to <a href='https://www.nature.com/articles/s41592-021-01225-0'>the companion paper</a></center>.
+<center>More demo images and videos are demonstrated in <a href='https://cabooster.github.io/DeepCAD-RT/Gallery/'>Gallery</a></center>. More details please refer to <a href='https://www.nature.com/articles/s41592-021-01225-0'>the companion paper</a></center>.
 
 
 ## Citation
