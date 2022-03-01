@@ -51,7 +51,7 @@ We optimized the hardware deployment and achieved an overall improvement of a <b
  <br>
   
   <p>
-    <br><br><br>
+    <br><br>
     <center><h2>Real-time implementation </h2></center>
 
   To achieve real-time processing during imaging acquisition, we made a program interface to incorporate DeepCAD-RT into our image acquisition software (Scanimage 5.7, Vidrio Technologies). For further acceleration and memory conservation, the inference of DeepCAD-RT was optimally deployed on GPU with TensorRT (NVIDIA), programmed in C++ for best hardware interaction, and then compiled in Matlab (MathWorks). Three parallel threads were designed for imaging, data processing, and display. The schedule for multi-thread programming is depicted in the following figure. The real-time implementation of DeepCAD-RT has been packaged as a free plugin with a user-friendly interface, and it could also be called by a Matlab script.
