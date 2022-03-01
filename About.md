@@ -23,7 +23,7 @@ title: About
 - Recording fast biological processes necessitates high imaging speed and the **short dwell time** further intensifies the shortage of photons. 
 - The **quantum nature of photons** makes the stochasticity (shot noise<sup>*</sup>) of optical measurements inevitable. The intensity detected by photoelectric sensors follows a Poisson distribution parameterized with the exact photon count. In fluorescence imaging, detection noise dominated by photon shot noise exacerbates the measurement uncertainty and obstructs the veritable visualization of underlying structures, potentially altering morphological and functional interpretations that follow. 
 
-*Shot noise: In optics, shot noise describes the fluctuations of the number of photons detected due to their occurrence independent of each other. There are other mechanisms of noise in optical signals which often dwarf the contribution of shot noise. But when these noises are suppressed, optical detection is said to be 'photon noise limited' because only shot noise is left. [[Wikipedia]](https://en.wikipedia.org/wiki/Shot_noise#)*
+***Shot noise**: In optics, shot noise describes the fluctuations of the number of photons detected due to their occurrence independent of each other. There are other mechanisms of noise in optical signals which often dwarf the contribution of shot noise. But when these noises are suppressed, optical detection is said to be 'photon noise limited' because only shot noise is left. [[Wikipedia]](https://en.wikipedia.org/wiki/Shot_noise#)*
 
 
 
