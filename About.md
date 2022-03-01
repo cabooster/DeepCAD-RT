@@ -32,7 +32,7 @@ title: About
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad6.png?raw=true" width="1000" align="middle" /></center>
 
 
-Considering the detection physics, three sources mainly contribute to the detection noise in fluorescence imaging, namely **the dark noise, the photon shot noise, and the readout noise**. Among them, the dark noise and the shot noise follow a Poisson distribution and the readout noise follows a Gaussian distribution. Hence, the detection noise of fluorescence microscopy follows a Mixed Poisson-Gaussian (MPG) distribution. Benefiting from advanced manufacturing technologies of integrated circuits and high-performance sensor cooling methods, the dark noise and the readout noise are relatively low. **Thus, the photon shot noise plays the dominant role in the MPG noise of fluorescence microscopy.**
+Considering the detection physics, three sources mainly contribute to the detection noise in fluorescence imaging, namely **the dark noise, the photon shot noise, and the readout noise**. Among them, the dark noise and the shot noise follow a Poisson distribution and the readout noise follows a Gaussian distribution. Hence, the detection noise of fluorescence microscopy follows a Mixed Poisson-Gaussian (MPG) distribution. Benefiting from advanced manufacturing technologies of integrated circuits and high-performance sensor cooling methods, the dark noise and the readout noise are relatively low. **Thus, the photon shot noise plays the dominant role in fluorescence microscopy.**
 
 
 ### Our Contribution
