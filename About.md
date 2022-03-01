@@ -20,7 +20,9 @@ title: About
 - The **low photon yield** of fluorescent indicators and their **low concentration** in labeled cells result in the lack of photons at the source. 
 
 - Although using higher excitation power is a straightforward way to increase fluorescence photons, living systems are too fragile to tolerate high excitation dosage. Extensive experiments have shown that illumination-induced **photobleaching, phototoxicity, and tissue heating** will disturb crucial cellular processes including cell proliferation, migration, vesicle release, neuronal firing, etc. 
-- Recording fast biological processes necessitates high imaging speed and the **short dwell time** further intensifies the shortage of photons. 
+
+- Recording fast biological processes necessitates high imaging speed and the **short dwell time** further intensifies the shortage of photons.
+ 
 - The **quantum nature of photons** makes the stochasticity (shot noise<sup>*</sup>) of optical measurements inevitable. The intensity detected by photoelectric sensors follows a Poisson distribution parameterized with the exact photon count. In fluorescence imaging, detection noise dominated by photon shot noise exacerbates the measurement uncertainty and obstructs the veritable visualization of underlying structures, potentially altering morphological and functional interpretations that follow. 
 
 ***Shot noise**: In optics, shot noise describes the fluctuations of the number of photons detected due to their occurrence independent of each other. There are other mechanisms of noise in optical signals which often dwarf the contribution of shot noise. But when these noises are suppressed, optical detection is said to be 'photon noise limited' because only shot noise is left. [[Wikipedia]](https://en.wikipedia.org/wiki/Shot_noise#)*
