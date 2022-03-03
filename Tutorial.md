@@ -2,10 +2,7 @@
 layout: page
 title: DeepCAD-RT tutorial
 ---
-
-<img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/logo.PNG?raw=true" width="800" align="middle">
-
-
+<img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/logo.PNG?raw=true" width="700" align="right" />
 
 
 
