@@ -2,7 +2,7 @@
 layout: page
 title: About
 ---
-
+<img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/logo.PNG?raw=true" width="700" align="right" />
 ### [GitHub](https://github.com/cabooster/DeepCAD-RT) | [Paper](https://www.nature.com/articles/s41592-021-01225-0)
 
 ## Content
