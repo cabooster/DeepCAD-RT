@@ -89,7 +89,7 @@ $ jupyter notebook
 
 We also provide a cloud-based demo implemented with Google Colab. You can run DeepCAD in your browser using a cloud GPU without configuring the environment. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STAR-811/DeepCAD-RT-new/blob/master/DeepCAD_RT_pytorch/notebooks/DeepCAD_RT_demo_colab.ipynb)
 
-*This is a toy example with a slow rate because of the limited performance of the GPU offered by Colab. You can increase the `train_datasets_size` and `n_epochs` with a more powerful GPU, and training and testing time can be further shortened.*
+*This is a simple example with a slow rate because of the limited GPU performance offered by Colab. You can increase the `train_datasets_size` and `n_epochs` with a more powerful GPU, and training and testing time can be further shortened.*
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad7.png?raw=true" width="700" align="middle"></center> 
 
