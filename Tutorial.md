@@ -8,10 +8,10 @@ title: DeepCAD-RT tutorial
 
 ## Content
 
-- [Python source code](#1-python-source-code)
-- [Jupyter notebook](#2-jupyter-notebook)
-- [Colab notebook](#3-colab-notebook)
-- [Matlab implementation for real-time processing](#4-matlab-implementation-for-real-time-processing)
+- [1. Python source code](#1-python-source-code)
+- [2. Jupyter notebook](#2-jupyter-notebook)
+- [3. Colab notebook](#3-colab-notebook)
+- [4. Matlab implementation for real-time processing](#4-matlab-implementation-for-real-time-processing)
 
 ## 1. Python source code
 
