@@ -8,21 +8,21 @@ title: DeepCAD-RT tutorial
 
 ## Content
 
-- [Python source code](#python-source-code)
-- [Jupyter notebook](#jupyter-notebook)
-- [Colab notebook](#colab-notebook)
-- [Matlab implementation for real-time processing](#matlab-implementation-for-real-time-processing)
+- [Python source code](#1-python-source-code)
+- [Jupyter notebook](#2-jupyter-notebook)
+- [Colab notebook](#3-colab-notebook)
+- [Matlab implementation for real-time processing](#4-matlab-implementation-for-real-time-processing)
 
-## Python source code
+## 1. Python source code
 
-### Our environment 
+### 1.1 Our environment 
 
 * Ubuntu 16.04 
 * Python 3.6
 * Pytorch 1.8.0
 * NVIDIA GPU (GeForce RTX 3090) + CUDA (11.1)
 
-### Environment configuration
+### 1.2 Environment configuration
 
 1. Create a virtual environment and install PyTorch. In the 3rd step, please select the correct Pytorch version that matches your CUDA version from [https://pytorch.org/get-started/previous-versions/](https://pytorch.org/get-started/previous-versions/).
 
@@ -38,14 +38,14 @@ title: DeepCAD-RT tutorial
    $ pip install deepcad
    ```
 
-### Download the source code
+### 1.3 Download the source code
 
 ```
 $ git clone git://github.com/cabooster/DeepCAD-RT
 $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
 ```
 
-### Demos
+### 1.4 Demos
 
 To try out the python file, please activate `deepcadrt` conda environment:
 
@@ -70,7 +70,7 @@ To test the denoising performance with pre-trained models, you can use our demo 
 python demo_test_pipeline.py
 ```
 
-## Jupyter notebook
+## 2. Jupyter notebook
 
 The notebooks `demo_train_pipeline.ipynb` and `demo_test_pipeline.ipynb` provide a simple and friendly way to implement DeepCAD-RT. They are located in the `DeepCAD_RT_pytorch/notebooks`. Before you launch the Jupyter notebooks, please configure the `deepcadrt` environment following the instruction in `Environment configuration` in the [last section](#python-source-code). And then, you can try out the notebooks by typing following commands:
 
@@ -82,7 +82,7 @@ $ jupyter notebook
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad8.png?raw=true" width="700" align="middle"></center> 
 
-## Colab notebook
+## 3. Colab notebook
 
 We also provide a cloud-based demo implemented with Google Colab. You can run DeepCAD in your browser using a cloud GPU without configuring the environment. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STAR-811/DeepCAD-RT-new/blob/master/DeepCAD_RT_pytorch/notebooks/DeepCAD_RT_demo_colab.ipynb)
 
@@ -90,23 +90,23 @@ We also provide a cloud-based demo implemented with Google Colab. You can run De
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad7.png?raw=true" width="700" align="middle"></center> 
 
-## Matlab implementation for real-time processing
+## 4. Matlab implementation for real-time processing
 
 To achieve real-time denoising during imaging process, DeepCAD-RT was implemented on GPU with Nvidia TensorRT and delicately-designed time sequence to further accelerate the inference speed and decrease memory cost. We developed a user-friendly Matlab GUI for DeepCAD-RT , which is easy to install and convenient to use. It has been tested on a Windows desktop with Intel i9 CPU and 128G RAM.  
 
-<center><img src="https://github.com/STAR-811/Deepcad-RT-page/blob/master/images/GUI.png?raw=true" width="600" align="middle"></center> 
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/GUI2.png?raw=true" width="900" align="middle"></center> 
 
 
 
-### Required environment
+### 4.1 Required environment
 
 - Windows 10
-- Matlab 2018a (or newer version)
 - CUDA 11.0
 - CUDNN 8.0.5
+- Matlab 2018a (or newer version)
 - Visual Studio 2017
 
-### File description
+### 4.2 File description
 
 `deepcad_trt.m`: Fast processing in matlab & C++ and save tiff
 
@@ -118,11 +118,11 @@ To achieve real-time denoising during imaging process, DeepCAD-RT was implemente
 
 `./model`: save engine file
 
-### Instructions for use
+### 4.3 Instructions for use
 
 #### Install
 
-Download the `.exe` file in our [cloud disk](https://cloud.tsinghua.edu.cn/f/ceebcebded4249c69540/).
+Download the `.exe` file in our [cloud disk](https://cloud.tsinghua.edu.cn/f/89410848303d40889078/).
 
 #### Model preparation
 
@@ -173,6 +173,8 @@ xxx\trtexec.exe --onnx=deepcad_200_80.onnx --explicitBatch --saveEngine=deepcad_
 
 
 #### Realtime inference with ScanImage
+
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/GUI.png?raw=true" width="600" align="middle"></center> 
 
 Matlab configuration:
 
