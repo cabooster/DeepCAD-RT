@@ -94,7 +94,7 @@ We also provide a cloud-based demo implemented with Google Colab. You can run De
 
 To achieve real-time denoising during imaging process, DeepCAD-RT was implemented on GPU with Nvidia TensorRT and delicately-designed time sequence to further accelerate the inference speed and decrease memory cost. We developed a user-friendly Matlab GUI for DeepCAD-RT , which is easy to install and convenient to use. It has been tested on a Windows desktop with Intel i9 CPU and 128G RAM.  
 
-<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/GUI2.png?raw=true" width="900" align="middle"></center> 
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/GUI2.png?raw=true" width="950" align="middle"></center> 
 
 
 
@@ -108,7 +108,9 @@ To achieve real-time denoising during imaging process, DeepCAD-RT was implemente
 
 ### 4.2 File description
 
-`deepcad_trt.m`: Fast processing in matlab & C++ and save tiff
+`deepcad_trt.m`: Fast processing and save tiff in matlab & C++
+
+`deepcad_trt_nosave.m`: Fast processing in C++ and save tiff in matlab
 
 `realtime_core.m`: Realtime simulation in matlab & C++ and save tiff
 
@@ -126,7 +128,7 @@ Download the `.exe` file in our [cloud disk](https://cloud.tsinghua.edu.cn/f/894
 
 #### Model preparation
 
-Before inference, you should transfer pth model to ONNX model, and then transfer ONNX model to Engine file. When you change your GPU, the Engine file should be rebuilt.
+Before inference, you should convert pth model to ONNX model, and then convert ONNX model to Engine file. When you change your GPU, the Engine file should be rebuilt.
 
    **pth model to ONNX model:**
 
@@ -137,10 +139,10 @@ Before inference, you should transfer pth model to ONNX model, and then transfer
    $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
    ```
 
-2. Run the `transfer_pth_to_onnx.py`.  Parameters in following command can be modified as required.
+2. Run the `convert_pth_to_onnx.py`.  Parameters in following command can be modified as required.
 
    ```
-   $ os.system('python transfer_pth_to_onnx.py --patch_x 200 --patch_y 200 --patch_t 80 --denoise_model ModelForPytorch --GPU 0')
+   $ os.system('python convert_pth_to_onnx.py --patch_x 200 --patch_y 200 --patch_t 80 --denoise_model ModelForPytorch --GPU 0')
    
    @parameters
    --patch_x, --patch_y, --patch_t: patch size in three dimensions
