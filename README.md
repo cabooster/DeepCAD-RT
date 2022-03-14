@@ -103,7 +103,7 @@ $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
 
 **Example training**
 
-To train your own DeepCAD-RT network, we recommend starting with the demo file `demo_train_pipeline.py`  in `DeepCAD_RT_pytorch` subfolder. One of our demo data will be downloaded by default to `DeepCAD_RT_pytorch/datasets` folder. You can also download other data in [our uploaded datasets](https://cabooster.github.io/DeepCAD-RT/Datasets/) or use your data after editing training parameters `datasets_path`. 
+To train your own DeepCAD-RT network, we recommend starting with the demo file `demo_train_pipeline.py`  in `DeepCAD_RT_pytorch` subfolder. One of our demo data will be downloaded by default to `DeepCAD_RT_pytorch/datasets` folder. You can also download other data in [our uploaded datasets](https://cabooster.github.io/DeepCAD-RT/Datasets/) or use your data after editing the training parameter `datasets_path`. 
 
 ```
 python demo_train_pipeline.py
@@ -111,7 +111,7 @@ python demo_train_pipeline.py
 
 **Example testing**
 
-To test the denoising performance with pre-trained models, you can run the demo file `demo_test_pipeline.py` . One of our demo data and corresponding model will be downloaded by default to `DeepCAD_RT_pytorch/datasets` and `DeepCAD_RT_pytorch/pth` folder, respectively. This file can be applied to your data after editing testing parameters `datasets_path` and `denoise_model`.
+To test the denoising performance with pre-trained models, you can run the demo file `demo_test_pipeline.py` . One of our demo data and corresponding model will be downloaded by default to `DeepCAD_RT_pytorch/datasets` and `DeepCAD_RT_pytorch/pth` folders, respectively. This file can be applied to your data after editing testing parameters `datasets_path` and `denoise_model`.
 
 ```
 python demo_test_pipeline.py
