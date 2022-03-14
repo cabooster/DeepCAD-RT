@@ -8,7 +8,7 @@ To achieve real-time denoising, DeepCAD-RT was optimally deployed on GPU using T
 
 - [Required environment](#required-environment)
 - [File description](#file-description)
-- [Instructions for use](#instructions)
+- [Instructions for use](#instructions-for-use)
 - [Demo video](#demo-video)
 
 ## Required environment
@@ -27,13 +27,13 @@ To achieve real-time denoising, DeepCAD-RT was optimally deployed on GPU using T
 
 `realtime_core.m`: Realtime simulation in matlab & C++ and save tiff
 
-`./deepcad/+deepcadSession`: Realtime inference with data flow from ScanImage
+`./deepcad/+deepcadSession`: Real-time inference with data flow from ScanImage
 
-`./results`: save result images
+`./results`: path to save result images
 
-`./model`: save engine file
+`./model`: path for the engine file
 
-## Instructions
+## Instructions for use
 
 ### Install
 
@@ -41,18 +41,18 @@ Download the `.exe` file in our [cloud disk](https://cloud.tsinghua.edu.cn/f/894
 
 ### Model preparation
 
-Before inference, you should convert pth model to ONNX model, and then convert ONNX model to Engine file. When you change your GPU, the Engine file should be rebuilt.
+Before using a model, you should first convert the pth model to an ONNX model, and then convert the ONNX model to an Engine file. When you change your GPU, the Engine file should be rebuilt.
 
    **pth model to ONNX model:**
 
-1. Go to `DeepCAD-RT/DeepCAD_RT_pytorch/` directory and activate `deepcadrt` conda environment [[Configuration tutorial for conda environment](#python-source-code)].  
+1. Go to `DeepCAD-RT/DeepCAD_RT_pytorch/` directory and activate the `deepcadrt` environment [[Configuration tutorial for conda environment](#python-source-code)].  
 
    ```
    $ conda activate deepcadrt
    $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
    ```
 
-2. Run the `convert_pth_to_onnx.py`.  Parameters in following command can be modified as required.
+2. Run the `convert_pth_to_onnx.py`. Parameters in the following command can be modified as required.
 
    ```
    $ os.system('python convert_pth_to_onnx.py --patch_x 200 --patch_y 200 --patch_t 80 --denoise_model ModelForPytorch --GPU 0')
@@ -63,9 +63,9 @@ Before inference, you should convert pth model to ONNX model, and then convert O
    --denoise_model: the folder containing the pre-trained models.
    ```
 
-   The recommended patch size is 200 × 200 × 80 pixels, which can achieve the optimal performance. Put the pth model and yaml file in `./pth` path.  The default name of ONNX file name is the model file name.
+   The recommended patch size is 200 × 200 × 80 pixels. Put the pth model and yaml file in `./pth` path.  The default name of ONNX file name is the model file name.
 
-   We also provide pre-trained ONNX model, which can be found in `./model` .  The patch size of `cal_mouse_mean_200_40_full.onnx` and `cal_mouse_mean_200_80_full.onnx` are  200 × 200 × 40 pixels and 200 × 200 × 80 pixels, respectively. The calcium imaging data used for training these model were captured by our customized two-photon microscope on mouse spines:
+   We also provide a pre-trained ONNX model in `./model` . The patch size of `cal_mouse_mean_200_40_full.onnx` and `cal_mouse_mean_200_80_full.onnx` are  200 × 200 × 40 pixels and 200 × 200 × 80 pixels, respectively. The calcium imaging data used for training these model were captured by our customized two-photon microscope:
 
 ​    *Key imaging parameters of training data:*
 
@@ -75,7 +75,7 @@ Before inference, you should convert pth model to ONNX model, and then convert O
 
 **ONNX model to Engine file:**
 
-3. Run following  cmd command in Windows10 system. Parameters can be modified as required: 
+3. Run the following command in Windows10 system. Parameters can be modified as required: 
 
 ```
 xxx\trtexec.exe --onnx=deepcad_200_80.onnx --explicitBatch --saveEngine=deepcad_fp16_200_80.engine --workspace=2000 --fp16
@@ -86,8 +86,7 @@ xxx\trtexec.exe --onnx=deepcad_200_80.onnx --explicitBatch --saveEngine=deepcad_
 ```
 
 
-
-### Realtime inference with ScanImage
+### Real-time inference with ScanImage
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/GUI.png?raw=true" width="600" align="middle"></center> 
 
@@ -115,40 +114,39 @@ Matlab configuration:
 
 5. Set the parameters in GUI:
 
-   `Engine file`: Engine file root path. Click `...` to browse file folder and choose the path.
+   `Engine file`: The path of the Engine file. Click `...` to open the file browser and choose the path.
 
-   `Save path`:Denoised image file save path. Click `...`  to browse file folder and choose the path
+   `Save path`:The path to save denoised images. Click `...` to open the file browser and choose the path
 
-   `Frames number`: Frame number of the noisy image you set in ScanImage interface. This parameter will update automatically when you click `Configure`. 
+   `Frame number`: Frame number of the noisy image you set in ScanImage interface. This parameter will update automatically when you click `Configure`. 
 
    <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/scanimage_parameter.png?raw=true" width="250" align="middle"></center>
 
-   **Attention: You should set frames number before you click `Configure`.**
+   **Attention: You should set the frame number before clicking `Configure`.**
 
    `Display setting`: 
 
-   `Manual` mode: You can design the minimum and maximum intensity value for noisy/denoised image displayment.
+   `Manual` mode: You can set the minimum and maximum intensity for image display.
 
-   `Auto` mode: The contrast of display image will be set automatically. It will be a little slower than `Manual` mode.
+   `Auto` mode: The contrast will be set automatically but slightly slower than `Manual` mode.
 
-   `Advanced`: Advanced parameters setting.
+   `Advanced`: Advanced settings.
 
-   `Patch size (x,y,t)`: These three parameters depend on the patch size you set when you convert Pytorch model to ONNX model.
+   `Patch size (x,y,t)`: The three parameters depend on the patch size you set when you convert Pytorch model to ONNX model.
 
    `Overlap factor`: The overlap factor between two adjacent patches. The recommended number is between 0.125 and 0.4. Larger overlap factor means better performance but lower inference speed.
 
-   `Input batch size`: The number of frames per batch. The recommended number is between 50 and 100. It should be larger than patch size in t dimension.
+   `Input batch size`: The number of frames per batch. The recommended value is between 50 and 100. It should be larger than the patch size in t dimension.
 
-   `Overlap frames between batches`: The number of overlap slice between neighboring batch. The recommended number is between 5 and 10. More overlap frames mean better performance but lower inference speed.
+   `Overlap frames between batches`: The number of overlapping slices between two adjacent batches. The recommended value is between 5 and 10. More overlapping frames lead to better performance but lower inference speed.
 
-6. After set all parameters, please click  `Configure`. When you click `Configure` for the first time, the initializer program will execute automatically.
+6. After set all parameters, please click `Configure`. If you click `Configure` for the first time, the initialization program will execute automatically.
 
-7. You can click `GRAB` in ScanImage and begin imaging.
+7. You can click `GRAB` in ScanImage and start imaging.
 
-8. Before every imaging process, you should click  `Configure`.
+8. Before each imaging session, you should click  `Configure`.
 
 ## Demo video
-
 
 
 [![IMAGE ALT TEXT](../images/sv1_video.png)](https://www.youtube.com/embed/u1ejSaVvWiY "Video Title")
