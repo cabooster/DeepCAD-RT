@@ -115,11 +115,11 @@ To achieve real-time denoising, DeepCAD-RT was optimally deployed on GPU using T
 
 `realtime_core.m`: Realtime simulation in Matlab & C++ and save tiff
 
-`./deepcad/+deepcadSession`: Realtime inference with data flow from ScanImage
+`./deepcad/+deepcadSession`: Real-time inference with data flow from ScanImage
 
-`./results`: save result images
+`./results`: Path to save result images
 
-`./model`: save engine file
+`./model`: Path for the engine file
 
 ### 4.3 Instructions for use
 
