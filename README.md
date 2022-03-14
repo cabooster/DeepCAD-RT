@@ -1,10 +1,18 @@
 # DeepCAD-RT: A versatile toolbox for microscopy imaging denoising
 
-<img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/logo.PNG?raw=true" width="700" align="middle" />
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/logo.PNG?raw=true" width="700" align="middle" /></center>
 
 ### [Project page](https://cabooster.github.io/DeepCAD-RT/) | [Paper](https://www.nature.com/articles/s41592-021-01225-0)
 
+## Contents
 
+- [Overview](#overview)
+- [Directory structure](#directory-structure)
+- [Pytorch code](#pytorch-code)
+- [Matlab GUI](#matlab-gui)
+- [Results](#results)
+- [License](./LICENSE)
+- [Citation](#citation)
 
 ## Overview
 
@@ -19,9 +27,43 @@ For more details, please see the companion paper where the method first appeared
 
 
 
-<img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/schematic.png?raw=true" width="800" align="middle">
+<img src="images/schematic.png" width="800" align="middle">
 
 
+
+## Directory structure
+
+```
+DeepCAD-RT
+|---DeepCAD_RT_pytorch #Pytorch implementation of DeepCAD-RT#
+|---|---demo_train_pipeline.py
+|---|---demo_test_pipeline.py
+|---|---convert_pth_to_onnx.py
+|---|---deepcad
+|---|---|---__init__.py
+|---|---|---utils.py
+|---|---|---network.py
+|---|---|---model_3DUnet.py
+|---|---|---data_process.py
+|---|---|---buildingblocks.py
+|---|---|---test_collection.py
+|---|---|---train_collection.py
+|---|---|---movie_display.py
+|---|---notebooks
+|---|---|---demo_train_pipeline.ipynb
+|---|---|---demo_test_pipeline.ipynb
+|---|---|---DeepCAD_RT_demo_colab.ipynb
+|---|---datasets
+|---|---|---DataForPytorch # project_name #
+|---|---|---|---data.tif
+|---|---pth
+|---|---|---ModelForPytorch
+|---|---|---|---model.pth
+|---|---|---|---model.yaml
+|---|---results
+|---|---|--- # test results#
+|---DeepCAD_RT_GUI #Matlab GUI of DeepCAD-RT#
+```
 
 ## Pytorch code
 
@@ -90,33 +132,35 @@ $ cd DeepCAD-RT/DeepCAD_RT_pytorch/notebooks
 $ jupyter notebook
 ```
 
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad8.png?raw=true" width="700" align="middle"></center> 
+
 ### Colab notebook
 
-We also provide a cloud-based demo implemented with Google Colab. You can run DeepCAD in your browser using a cloud GPU without configuring the environment. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cabooster/DeepCAD-RT/blob/master/DeepCAD_RT_pytorch/notebooks/DeepCAD_RT_demo_colab.ipynb)
+We also provide a cloud-based demo implemented with Google Colab. You can run DeepCAD in your browser using a cloud GPU without configuring the environment. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STAR-811/DeepCAD-RT-new/blob/master/DeepCAD_RT_pytorch/notebooks/DeepCAD_RT_demo_colab.ipynb)
 
 *This is a simple example with a slow rate because of the limited GPU performance offered by Colab. You can increase the `train_datasets_size` and `n_epochs` with a more powerful GPU, and training and testing time can be further shortened.*
 
-
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad7.png?raw=true" width="700" align="middle"></center> 
 
 ## Matlab GUI
 
 To achieve real-time denoising during imaging process, DeepCAD-RT is implemented on GPU with Nvidia TensorRT and delicately-designed time sequence to further accelerate the inference speed and decrease memory cost. We developed a user-friendly Matlab GUI for DeepCAD-RT , which is easy to install and convenient to use (has been tested on a Windows desktop with Intel i9 CPU and 128G RAM).  **Tutorials** on installing and using the GUI has been moved to [**this page**](https://github.com/STAR-811/DeepCAD-RT/tree/master/DeepCAD_RT_GUI).  
 
-<img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/GUI2.png?raw=true" width="950" align="middle">
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/GUI2.png?raw=true" width="950" align="middle"></center> 
 
 ## Results
 
 **1. Universal denoising for calcium imaging in zebrafish.**
 
-[![IMAGE ALT TEXT](https://github.com/cabooster/DeepCAD-RT/blob/page/images/sv3_video.png?raw=true.png)]( https://www.youtube.com/embed/GN0IO7bGoGg "Video Title")
+[![IMAGE ALT TEXT](images/sv3_video.png)]( https://www.youtube.com/embed/GN0IO7bGoGg "Video Title")
 
 **2. Denoising performance of DeepCAD-RT of neutrophils in the mouse brain in vivo.** 
 
-[![IMAGE ALT TEXT](https://github.com/cabooster/DeepCAD-RT/blob/page/images/sv8_video.png?raw=true.png)]( https://www.youtube.com/embed/eyLPVRcEGHs "Video Title")
+[![IMAGE ALT TEXT](images/sv8_video.png)]( https://www.youtube.com/embed/eyLPVRcEGHs "Video Title")
 
 **3. Denoising performance of DeepCAD-RT on a recently developed genetically encoded ATP sensor.**
 
-[![IMAGE ALT TEXT](https://github.com/cabooster/DeepCAD-RT/blob/page/images/sv10_video.png?raw=true.png)](https://www.youtube.com/embed/u1ejSaVvWiY "Video Title")
+[![IMAGE ALT TEXT](images/sv10_video.png)](https://www.youtube.com/embed/u1ejSaVvWiY "Video Title")
 
 More demo videos are demonstrated on [our website](https://cabooster.github.io/DeepCAD-RT/Gallery/).
 
@@ -124,7 +168,7 @@ More demo videos are demonstrated on [our website](https://cabooster.github.io/D
 
 If you use this code please cite the companion paper where the original method appeared: 
 
-Li, X., Zhang, G., Wu, J. et al. Reinforcing neuron extraction and spike inference in calcium imaging using deep self-supervised denoising. Nat Methods 18, 1395–1400 (2021). [https://doi.org/10.1038/s41592-021-01225-0](https://www.nature.com/articles/s41592-021-01225-0)
+Li, X., Zhang, G., Wu, J. et al. Reinforcing neuron extraction and spike inference in calcium imaging using deep self-supervised denoising. Nat Methods 18, 1395–1400 (2021). [https://doi.org/10.1038/s41592-021-01225-0](https://www.nature.com/articles/s41592-021-01225-0) 
 
 ```
 @article{li2021reinforcing,
