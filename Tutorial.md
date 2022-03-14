@@ -24,7 +24,7 @@ title: DeepCAD-RT tutorial
 
 ### 1.2 Environment configuration
 
-1. Create a virtual environment and install PyTorch. In the 3rd step, please select the correct Pytorch version that matches your CUDA version from [https://pytorch.org/get-started/previous-versions/](https://pytorch.org/get-started/previous-versions/).
+1. Create a virtual environment and install PyTorch. In the 3rd step, please select the correct Pytorch version that matches your CUDA version from [https://pytorch.org/get-started/previous-versions/](https://pytorch.org/get-started/previous-versions/). 
 
    ```
    $ conda create -n deepcadrt python=3.6
@@ -32,7 +32,7 @@ title: DeepCAD-RT tutorial
    $ pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
    ```
 
-2. We made a pip installable realease of DeepCAD [pypi](https://pypi.org/project/deepcad/). You can install it by simply entering following command:
+2. We made a pip installable realease of DeepCAD-RT [[pypi](https://pypi.org/project/deepcad/)]. You can install it by entering the following command:
 
    ```
    $ pip install deepcad
@@ -47,7 +47,7 @@ $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
 
 ### 1.4 Demos
 
-To try out the Python code, please activate `deepcadrt` conda environment:
+To try out the Python code, please activate `deepcadrt` conda environment first:
 
 ```
 $ conda activate deepcadrt
@@ -56,7 +56,8 @@ $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
 
 **Example training**
 
-To  train your own DeepCAD-RT network, we recommend to start with the demo file `demo_train_pipeline.py`  in `DeepCAD_RT_pytorch` subfolder. You can try our demo files directly or edit training parameters appropriate to your hardware and data. 
+To train a DeepCAD-RT model, we recommend starting with the demo script `demo_train_pipeline.py`. One demo dataset will be downloaded to the `DeepCAD_RT_pytorch/datasets` folder automatically. You can also download other data from [the companion webpage](https://cabooster.github.io/DeepCAD-RT/Datasets/) or use your own data by changing the training parameter `datasets_path`. 
+
 
 ```
 python demo_train_pipeline.py
@@ -64,7 +65,7 @@ python demo_train_pipeline.py
 
 **Example testing**
 
-To test the denoising performance with pre-trained models, you can use our demo data and correspoding models or edit parameters to test your own model in the demo file `demo_test_pipeline.py` .
+To test the denoising performance with pre-trained models, you can run the demo script `demo_test_pipeline.py` . A demo dataset and its denoising model will be automatically downloaded to `DeepCAD_RT_pytorch/datasets` and `DeepCAD_RT_pytorch/pth`, respectively. You can change the dataset and the model by changing the parameters `datasets_path` and `denoise_model`.
 
 ```
 python demo_test_pipeline.py
@@ -72,7 +73,7 @@ python demo_test_pipeline.py
 
 ## 2. Jupyter notebook
 
-The notebooks `demo_train_pipeline.ipynb` and `demo_test_pipeline.ipynb` provide a simple and friendly way to implement DeepCAD-RT. They are located in the `DeepCAD_RT_pytorch/notebooks`. Before you launch the Jupyter notebooks, please configure the `deepcadrt` environment following the instruction in `Environment configuration` in the [last section](#python-source-code). And then, you can try out the notebooks by typing following commands:
+We provide simple and user-friendly Jupyter notebooks to implement DeepCAD-RT. They are in the `DeepCAD_RT_pytorch/notebooks` folder. Before you launch the notebooks, please configure an environment following the instruction in [Environment configuration](#environment-configuration) . And then, you can launch the notebooks through the following commands:
 
 ```
 $ conda activate deepcadrt
@@ -84,15 +85,15 @@ $ jupyter notebook
 
 ## 3. Colab notebook
 
-We also provide a cloud-based demo implemented with Google Colab. You can run DeepCAD in your browser using a cloud GPU without configuring the environment. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STAR-811/DeepCAD-RT-new/blob/master/DeepCAD_RT_pytorch/notebooks/DeepCAD_RT_demo_colab.ipynb)
+We also provide a cloud-based notebook implemented with Google Colab. You can run DeepCAD-RT directly in your browser using a cloud GPU without configuring the environment. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cabooster/DeepCAD-RT/blob/main/DeepCAD_RT_pytorch/notebooks/DeepCAD_RT_demo_colab.ipynb)
 
-*This is a simple example with a slow rate because of the limited GPU performance offered by Colab. You can increase the `train_datasets_size` and `n_epochs` with a more powerful GPU, and training and testing time can be further shortened.*
+*Note: Colab notebook needs longer time to train and test because of the limited GPU performance offered by Colab.*
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad7.png?raw=true" width="700" align="middle"></center> 
 
 ## 4. Matlab implementation for real-time processing
 
-To achieve real-time denoising during imaging process, DeepCAD-RT was implemented on GPU with Nvidia TensorRT and delicately-designed time sequence to further accelerate the inference speed and decrease memory cost. We developed a user-friendly Matlab GUI for DeepCAD-RT , which is easy to install and convenient to use. It has been tested on a Windows desktop with Intel i9 CPU and 128G RAM.  
+To achieve real-time denoising, DeepCAD-RT was optimally deployed on GPU using TensorRT (Nvidia) for further acceleration and memory reduction. We also designed a sophisticated time schedule for multi-thread processing. Based on a two-photon microscope, real-time denoising has been achieved with our Matlab GUI of DeepCAD-RT (tested on a Windows desktop with Intel i9 CPU and 128 GB RAM).
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/GUI2.png?raw=true" width="950" align="middle"></center> 
 
