@@ -139,7 +139,7 @@ We also provide a cloud-based notebook implemented with Google Colab. You can ru
 
 ## Matlab GUI
 
-To achieve real-time denoising during imaging, DeepCAD-RT was optimally deployed on GPU using Nvidia TensorRT for further acceleration and memory reduction. We also designed a sophisticated time schedule for multi-thread processing. Based on a two-photon microscope, real-time denoising has been achieved with our Matlab GUI of DeepCAD-RT (tested on a Windows desktop with Intel i9 CPU and 128 GB RAM).  **Tutorials** on installing and using the GUI has been moved to [**this page**](https://github.com/STAR-811/DeepCAD-RT/tree/master/DeepCAD_RT_GUI).  
+To achieve real-time denoising, DeepCAD-RT was optimally deployed on GPU using TensorRT (Nvidia) for further acceleration and memory reduction. We also designed a sophisticated time schedule for multi-thread processing. Based on a two-photon microscope, real-time denoising has been achieved with our Matlab GUI of DeepCAD-RT (tested on a Windows desktop with Intel i9 CPU and 128 GB RAM).  **Tutorials** on installing and using the GUI has been moved to [**this page**](https://github.com/STAR-811/DeepCAD-RT/tree/master/DeepCAD_RT_GUI).  
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/GUI2.png?raw=true" width="950" align="middle"></center> 
 
