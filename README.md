@@ -145,15 +145,15 @@ To achieve real-time denoising during imaging, DeepCAD-RT was optimally deployed
 
 ## Results
 
-**1. Denoising calcium imaging in zebrafish.**
+### 1. DeepCAD-RT massively improves the imaging SNR of neuronal population recordings in the zebrafish brain.
 
 [![IMAGE ALT TEXT](images/sv3_video.png)]( https://www.youtube.com/embed/GN0IO7bGoGg "Video Title")
 
-**2. Denoising performance of DeepCAD-RT of neutrophils in the mouse brain in vivo.** 
+### 2. Denoising performance of DeepCAD-RT of neutrophils in the mouse brain in vivo.
 
 [![IMAGE ALT TEXT](images/sv8_video.png)]( https://www.youtube.com/embed/eyLPVRcEGHs "Video Title")
 
-**3. Denoising performance of DeepCAD-RT on a recently developed genetically encoded ATP sensor.**
+### 3. DeepCAD-RT reveals the ATP (Adenosine 5’-triphosphate) dynamics of astrocytes in 3D after laser-induced brain injury.
 
 [![IMAGE ALT TEXT](images/sv10_video.png)](https://www.youtube.com/embed/u1ejSaVvWiY "Video Title")
 
