@@ -8,7 +8,7 @@ To achieve real-time denoising, DeepCAD-RT was optimally deployed on GPU using T
 
 - [Required environment](#required-environment)
 - [File description](#file-description)
-- [Instructions for use](#instructions-for-use)
+- [Instructions for use](#instructions)
 - [Demo video](#demo-video)
 
 ## Required environment
@@ -33,7 +33,7 @@ To achieve real-time denoising, DeepCAD-RT was optimally deployed on GPU using T
 
 `./model`: save engine file
 
-## Instructions for use
+## Instructions
 
 ### Install
 
