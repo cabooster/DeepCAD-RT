@@ -109,11 +109,11 @@ To achieve real-time denoising, DeepCAD-RT was optimally deployed on GPU using T
 
 ### 4.2 File description
 
-`deepcad_trt.m`: Fast processing and save tiff in matlab & C++
+`deepcad_trt.m`: Matlab script that calls fast processing and tiff saving function programmed in C++
 
-`deepcad_trt_nosave.m`: Fast processing in C++ and save tiff in matlab
+`deepcad_trt_nosave.m`: Matlab script that calls fast processing function programmed in C++ and save tiff in Matlab
 
-`realtime_core.m`: Realtime simulation in matlab & C++ and save tiff
+`realtime_core.m`: Realtime simulation in Matlab & C++ and save tiff
 
 `./deepcad/+deepcadSession`: Realtime inference with data flow from ScanImage
 
