@@ -15,7 +15,7 @@ title: About
 
 ### Background
 
-**Among the challenges of fluorescence microscopy, poor imaging signal-to-noise ratio (SNR) caused by limited photon budget lingeringly stands in the central position.** Fluorescence microscopy is inherently sensitive to detection noise because the photon flux in fluorescence imaging is far lower than that in photography. To capture enough fluorescence photons for satisfactory signal-to-noise ratio (SNR), researchers have to sacrifice imaging speed, resolution, and even sample health. The causes of this photon-limited challenge are as follows:
+**Among the challenges of fluorescence microscopy, poor imaging signal-to-noise ratio (SNR) caused by limited photon budget lingeringly stands in the central position.** Fluorescence microscopy is inherently sensitive to detection noise because the photon flux in fluorescence imaging is far lower than that in photography. To capture enough fluorescence photons for satisfactory SNR, researchers have to sacrifice imaging speed, resolution, and even sample health. The causes of this photon-limited challenge are as follows:
 
 - The **low photon yield** of fluorescent indicators and their **low concentration** in labeled cells result in the lack of photons at the source. 
 
