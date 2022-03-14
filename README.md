@@ -79,7 +79,7 @@ DeepCAD-RT
    $ pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
    ```
 
-2. We made a pip installable realease of DeepCAD [[pypi](https://pypi.org/project/deepcad/)]. You can install it by entering the following command:
+2. We made a pip installable realease of DeepCAD-RT [[pypi](https://pypi.org/project/deepcad/)]. You can install it by entering the following command:
 
    ```
    $ pip install deepcad
@@ -103,7 +103,7 @@ $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
 
 **Example training**
 
-To train a DeepCAD-RT model, we recommend starting with the demo script `demo_train_pipeline.py`. One demo dataset will be automatically downloaded to the `DeepCAD_RT_pytorch/datasets` folder. You can also download other data from [the companion webpage](https://cabooster.github.io/DeepCAD-RT/Datasets/) or use your own data by changing the training parameter `datasets_path`. 
+To train a DeepCAD-RT model, we recommend starting with the demo script `demo_train_pipeline.py`. One demo dataset will be downloaded to the `DeepCAD_RT_pytorch/datasets` folder automatically. You can also download other data from [the companion webpage](https://cabooster.github.io/DeepCAD-RT/Datasets/) or use your own data by changing the training parameter `datasets_path`. 
 
 ```
 python demo_train_pipeline.py
@@ -133,7 +133,7 @@ $ jupyter notebook
 
 We also provide a cloud-based notebook implemented with Google Colab. You can run DeepCAD-RT directly in your browser using a cloud GPU without configuring the environment. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cabooster/DeepCAD-RT/blob/main/DeepCAD_RT_pytorch/notebooks/DeepCAD_RT_demo_colab.ipynb)
 
-*Colab notebook needs longer time to train and test because of the limited GPU performance offered by Colab.*
+*Note: Colab notebook needs longer time to train and test because of the limited GPU performance offered by Colab.*
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad7.png?raw=true" width="800" align="middle"></center> 
 
