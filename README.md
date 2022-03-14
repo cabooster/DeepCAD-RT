@@ -59,6 +59,8 @@ DeepCAD-RT
 |---|---|--- # test results#
 |---DeepCAD_RT_GUI #Matlab GUI of DeepCAD-RT#
 ```
+- **DeepCAD_RT_pytorch** contains the Pytorch implementation of DeepCAD-RT (Python scripts, Jupyter notebooks, Colab notebook)
+- **DeepCAD_RT_GUI** contains all C++ and Matlab files for the real-time implementation of DeepCAD-RT
 
 ## Pytorch code
 
