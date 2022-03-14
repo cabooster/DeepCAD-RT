@@ -24,7 +24,7 @@ else:
 
 # %% First setup some parameters for training
 n_epochs = 10               # the number of training epochs
-GPU = '1'                   # the index of GPU used for computation (e.g. '0', '0,1', '0,1,2')
+GPU = '0'                   # the index of GPU used for computation (e.g. '0', '0,1', '0,1,2')
 train_datasets_size = 6000  # dataset size for training (the number of patches)
 patch_xy = 150              # the width and height of 3D patches
 patch_t = 150               # the time dimension of 3D patches
