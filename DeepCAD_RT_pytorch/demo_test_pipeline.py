@@ -24,7 +24,7 @@ else:
 
 # %% First setup some parameters for testing
 test_datasize = 300                   # the number of slices to be tested
-GPU = '1'                             # the index of GPU you will use for computation (e.g. '0', '0,1', '0,1,2')
+GPU = '0'                             # the index of GPU you will use for computation (e.g. '0', '0,1', '0,1,2')
 patch_xy = 150                        # the width and height of 3D patches
 patch_t = 150                         # the time dimension of 3D patches
 overlap_factor = 0.4                  # the overlap factor between two adjacent patches
