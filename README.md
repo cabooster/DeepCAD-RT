@@ -132,7 +132,7 @@ $ cd DeepCAD-RT/DeepCAD_RT_pytorch/notebooks
 $ jupyter notebook
 ```
 
-<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad8.png?raw=true" width="900" align="middle"></center> 
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad8.png?raw=true" width="800" align="middle"></center> 
 
 ### Colab notebook
 
@@ -140,7 +140,7 @@ We also provide a cloud-based demo implemented with Google Colab. You can run De
 
 *This is a simple example with a slow rate because of the limited GPU performance offered by Colab. You can increase the `train_datasets_size` and `n_epochs` with a more powerful GPU, and training and testing time can be further shortened.*
 
-<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad7.png?raw=true" width="900" align="middle"></center> 
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad7.png?raw=true" width="800" align="middle"></center> 
 
 ## Matlab GUI
 
