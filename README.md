@@ -145,7 +145,7 @@ To achieve real-time denoising during imaging, DeepCAD-RT was optimally deployed
 
 ## Results
 
-**1. Universal denoising for calcium imaging in zebrafish.**
+**1. Denoising calcium imaging in zebrafish.**
 
 [![IMAGE ALT TEXT](images/sv3_video.png)]( https://www.youtube.com/embed/GN0IO7bGoGg "Video Title")
 
