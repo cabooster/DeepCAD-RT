@@ -1,4 +1,4 @@
-# DeepCAD-RT: A versatile toolbox for microscopy imaging denoising
+# DeepCAD-RT: Real-time denoising of fluorescence time-lapse imaging using deep self-supervised learning
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/logo.PNG?raw=true" width="700" align="middle" /></center>
 
