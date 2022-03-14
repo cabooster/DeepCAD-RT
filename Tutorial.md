@@ -47,7 +47,7 @@ $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
 
 ### 1.4 Demos
 
-To try out the python file, please activate `deepcadrt` conda environment:
+To try out the Python code, please activate `deepcadrt` conda environment:
 
 ```
 $ conda activate deepcadrt
