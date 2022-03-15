@@ -22,7 +22,7 @@ We present a versatile method **DeepCAD-RT** to denoise fluorescence time-lapse 
 
 
 For more details, please see the companion paper where the method first appeared: 
-["*Reinforcing neuron extraction and spike inference in calcium imaging using deep self-supervised denoising, Nature Methods (2021)*"](https://www.nature.com/articles/s41592-021-01225-0).
+["*Real-time denoising of fluorescence time-lapse imaging enables high-sensitivity observations of biological dynamics beyond the shot-noise limit, bioRxiv (2022)*"](https://www.nature.com/articles/s41592-021-01225-0).
 
 <img src="images/schematic.png" width="800" align="middle">
 
@@ -167,7 +167,9 @@ More demo videos are demonstrated on [our website](https://cabooster.github.io/D
 
 If you use this code please cite the companion paper where the original method appeared: 
 
-Li, X., Zhang, G., Wu, J. et al. Reinforcing neuron extraction and spike inference in calcium imaging using deep self-supervised denoising. Nat Methods 18, 1395–1400 (2021). [https://doi.org/10.1038/s41592-021-01225-0](https://www.nature.com/articles/s41592-021-01225-0) 
+Xinyang Li, Yixin Li, Yiliang Zhou, et al. Real-time denoising of fluorescence time-lapse imaging enables high-sensitivity observations of biological dynamics beyond the shot-noise limit. bioRxiv (2022). [https://doi.org/10.1101/2022.03.14.484230](https://www.biorxiv.org/content/10.1101/2022.03.14.484230v1)
+
+Xinyang Li, Guoxun Zhang, Jiamin Wu, et al. Reinforcing neuron extraction and spike inference in calcium imaging using deep self-supervised denoising. Nat Methods 18, 1395–1400 (2021). [https://doi.org/10.1038/s41592-021-01225-0](https://www.nature.com/articles/s41592-021-01225-0) 
 
 
 ```
