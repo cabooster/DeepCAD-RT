@@ -161,7 +161,7 @@ To achieve real-time denoising, DeepCAD-RT was optimally deployed on GPU using T
 
 [![IMAGE ALT TEXT](images/sv10_video.png)](https://www.youtube.com/embed/u1ejSaVvWiY "Video Title")
 
-More demo videos are demonstrated on [our website](https://cabooster.github.io/DeepCAD-RT/Gallery/).
+More demo videos are presented on [our website](https://cabooster.github.io/DeepCAD-RT/Gallery/).
 
 ## Citation
 
