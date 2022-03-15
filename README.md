@@ -80,7 +80,9 @@ DeepCAD-RT
    $ conda activate deepcadrt
    $ pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
    ```
-
+      
+      *Note:  `pip install` command is required for Pytorch installation.*
+  
 2. We made a pip installable realease of DeepCAD-RT [[pypi](https://pypi.org/project/deepcad/)]. You can install it by entering the following command:
 
    ```
