@@ -139,7 +139,7 @@ We also provide a cloud-based notebook implemented with Google Colab. You can ru
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cabooster/DeepCAD-RT/blob/main/DeepCAD_RT_pytorch/notebooks/DeepCAD_RT_demo_colab.ipynb)
 
-*Note: Colab notebook needs longer time to train and test because of the limited GPU performance offered by Colab.*
+*Note: The Colab notebook needs much longer time to train and test because of the limited GPU performance offered by Colab.*
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad7.png?raw=true" width="800" align="middle"></center> 
 
