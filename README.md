@@ -172,15 +172,15 @@ Li, X., Zhang, G., Wu, J. et al. Reinforcing neuron extraction and spike inferen
 
 ```
 @article {Li2022.03.14.484230,
-	author = {Li, Xinyang and Li, Yixin and Zhou, Yiliang and Wu, Jiamin and Zhao, Zhifeng and Fan, Jiaqi and Deng, Fei and Wu, Zhaofa and Xiao, Guihua and He, Jing and Zhang, Yuanlong and Zhang, Guoxun and Hu, Xiaowan and Zhang, Yi and Qiao, Hui and Xie, Hao and Li, Yulong and Wang, Haoqian and Fang, Lu and Dai, Qionghai},
-	title = {Real-time denoising of fluorescence time-lapse imaging enables high-sensitivity observations of biological dynamics beyond the shot-noise limit},
-	elocation-id = {2022.03.14.484230},
-	year = {2022},
-	doi = {10.1101/2022.03.14.484230},
-	publisher = {Cold Spring Harbor Laboratory},
-	URL = {https://www.biorxiv.org/content/early/2022/03/14/2022.03.14.484230},
-	eprint = {https://www.biorxiv.org/content/early/2022/03/14/2022.03.14.484230.full.pdf},
-	journal = {bioRxiv}
+  author = {Li, Xinyang and Li, Yixin and Zhou, Yiliang and Wu, Jiamin and Zhao, Zhifeng and Fan, Jiaqi and Deng, Fei and Wu, Zhaofa and Xiao, Guihua and He, Jing and Zhang, Yuanlong and Zhang, Guoxun and Hu, Xiaowan and Zhang, Yi and Qiao, Hui and Xie, Hao and Li, Yulong and Wang, Haoqian and Fang, Lu and Dai, Qionghai},
+  title = {Real-time denoising of fluorescence time-lapse imaging enables high-sensitivity observations of biological dynamics beyond the shot-noise limit},
+  elocation-id = {2022.03.14.484230},
+  year = {2022},
+  doi = {10.1101/2022.03.14.484230},
+  publisher = {Cold Spring Harbor Laboratory},
+  URL = {https://www.biorxiv.org/content/early/2022/03/14/2022.03.14.484230},
+  eprint = {https://www.biorxiv.org/content/early/2022/03/14/2022.03.14.484230.full.pdf},
+  journal = {bioRxiv}
 }
 @article{li2021reinforcing,
   title={Reinforcing neuron extraction and spike inference in calcium imaging using deep self-supervised denoising},
