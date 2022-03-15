@@ -236,7 +236,7 @@ Matlab configuration:
 8. Before each imaging session, you should click  `Configure`.
 
 
-### GUI demo video
+### GUI demo
 
 <center><iframe width="800" height="500" src="https://www.youtube.com/embed/u1ejSaVvWiY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </center>
 
