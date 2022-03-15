@@ -125,7 +125,7 @@ To achieve real-time denoising, DeepCAD-RT was optimally deployed on GPU using T
 
 #### Install
 
-Download the `.exe` file in the [cloud disk](https://zenodo.org/record/6352555#.Yi82u3pBybg).
+Download the `.exe` file from [here](https://zenodo.org/record/6352555#.Yi82u3pBybg).
 
 #### Model preparation
 
