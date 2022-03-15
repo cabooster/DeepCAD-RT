@@ -22,7 +22,7 @@ We present a versatile method **DeepCAD-RT** to denoise fluorescence time-lapse 
 
 
 For more details, please see the companion paper where the method first appeared: 
-["*Real-time denoising of fluorescence time-lapse imaging enables high-sensitivity observations of biological dynamics beyond the shot-noise limit, bioRxiv (2022)*"](https://www.nature.com/articles/s41592-021-01225-0).
+["*Real-time denoising of fluorescence time-lapse imaging enables high-sensitivity observations of biological dynamics beyond the shot-noise limit, bioRxiv (2022)*"](https://www.biorxiv.org/content/10.1101/2022.03.14.484230v1).
 
 <img src="images/schematic.png" width="800" align="middle">
 
