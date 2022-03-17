@@ -73,7 +73,7 @@ python demo_test_pipeline.py
 
 ## 2. Jupyter notebook
 
-We provide simple and user-friendly Jupyter notebooks to implement DeepCAD-RT. They are in the `DeepCAD_RT_pytorch/notebooks` folder. Before you launch the notebooks, please configure an environment following the instruction in [Environment configuration](#environment-configuration) . And then, you can launch the notebooks through the following commands:
+We provide simple and user-friendly Jupyter notebooks to implement DeepCAD-RT. They are in the `DeepCAD_RT_pytorch/notebooks` folder. Before you launch the notebooks, please configure an environment following the instruction in [Environment configuration](#12-environment-configuration) . And then, you can launch the notebooks through the following commands:
 
 ```
 $ conda activate deepcadrt
@@ -133,7 +133,7 @@ Before using a model, you should first convert the pth model to an ONNX model, a
 
    **pth model to ONNX model:**
 
-1. Go to `DeepCAD-RT/DeepCAD_RT_pytorch/` directory and activate the `deepcadrt` environment [[Configuration tutorial for conda environment](#python-source-code)].  
+1. Go to `DeepCAD-RT/DeepCAD_RT_pytorch/` directory and activate the `deepcadrt` environment [[Configuration tutorial for conda environment](#1-python-source-code)].  
 
    ```
    $ conda activate deepcadrt
