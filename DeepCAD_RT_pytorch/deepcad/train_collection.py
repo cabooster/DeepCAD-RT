@@ -17,7 +17,7 @@ import time
 import datetime
 from .data_process import trainset, test_preprocess_chooseOne, testset, multibatch_test_save, singlebatch_test_save
 from skimage import io
-from deepcad.movie_display import test_img_display
+from .movie_display import test_img_display,display_img
 
 
 class training_class():
@@ -62,19 +62,9 @@ class training_class():
         self.test_datasize = 400  # how many slices to be tested (use the first image in the folder by default)
         self.visualize_images_per_epoch = False
         self.save_test_images_per_epoch = False
+        self.colab_display = False
+        self.result_display = ''
         self.set_params(params_dict)
-    def print_params(self):
-        print("{:<20} {:<20} ".format('datasets_path:', self.datasets_path))
-        print("{:<20} {:<10} {:<10} {:<10} {:<10} {:<10}".format('train_datasets_size:', self.train_datasets_size, 'pth_dir:',
-                                                   self.pth_dir,'batch_size:', self.batch_size))
-        print("{:<20} {:<10} {:<10} {:<10} {:<10} {:<10}".format('overlap_factor:', self.overlap_factor,'fmap:',self.fmap, 'lr:',self.lr))
-        print("{:<20} {:<10} {:<10} {:<10} {:<10} {:<10}".format('n_epochs:', self.n_epochs, 'GPU:',self.GPU, 'ngpu:',self.ngpu))
-        print("{:<10} {:<10} {:<10} {:<10} {:<10} {:<10}".format('patch_t:', self.patch_t, 'patch_x:',self.patch_x, 'patch_y:',self.patch_y))
-        print("{:<10} {:<10} {:<10} {:<10} {:<10} {:<10}".format('patch_t:', self.gap_t, 'gap_x:',self.gap_x, 'gap_y:',self.gap_y))
-        print("{:<10} {:<10} {:<10} {:<10} {:<10} {:<10}".format('Adam b1:', self.b1, 'Adam b2:',self.b2, 'num_workers:',self.num_workers))
-        print("{:<10} {:<7} {:<15} {:<6} {:<7} {:<10}".format('scale_factor:', self.scale_factor, 'select_img_num:',self.select_img_num, 'test_datasize:',self.test_datasize))
-        print('visualize_images_per_epoch:',self.visualize_images_per_epoch,end="\t")
-        print('save_test_images_per_epoch:',self.save_test_images_per_epoch,end="\t")
     def run(self):
         """
         General function for training DeepCAD network.
@@ -92,6 +82,7 @@ class training_class():
         self.distribute_GPU()
         # start training and result visualization during training period (optional)
         self.train()
+
 
     def prepare_file(self):
         """
@@ -126,7 +117,7 @@ class training_class():
         self.batch_size = self.ngpu                                 # By default, the batch size is equal to the number of GPU for minimal memory consumption
         print('\033[1;31mTraining parameters -----> \033[0m')
         print(self.__dict__)
-        # self.print_params()
+
 
     def initialize_network(self):
         """
@@ -334,6 +325,17 @@ class training_class():
                         self.test(epoch, iteration)
                         print('\n', end=' ')
         print('Train finished. Save all models to disk.')
+        if self.colab_display:
+            result_img_list = []
+            results_path = self.pth_path
+            results_list = list(os.walk(results_path, topdown=False))[-1][-1]
+            for i in range(len(results_list)):
+              aaa = results_list[i]
+              if '.tif' in aaa:
+                 result_img_list.append(aaa)
+            result_img_list.sort()
+            self.result_display = results_path+'/'+result_img_list[-1]
+
 
     def save_model(self, epoch, iteration):
         """

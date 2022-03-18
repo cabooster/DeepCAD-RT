@@ -2,10 +2,14 @@
 Suite of functions that help display movie
 
 """
+import matplotlib
+import matplotlib.pyplot as plt
+
 import tifffile as tiff
 import cv2
 import numpy as np
 from csbdeep.utils import normalize
+
 
 
 def display(filename, display_length, norm_min_percent, norm_max_percent):
@@ -28,6 +32,20 @@ def display(filename, display_length, norm_min_percent, norm_max_percent):
         cv2.imshow('Raw video', tempimg)
         cv2.waitKey(33)
     cv2.destroyWindow('Raw video')
+
+def display_img(filename, norm_min_percent, norm_max_percent):
+    img = tiff.imread(filename)
+    img = img.astype(np.float32)
+    t, x, y = img.shape[0:3]
+    img = img[int(t / 2), :, :]
+
+    img = normalize(img, norm_min_percent, norm_max_percent)
+    img = img * 255
+
+    return img
+    # show_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+
 
 
 def test_img_display(img, display_length, norm_min_percent, norm_max_percent):

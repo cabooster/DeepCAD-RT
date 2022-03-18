@@ -49,7 +49,10 @@ class testing_class():
         self.denoise_model = ''
         self.visualize_images_per_epoch = False
         self.save_test_images_per_epoch = False
+        self.colab_display = False
+        self.result_display = ''
         self.set_params(params_dict)
+
 
     def run(self):
         """
@@ -316,4 +319,11 @@ class testing_class():
                         result_name = output_path_name + '//' + self.img_list[N].replace('.tif','') + '_' + pth_name.replace(
                             '.pth', '') + '_output.tif'
                         io.imsave(result_name, output_img, check_contrast=False)
+
+                    if pth_count == self.model_list_length:
+                        if self.colab_display:
+                            self.result_display = output_path_name + '//' + self.img_list[N].replace('.tif','') + '_' + pth_name.replace(
+                            '.pth', '') + '_output.tif'
+
+
         print('Test finished. Save all results to disk.')
