@@ -115,19 +115,19 @@ To achieve real-time denoising, DeepCAD-RT was optimally deployed on GPU using T
 
 `realtime_core.m`: Realtime simulation in Matlab & C++ and save tiff
 
-`./deepcad/+deepcadSession`: Real-time inference with data flow from ScanImage
+`DeepCAD-RT-v2.x.x/DeepCAD-RT-v2/deepcad/+deepcadSession`: Real-time inference with data flow from ScanImage
 
-`./results`: Path to save result images
+`DeepCAD-RT-v2.x.x/DeepCAD-RT-v2/results`: Path to save result images
 
-`./model`: Path for the engine file
+`DeepCAD-RT-v2.x.x/DeepCAD-RT-v2/model`: Path for the engine file
 
 ### 4.3 Instructions for use
 
 #### Install
 
-1. Download the `.exe` file from [here](https://zenodo.org/record/6366812#.YjQFNupBybg).
+1. Download the `.exe` file from [here](https://zenodo.org/record/6366812#.YjQFNupBybg). When you double click this self-extracting file, the relevant files of DeepCAD-RT will unzip to the location that you chose.
 
-2. Copy the `.dll` files from `<installpath>/dll` to your CUDA installation directory, for example `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\bin`. The CUDA installer should have already added the CUDA path to your system PATH (from [TensorRT installation guide](https://docs.nvidia.com/deeplearning/tensorrt/archives/tensorrt-601/tensorrt-install-guide/index.html#installing-zip)).
+2. Copy the `.dll` files from `<installpath>/DeepCAD-RT-v2.x.x/dll` to your CUDA installation directory, for example `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\bin`. The CUDA installer should have already added the CUDA path to your system PATH (from [TensorRT installation guide](https://docs.nvidia.com/deeplearning/tensorrt/archives/tensorrt-601/tensorrt-install-guide/index.html#installing-zip)).
 
 #### Model preparation
 
@@ -185,7 +185,7 @@ Matlab configuration:
 
 1. Open Matlab.
 
-2. Change file path to xxx/DeepCAD-RT-v2.
+2. Change file path to `<installpath>/DeepCAD-RT-v2.x.x/DeepCAD-RT-v2`.
 
 3. Configure the environment:
 
