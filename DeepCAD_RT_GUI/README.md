@@ -57,7 +57,7 @@ Before using a model, you should first convert the pth model to an ONNX model, a
 2. Run the `convert_pth_to_onnx.py`. Parameters in the following command can be modified as required.
 
    ```
-   $ os.system('python convert_pth_to_onnx.py --patch_x 200 --patch_y 200 --patch_t 80 --denoise_model ModelForPytorch --GPU 0')
+   $ os.system('python convert_pth_to_onnx.py --patch_x 200 --patch_y 200 --patch_t 40 --denoise_model ModelForPytorch --GPU 0')
    
    @parameters
    --patch_x, --patch_y, --patch_t: patch size in three dimensions
@@ -65,7 +65,7 @@ Before using a model, you should first convert the pth model to an ONNX model, a
    --denoise_model: the folder containing the pre-trained models.
    ```
 
-   The recommended patch size is 200x200x80 pixels. Put the pth model and yaml file in `./pth` path.  The default name of ONNX file name is the model file name.
+   The recommended patch size is 200x200x40 pixels. Put the pth model and yaml file in `./pth` path.  The default name of ONNX file name is the model file name.
 
    We provide a pre-trained ONNX model in `./model` . The patch size of `cal_mouse_mean_200_40_full.onnx` and `cal_mouse_mean_200_80_full.onnx` are  200x200x40 pixels and 200x200x80 pixels, respectively. The calcium imaging data used for training these model were captured by our customized two-photon microscope:
 
@@ -80,7 +80,7 @@ Before using a model, you should first convert the pth model to an ONNX model, a
 3. Run the following command in Windows cmd.exe. Parameters can be modified as required: 
 
 ```
-xxx\trtexec.exe --onnx=deepcad_200_80.onnx --explicitBatch --saveEngine=deepcad_fp16_200_80.engine --workspace=2000 --fp16
+xxx\trtexec.exe --onnx=cal_mouse_mean_200_40_full.onnx --explicitBatch --saveEngine=deepcad_fp16_200_40.engine --workspace=2000 --fp16
 
 @parameters
 --onnx: ONNX file name
