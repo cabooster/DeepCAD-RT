@@ -37,7 +37,7 @@ To achieve real-time denoising, DeepCAD-RT was optimally deployed on GPU using T
 
 ### Install
 
-1. Download the `.exe` file from [here](https://zenodo.org/record/6369450#.YjU1JupBybg). When you double click this self-extracting file, the relevant files of DeepCAD-RT will unzip to the location that you choose.
+1. Download the `.exe` file from [here](https://doi.org/10.5281/zenodo.6352526). When you double click this self-extracting file, the relevant files of DeepCAD-RT will unzip to the location that you choose.
 
 2. Copy the `.dll` files from `<installpath>/DeepCAD-RT-v2.x.x/dll` to your CUDA installation directory, for example `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\bin`. The CUDA installer should have already added the CUDA path to your system PATH (from [TensorRT installation guide](https://docs.nvidia.com/deeplearning/tensorrt/archives/tensorrt-601/tensorrt-install-guide/index.html#installing-zip)).
 
