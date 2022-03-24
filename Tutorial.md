@@ -81,7 +81,7 @@ $ cd DeepCAD-RT/DeepCAD_RT_pytorch/notebooks
 $ jupyter notebook
 ```
 
-<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad8.png?raw=true" width="700" align="middle"></center> 
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/deepcad8.png?raw=true" width="900" align="middle"></center> 
 
 ## 3. Colab notebook
 
