@@ -92,7 +92,7 @@ DeepCAD-RT
 ### Download the source code
 
 ```
-$ git clone git://github.com/cabooster/DeepCAD-RT
+$ git clone https://github.com/cabooster/DeepCAD-RT
 $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
 ```
 
