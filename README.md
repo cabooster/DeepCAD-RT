@@ -55,6 +55,9 @@ DeepCAD-RT
 |---|---|---ModelForPytorch
 |---|---|---|---model.pth
 |---|---|---|---model.yaml
+|---|---onnx
+|---|---|---ModelForPytorch
+|---|---|---|---model.onnx
 |---|---results
 |---|---|--- # test results#
 |---DeepCAD_RT_GUI #Matlab GUI of DeepCAD-RT#
