@@ -82,8 +82,11 @@ class testing_class():
             self.pth_path: the folder for pth file storage
 
         """
-
-        self.datasets_name = self.datasets_path.split("/", 1)[1]
+        if self.datasets_path[-1]!='/':
+           self.datasets_name=self.datasets_path.split("/")[-1]
+        else:
+           self.datasets_name=self.datasets_path.split("/")[-2]
+        # self.datasets_name = self.datasets_path.split("/", 1)[1]
         # pth_name = self.datasets_name + '_' + datetime.datetime.now().strftime("%Y%m%d%H%M")
         # self.pth_path = self.pth_dir + '/' + pth_name
         # if not os.path.exists(self.pth_path):
