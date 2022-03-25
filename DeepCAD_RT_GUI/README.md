@@ -41,52 +41,6 @@ To achieve real-time denoising, DeepCAD-RT was optimally deployed on GPU using T
 
 2. Copy the `.dll` files from `<installpath>/DeepCAD-RT-v2.x.x/dll` to your CUDA installation directory, for example `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\bin`. The CUDA installer should have already added the CUDA path to your system PATH (from [TensorRT installation guide](https://docs.nvidia.com/deeplearning/tensorrt/archives/tensorrt-601/tensorrt-install-guide/index.html#installing-zip)).
 
-### Model preparation
-
-Before using a model, you should first convert the pth model to an ONNX model, and then convert the ONNX model to an Engine file. When you change your GPU, the Engine file should be rebuilt.
-
-   **pth model to ONNX model:**
-
-1. Go to `DeepCAD-RT/DeepCAD_RT_pytorch/` directory and activate the `deepcadrt` environment [[Configuration tutorial for conda environment](#python-source-code)].  
-
-   ```
-   $ conda activate deepcadrt
-   $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
-   ```
-
-2. Run the `convert_pth_to_onnx.py`. Parameters in the following command can be modified as required.
-
-   ```
-   $ os.system('python convert_pth_to_onnx.py --patch_x 200 --patch_y 200 --patch_t 40 --denoise_model ModelForPytorch --GPU 0')
-   
-   @parameters
-   --patch_x, --patch_y, --patch_t: patch size in three dimensions
-   --GPU: specify the GPU used for file conversion
-   --denoise_model: the folder containing the pre-trained models.
-   ```
-
-   The recommended patch size is 200x200x40 pixels. Put the pth model and yaml file in `./pth` path.  The default name of ONNX file name is the model file name.
-
-   We provide a pre-trained ONNX model in `./model` . The patch size of `cal_mouse_mean_200_40_full.onnx` and `cal_mouse_mean_200_80_full.onnx` are  200x200x40 pixels and 200x200x80 pixels, respectively. The calcium imaging data used for training these model were captured by our customized two-photon microscope:
-
-​    *Key imaging parameters of training data:*
-
-- *30Hz sampling rate, 500x500 μm2 field of view, 490x490 pixels.*
-- *The imaging depth is ranging from 40 to 180 um.*
-- *The imaging power is ranging from 66 to 99 mW.*
-
-**ONNX model to Engine file:**
-
-3. Run the following command in Windows cmd.exe. Parameters can be modified as required: 
-
-```
-xxx\trtexec.exe --onnx=cal_mouse_mean_200_40_full.onnx --explicitBatch --saveEngine=deepcad_fp16_200_40.engine --workspace=2000 --fp16
-
-@parameters
---onnx: ONNX file name
---saveEngine: Engine file name
-```
-
 
 ### Real-time inference with ScanImage
 
@@ -116,11 +70,11 @@ Matlab configuration:
 
 5. Set the parameters in GUI:
 
-   `Engine file`: The path of the Engine file. Click `...` to open the file browser and choose the path.
+   `Model file`: The path of the ONNX file. After training, the ONNX files will be saved in `DeepCAD-RT/DeepCAD_RT_pytorch/onnx`. Click `...` to open the file browser and choose the file used for inference.
 
    `Save path`:The path to save denoised images. Click `...` to open the file browser and choose the path
 
-   `Frames number`: How many frames to acquire. It is equal to the value set in ScanImage. This parameter will update automatically when you click `Configure`. 
+   `Frame number`: How many frames to acquire. It is equal to the value set in ScanImage. This parameter will update automatically when you click `Configure`. 
 
    <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/scanimage_parameter.png?raw=true" width="250" align="middle"></center>
 
@@ -134,7 +88,7 @@ Matlab configuration:
 
    `Advanced`: Advanced settings.
 
-   `Patch size (x,y,t)`: The three parameters depend on the patch size you set when you convert Pytorch model to ONNX model.
+   `Patch size (x,y,t)`: The three parameters depend on the patch size you set in the training process.
 
    `Overlap factor`: The overlap factor between two adjacent patches. The recommended number is between 0.125 and 0.4. Larger overlap factor means better performance but lower inference speed.
 
