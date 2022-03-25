@@ -41,6 +41,17 @@ To achieve real-time denoising, DeepCAD-RT was optimally deployed on GPU using T
 
 2. Copy the `.dll` files from `<installpath>/DeepCAD-RT-v2.x.x/dll` to your CUDA installation directory, for example `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\bin`. The CUDA installer should have already added the CUDA path to your system PATH (from [TensorRT installation guide](https://docs.nvidia.com/deeplearning/tensorrt/archives/tensorrt-601/tensorrt-install-guide/index.html#installing-zip)).
 
+### Model preparation
+
+   After [training](https://github.com/cabooster/DeepCAD-RT#demos), the ONNX files will be saved in `DeepCAD-RT/DeepCAD_RT_pytorch/onnx`. In order to reduce latency, `patch_t` should be minimized. **The recommended patch size is 200x200x40 pixels. **
+
+   We provide two pre-trained ONNX models in `DeepCAD-RT-v2.x.x/DeepCAD-RT-v2/model` . The patch size of `cal_mouse_mean_200_40_full.onnx` and `cal_mouse_mean_200_80_full.onnx` are 200x200x40 pixels and 200x200x80 pixels, respectively. The calcium imaging data used for training these model were captured by our customized two-photon microscope:
+
+​    *Key imaging parameters of training data:*
+
+- *30Hz sampling rate, 500x500 μm2 field of view, 490x490 pixels.*
+- *The imaging depth is ranging from 40 to 180 um.*
+- *The imaging power is ranging from 66 to 99 mW.*
 
 ### Real-time inference with ScanImage
 
@@ -70,7 +81,7 @@ Matlab configuration:
 
 5. Set the parameters in GUI:
 
-   `Model file`: The path of the ONNX file. After training, the ONNX files will be saved in `DeepCAD-RT/DeepCAD_RT_pytorch/onnx`. Click `...` to open the file browser and choose the file used for inference.
+   `Model file`: The path of the ONNX file.  Click `...` to open the file browser and choose the file used for inference.
 
    `Save path`:The path to save denoised images. Click `...` to open the file browser and choose the path
 
