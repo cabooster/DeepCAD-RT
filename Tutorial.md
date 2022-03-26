@@ -119,7 +119,7 @@ To achieve real-time denoising, DeepCAD-RT was optimally deployed on GPU using T
 
 `DeepCAD-RT-v2.x.x/DeepCAD-RT-v2/results`: Path to save result images
 
-`DeepCAD-RT-v2.x.x/DeepCAD-RT-v2/model`: Path for the engine file
+`DeepCAD-RT-v2.x.x/DeepCAD-RT-v2/engine_file`: Path for the engine file
 
 ### 4.3 Instructions for use
 
