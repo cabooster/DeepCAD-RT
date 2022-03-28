@@ -133,13 +133,7 @@ To achieve real-time denoising, DeepCAD-RT was optimally deployed on GPU using T
 
    After [training](https://github.com/cabooster/DeepCAD-RT#demos), the ONNX files will be saved in `DeepCAD-RT/DeepCAD_RT_pytorch/onnx`. In order to reduce latency, `patch_t` should be decreased. **The recommended training patch size is 200x200x40 pixels.**
 
-   We provide two pre-trained ONNX models in `DeepCAD-RT-v2.x.x/DeepCAD-RT-v2` . The patch size of `cal_mouse_mean_200_40_full.onnx` and `cal_mouse_mean_200_80_full.onnx` are 200x200x40 pixels and 200x200x80 pixels, respectively. The calcium imaging data used for training these model were captured by our customized two-photon microscope:
-
-​    *Key imaging parameters of training data:*
-
-- *30Hz sampling rate, 500x500 μm2 field of view, 490x490 pixels.*
-- *The imaging depth is ranging from 40 to 180 um.*
-- *The imaging power is ranging from 66 to 99 mW.*
+   We provide two pre-trained ONNX models in `DeepCAD-RT-v2.x.x/DeepCAD-RT-v2` . The patch size of `cal_mouse_mean_200_40_full.onnx` and `cal_mouse_mean_200_80_full.onnx` are 200x200x40 pixels and 200x200x80 pixels, respectively. The calcium imaging data used for training these model were captured by our customized two-photon microscope.
 
 
 #### Realtime inference with ScanImage
