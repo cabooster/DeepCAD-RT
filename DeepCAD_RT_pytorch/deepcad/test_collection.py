@@ -224,7 +224,7 @@ class testing_class():
                 self.print_img_name = False
                 # test all stacks
                 for N in range(len(self.img_list)):
-                    name_list, noise_img, coordinate_list,test_im_name, img_mean = test_preprocess_chooseOne(self, N)
+                    name_list, noise_img, coordinate_list,test_im_name, img_mean, input_data_type = test_preprocess_chooseOne(self, N)
                     # print(len(name_list))
                     prev_time = time.time()
                     time_start = time.time()
@@ -314,11 +314,19 @@ class testing_class():
 
                     # Save inference image
                     if (self.save_test_images_per_epoch):
-                        if output_img.min()<0:
-                             output_img = output_img.astype('int16')
+                        if input_data_type == 'uint16':
+                            output_img=np.clip(output_img, 0, 65535)
+                            output_img = output_img.astype('uint16')
+
+                        elif input_data_type == 'int16':
+                            output_img=np.clip(output_img, -32767, 32767)
+                            output_img = output_img.astype('int16')
+
                         else:
-                             output_img = output_img.astype('uint16')
-                        # output_img = output_img.astype('int16')
+                            output_img = output_img.astype('int32')
+
+
+
                         result_name = output_path_name + '//' + self.img_list[N].replace('.tif','') + '_' + pth_name.replace(
                             '.pth', '') + '_output.tif'
                         io.imsave(result_name, output_img, check_contrast=False)

@@ -463,6 +463,7 @@ def test_preprocess_chooseOne(args, img_id):
 
     im_dir = im_folder + '//' + im_name
     noise_im = tiff.imread(im_dir)
+    input_data_type = noise_im.dtype
     img_mean = noise_im.mean()
     # print('noise_im max -----> ',noise_im.max())
     # print('noise_im min -----> ',noise_im.min())
@@ -574,4 +575,4 @@ def test_preprocess_chooseOne(args, img_id):
                 # print(' single_coordinate -----> ',single_coordinate)
                 coordinate_list[patch_name] = single_coordinate
 
-    return name_list, noise_im, coordinate_list, im_name, img_mean
+    return name_list, noise_im, coordinate_list, im_name, img_mean, input_data_type

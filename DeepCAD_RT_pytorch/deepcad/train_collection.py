@@ -376,7 +376,7 @@ class training_class():
         """
         # Crop test file into 3D patches for inference
         self.print_img_name = True
-        name_list, noise_img, coordinate_list, test_im_name, img_mean = test_preprocess_chooseOne(self, img_id=0)
+        name_list, noise_img, coordinate_list, test_im_name, img_mean, input_data_type = test_preprocess_chooseOne(self, img_id=0)
         # Record the inference time
         prev_time = time.time()
         time_start = time.time()
@@ -458,7 +458,18 @@ class training_class():
         # Save inference image
         if (self.save_test_images_per_epoch):
             output_img = output_img[50:self.test_datasize-50, :, :]
-            output_img = output_img.astype('int16')
+            if input_data_type == 'uint16':
+                output_img=np.clip(output_img, 0, 65535)
+                output_img = output_img.astype('uint16')
+
+            elif input_data_type == 'int16':
+                output_img=np.clip(output_img, -32767, 32767)
+                output_img = output_img.astype('int16')
+
+            else:
+                output_img = output_img.astype('int32')
+
+
             result_name = self.pth_path + '//' + test_im_name.replace('.tif', '') + '_' + 'E_' + str(
                 train_epoch + 1).zfill(2) + '_Iter_' + str(train_iteration + 1).zfill(4) + '.tif'
             io.imsave(result_name, output_img, check_contrast=False)
