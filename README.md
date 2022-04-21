@@ -86,7 +86,7 @@ DeepCAD-RT
       
       *Note:  `pip install` command is required for Pytorch installation.*
   
-2. We made a installable pip realease of DeepCAD-RT [[pypi](https://pypi.org/project/deepcad/)]. You can install it by entering the following command:
+2. We made a installable pip release of DeepCAD-RT [[pypi](https://pypi.org/project/deepcad/)]. You can install it by entering the following command:
 
    ```
    $ pip install deepcad
