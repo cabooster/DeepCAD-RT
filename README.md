@@ -104,7 +104,7 @@ $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
 To try out the Python code, please activate the `deepcadrt` environment first:
 
 ```
-$ conda activate deepcadrt
+$ source activate deepcadrt
 $ cd DeepCAD-RT/DeepCAD_RT_pytorch/
 ```
 
@@ -129,7 +129,7 @@ python demo_test_pipeline.py
 We provide simple and user-friendly Jupyter notebooks to implement DeepCAD-RT. They are in the `DeepCAD_RT_pytorch/notebooks` folder. Before you launch the notebooks, please configure an environment following the instruction in [Environment configuration](#environment-configuration) . And then, you can launch the notebooks through the following commands:
 
 ```
-$ conda activate deepcadrt
+$ source activate deepcadrt
 $ cd DeepCAD-RT/DeepCAD_RT_pytorch/notebooks
 $ jupyter notebook
 ```
