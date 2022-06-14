@@ -20,7 +20,7 @@ def random_transform(input, target):
     Return:
         input, target : the input and target patch after data augmentation
     """
-    p_trans = random.randrange(6)
+    p_trans = random.randrange(8)
     if p_trans == 0:  # no transformation
         input = input
         target = target
@@ -36,9 +36,21 @@ def random_transform(input, target):
     elif p_trans == 4:  # horizontal flip
         input = input[:, :, ::-1]
         target = target[:, :, ::-1]
-    elif p_trans == 5:  # vertical flip
-        input = input[:, ::-1, :]
-        target = target[:, ::-1, :]
+    elif p_trans == 5:  # horizontal flip & left rotate 90
+        input = input[:, :, ::-1]
+        input = np.rot90(input, k=1, axes=(1, 2))
+        target = target[:, :, ::-1]
+        target = np.rot90(target, k=1, axes=(1, 2))
+    elif p_trans == 6:  # horizontal flip & left rotate 180
+        input = input[:, :, ::-1]
+        input = np.rot90(input, k=2, axes=(1, 2))
+        target = target[:, :, ::-1]
+        target = np.rot90(target, k=2, axes=(1, 2))
+    elif p_trans == 7:  # horizontal flip & left rotate 270
+        input = input[:, :, ::-1]
+        input = np.rot90(input, k=3, axes=(1, 2))
+        target = target[:, :, ::-1]
+        target = np.rot90(target, k=3, axes=(1, 2))
     return input, target
 
 
