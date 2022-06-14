@@ -15,6 +15,13 @@ title: DeepCAD-RT tutorial
 
 ## 1. Python source code
 
+###  :triangular_flag_on_post:UPDATE v0.7 (June 2022) 
+
+We replace 12-fold augmentation with 16-fold augmentation for more stable results. 
+
+Denoising performance (SNR) comparison with the increase of training epochs on simulated  calcium imaging data:
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/main/images/16aug.png?raw=true" width="600" align="middle" /></center>
+
 ### 1.1 Our environment 
 
 * Ubuntu 16.04 
