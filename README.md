@@ -72,6 +72,7 @@ DeepCAD-RT
 We replace 12-fold augmentation with 16-fold augmentation for more stable results. 
 
 Denoising performance (SNR) comparison with the increase of training epochs on simulated  calcium imaging data:
+<center><img src="https://github.com/cabooster/DeepCAD-RT/blob/main/images/16aug2.png?raw=true" width="600" align="middle" /></center>
 
 ### Our environment 
 
