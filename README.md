@@ -67,6 +67,12 @@ DeepCAD-RT
 
 ## Pytorch code
 
+###  :triangular_flag_on_post:UPDATE v0.7 (June 2022) 
+
+We replace 12-fold augmentation with 16-fold augmentation for more stable results. 
+
+Denoising performance (SNR) comparison with the increase of training epochs on simulated  calcium imaging data:
+
 ### Our environment 
 
 * Ubuntu 16.04 
