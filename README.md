@@ -187,7 +187,7 @@ More demo videos are presented on [our website](https://cabooster.github.io/Deep
 
 ## Citation
 
-If you use this code please cite the companion paper where the original method appeared: 
+If you use this code, please cite the companion paper where the original method appeared: 
 
 - Xinyang Li, Yixin Li, Yiliang Zhou, et al. Real-time denoising of fluorescence time-lapse imaging enables high-sensitivity observations of biological dynamics beyond the shot-noise limit. bioRxiv (2022). [https://doi.org/10.1101/2022.03.14.484230](https://www.biorxiv.org/content/10.1101/2022.03.14.484230v1)
 
