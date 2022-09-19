@@ -75,7 +75,7 @@ DeepCAD-RT
 ## Pytorch code
 ### Updates
 <details>
-  <summary>:triangular_flag_on_post:2022/06/14 </summary>
+  <summary>:triangular_flag_on_post:2022/06/14: Enhanced data augmentation. </summary>
   
 We replaced 12-fold data augmentation with 16-fold data augmentation for better performance. 
 
