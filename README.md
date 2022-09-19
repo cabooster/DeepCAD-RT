@@ -29,7 +29,7 @@ For more details, please see the companion paper where the method first appeared
 ## Directory structure
 
 <details>
-  <summary>Click for details</summary>
+  <summary>Click to unfold the directory tree</summary>
   
 ```
 DeepCAD-RT
