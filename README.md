@@ -28,6 +28,9 @@ For more details, please see the companion paper where the method first appeared
 
 ## Directory structure
 
+<details>
+  <summary>Click me</summary>
+  
 ```
 DeepCAD-RT
 |---DeepCAD_RT_pytorch #Pytorch implementation of DeepCAD-RT#
@@ -64,6 +67,10 @@ DeepCAD-RT
 ```
 - **DeepCAD_RT_pytorch** contains the Pytorch implementation of DeepCAD-RT (Python scripts, Jupyter notebooks, Colab notebook)
 - **DeepCAD_RT_GUI** contains all C++ and Matlab files for the real-time implementation of DeepCAD-RT
+
+</details>
+
+
 
 ## Pytorch code
 
