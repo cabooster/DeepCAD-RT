@@ -2,7 +2,7 @@
 
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/page/images/logo.PNG?raw=true" width="700" align="middle" /></center>
 
-### [Project page](https://cabooster.github.io/DeepCAD-RT/) | [Paper](https://www.biorxiv.org/content/10.1101/2022.03.14.484230v1)
+### [Project page](https://cabooster.github.io/DeepCAD-RT/) | [Paper](https://www.nature.com/articles/s41587-022-01450-8)
 
 ## Contents
 
@@ -22,7 +22,7 @@ We present a versatile method **DeepCAD-RT** to denoise fluorescence time-lapse 
 
 
 For more details, please see the companion paper where the method first appeared: 
-["*Real-time denoising of fluorescence time-lapse imaging enables high-sensitivity observations of biological dynamics beyond the shot-noise limit, bioRxiv (2022)*"](https://www.biorxiv.org/content/10.1101/2022.03.14.484230v1).
+["*Real-time denoising enables high-sensitivity fluorescence time-lapse imaging beyond the shot-noise limit, Nature Biotechnology (2022)*"](https://www.nature.com/articles/s41587-022-01450-8).
 
 <img src="images/schematic.png" width="800" align="middle">
 
