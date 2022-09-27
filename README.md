@@ -189,22 +189,18 @@ More demo videos are presented on [our website](https://cabooster.github.io/Deep
 
 If you use this code, please cite the companion paper where the original method appeared: 
 
-- Xinyang Li, Yixin Li, Yiliang Zhou, et al. Real-time denoising of fluorescence time-lapse imaging enables high-sensitivity observations of biological dynamics beyond the shot-noise limit. bioRxiv (2022). [https://doi.org/10.1101/2022.03.14.484230](https://www.biorxiv.org/content/10.1101/2022.03.14.484230v1)
+- Xinyang Li, Yixin Li, Yiliang Zhou, et al. Real-time denoising enables high-sensitivity fluorescence time-lapse imaging beyond the shot-noise limit. Nat Biotechnol (2022). [https://doi.org/10.1038/s41587-022-01450-8](https://www.nature.com/articles/s41587-022-01450-8)
 
 - Xinyang Li, Guoxun Zhang, Jiamin Wu, et al. Reinforcing neuron extraction and spike inference in calcium imaging using deep self-supervised denoising. Nat Methods 18, 1395–1400 (2021). [https://doi.org/10.1038/s41592-021-01225-0](https://www.nature.com/articles/s41592-021-01225-0) 
 
 
 ```
-@article {Li2022.03.14.484230,
-  author = {Li, Xinyang and Li, Yixin and Zhou, Yiliang and Wu, Jiamin and Zhao, Zhifeng and Fan, Jiaqi and Deng, Fei and Wu, Zhaofa and Xiao, Guihua and He, Jing and Zhang, Yuanlong and Zhang, Guoxun and Hu, Xiaowan and Zhang, Yi and Qiao, Hui and Xie, Hao and Li, Yulong and Wang, Haoqian and Fang, Lu and Dai, Qionghai},
-  title = {Real-time denoising of fluorescence time-lapse imaging enables high-sensitivity observations of biological dynamics beyond the shot-noise limit},
-  elocation-id = {2022.03.14.484230},
-  year = {2022},
-  doi = {10.1101/2022.03.14.484230},
-  publisher = {Cold Spring Harbor Laboratory},
-  URL = {https://www.biorxiv.org/content/early/2022/03/14/2022.03.14.484230},
-  eprint = {https://www.biorxiv.org/content/early/2022/03/14/2022.03.14.484230.full.pdf},
-  journal = {bioRxiv}
+@article {li2022realtime,
+  title = {Real-time denoising enables high-sensitivity fluorescence time-lapse imaging beyond the shot-noise limit},
+  author = {Li, Xinyang and Li, Yixin and Zhou, Yiliang and Wu, Jiamin and Zhao, Zhifeng and Fan, Jiaqi and Deng, Fei and Wu, Zhaofa and Xiao, Guihua and He, Jing and Zhang, Yuanlong and Zhang, Guoxun and Hu, Xiaowan and Chen, Xingye and Zhang, Yi and Qiao, Hui and Xie, Hao and Li, Yulong and Wang, Haoqian and Fang, Lu and Dai, Qionghai},
+  journal={Nature Biotechnology},
+  year={2022},
+  publisher={Nature Publishing Group}
 }
 @article{li2021reinforcing,
   title={Reinforcing neuron extraction and spike inference in calcium imaging using deep self-supervised denoising},
