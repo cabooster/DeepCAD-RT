@@ -23,7 +23,7 @@ else:
     denoise_model = 'fish_localbrain_demo_202203051620'  # A folder containing pth models to be tested
 
 # %% First setup some parameters for testing
-test_datasize = 100000                # the number of frames to be tested (test all frames by default)
+test_datasize = 100000                # the number of frames to be tested (test all frames if the number exceeds the total number of frames in a .tif file)
 GPU = '0'                             # the index of GPU you will use for computation (e.g. '0', '0,1', '0,1,2')
 patch_xy = 150                        # the width and height of 3D patches
 patch_t = 150                         # the time dimension of 3D patches
