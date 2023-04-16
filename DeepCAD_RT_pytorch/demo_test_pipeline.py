@@ -27,7 +27,8 @@ test_datasize = 100000                # the number of frames to be tested (test 
 GPU = '0'                             # the index of GPU you will use for computation (e.g. '0', '0,1', '0,1,2')
 patch_xy = 150                        # the width and height of 3D patches
 patch_t = 150                         # the time dimension of 3D patches
-overlap_factor = 0.4                  # the overlap factor between two adjacent patches
+overlap_factor = 0.6                  # the overlap factor between two adjacent patches. 
+                                      # Since the receptive field of 3D-Unet is ~90, seamless stitching requires an overlap (patch_xyt*overlap_factor）of at least 90 pixels
 num_workers = 4                       # if you use Windows system, set this to 0.
 
 # %% Setup some parameters for result visualization during testing period (optional)
