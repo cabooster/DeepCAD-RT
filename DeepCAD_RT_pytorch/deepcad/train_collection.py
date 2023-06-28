@@ -331,7 +331,7 @@ class training_class():
                         print('Testing model of epoch {} on the first noisy file ----->'.format(epoch + 1))
                         self.test(epoch, iteration)
                         print('\n', end=' ')
-        print('Train finished. Save all models to disk.')
+        print('Training finished. All models saved to disk.')
         if self.colab_display:
             result_img_list = []
             results_path = self.pth_path

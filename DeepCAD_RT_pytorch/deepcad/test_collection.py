@@ -337,4 +337,4 @@ class testing_class():
                             '.pth', '') + '_output.tif'
 
 
-        print('Test finished. Save all results to disk.')
+        print('Testing finished. All results saved to disk.')
