@@ -189,9 +189,9 @@ More demo videos are presented on [our website](https://cabooster.github.io/Deep
 
 If you use this code, please cite the companion paper where the original method appeared: 
 
-- Xinyang Li, Yixin Li, Yiliang Zhou, et al. Real-time denoising enables high-sensitivity fluorescence time-lapse imaging beyond the shot-noise limit. Nat Biotechnol (2022). [https://doi.org/10.1038/s41587-022-01450-8](https://www.nature.com/articles/s41587-022-01450-8)
+- Xinyang Li, Yixin Li, Yiliang Zhou, et al. Real-time denoising enables high-sensitivity fluorescence time-lapse imaging beyond the shot-noise limit. Nat. Biotechnol. (2022). [https://doi.org/10.1038/s41587-022-01450-8](https://www.nature.com/articles/s41587-022-01450-8)
 
-- Xinyang Li, Guoxun Zhang, Jiamin Wu, et al. Reinforcing neuron extraction and spike inference in calcium imaging using deep self-supervised denoising. Nat Methods 18, 1395–1400 (2021). [https://doi.org/10.1038/s41592-021-01225-0](https://www.nature.com/articles/s41592-021-01225-0) 
+- Xinyang Li, Guoxun Zhang, Jiamin Wu, et al. Reinforcing neuron extraction and spike inference in calcium imaging using deep self-supervised denoising. Nat. Methods 18, 1395–1400 (2021). [https://doi.org/10.1038/s41592-021-01225-0](https://www.nature.com/articles/s41592-021-01225-0) 
 
 
 ```
