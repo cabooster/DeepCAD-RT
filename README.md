@@ -87,7 +87,7 @@ Denoising performance (SNR) with the increase of training epochs on simulated ca
 ### Our environment 
 
 * Ubuntu 16.04 
-* Python 3.6
+* Python 3.9
 * Pytorch 1.8.0
 * NVIDIA GPU (GeForce RTX 3090) + CUDA (11.1)
 
@@ -96,7 +96,7 @@ Denoising performance (SNR) with the increase of training epochs on simulated ca
 1. Create a virtual environment and install PyTorch. In the 3rd step, please select the correct Pytorch version that matches your CUDA version from [https://pytorch.org/get-started/previous-versions/](https://pytorch.org/get-started/previous-versions/). 
 
    ```
-   $ conda create -n deepcadrt python=3.6
+   $ conda create -n deepcadrt python=3.9
    $ conda activate deepcadrt
    $ pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
    ```
