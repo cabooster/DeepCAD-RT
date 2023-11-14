@@ -322,6 +322,10 @@ class testing_class():
                             output_img=np.clip(output_img, -32767, 32767)
                             output_img = output_img.astype('int16')
 
+                         elif input_data_type == 'uint8':
+                            output_img=np.clip(output_img, 0, 255)
+                            output_img = output_img.astype('uint8')
+
                         else:
                             output_img = output_img.astype('int32')
 
