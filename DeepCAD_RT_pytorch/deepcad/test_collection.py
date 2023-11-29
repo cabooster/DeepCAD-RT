@@ -1,4 +1,6 @@
 import os
+import sys
+
 import numpy as np
 import yaml
 from .network import Network_3D_Unet
@@ -48,7 +50,6 @@ class testing_class():
         self.test_datasize = 400
         self.denoise_model = ''
         self.visualize_images_per_epoch = False
-        self.save_test_images_per_epoch = False
         self.colab_display = False
         self.result_display = ''
         self.set_params(params_dict)
@@ -127,17 +128,15 @@ class testing_class():
     def read_modellist(self):
 
         model_path = self.pth_dir + '//' + self.denoise_model
-        model_list = list(os.walk(model_path, topdown=False))[-1][-1]
+        model_file_list = list(os.walk(model_path, topdown=False))[-1][-1]
+        model_list = [item for item in model_file_list if '.pth' in item]
         model_list.sort()
-
-        # calculate the number of model file
-        count_pth = 0
-        for i in range(len(model_list)):
-            aaa = model_list[i]
-            if '.pth' in aaa:
-                count_pth = count_pth + 1
-        self.model_list = model_list
-        self.model_list_length = count_pth
+        try:
+            self.model_list = model_list[-1]
+        except Exception as e:
+            print('\033[1;31mThere is no .pth file in the models directory! \033[0m')
+            sys.exit()
+        self.model_list_length = 1 # Test the last model by default
 
     def initialize_network(self):
         """
@@ -203,142 +202,142 @@ class testing_class():
 
         """
         pth_count=0
-        for pth_index in range(len(self.model_list)):
-            aaa = self.model_list[pth_index]
-            if '.pth' in aaa:
-                pth_count=pth_count+1
-                pth_name = self.model_list[pth_index]
-                output_path_name = self.output_path + '//' + pth_name.replace('.pth', '')
-                if not os.path.exists(output_path_name):
-                    os.mkdir(output_path_name)
 
-                # load model
-                model_name = self.pth_dir + '//' + self.denoise_model + '//' + pth_name
-                if isinstance(self.local_model, nn.DataParallel):
-                    self.local_model.module.load_state_dict(torch.load(model_name))  # parallel
-                    self.local_model.eval()
-                else:
-                    self.local_model.load_state_dict(torch.load(model_name))  # not parallel
-                    self.local_model.eval()
-                self.local_model.cuda()
-                self.print_img_name = False
-                # test all stacks
-                for N in range(len(self.img_list)):
-                    name_list, noise_img, coordinate_list,test_im_name, img_mean, input_data_type = test_preprocess_chooseOne(self, N)
-                    # print(len(name_list))
+        if '.pth' in self.model_list:
+            pth_count=pth_count+1
+            pth_name = self.model_list
+            output_path_name = self.output_path + '//' + pth_name.replace('.pth', '')
+            if not os.path.exists(output_path_name):
+                os.mkdir(output_path_name)
+
+            # load model
+            model_name = self.pth_dir + '//' + self.denoise_model + '//' + pth_name
+            if isinstance(self.local_model, nn.DataParallel):
+                self.local_model.module.load_state_dict(torch.load(model_name))  # parallel
+                self.local_model.eval()
+            else:
+                self.local_model.load_state_dict(torch.load(model_name))  # not parallel
+                self.local_model.eval()
+            self.local_model.cuda()
+            self.print_img_name = False
+            # test all stacks
+            print('Testing the last model by default:')
+            for N in range(len(self.img_list)):
+                name_list, noise_img, coordinate_list,test_im_name, img_mean, input_data_type = test_preprocess_chooseOne(self, N)
+                # print(len(name_list))
+                prev_time = time.time()
+                time_start = time.time()
+                denoise_img = np.zeros(noise_img.shape)
+                input_img = np.zeros(noise_img.shape)
+
+                test_data = testset(name_list, coordinate_list, noise_img)
+                testloader = DataLoader(test_data, batch_size=self.batch_size, shuffle=False,
+                                        num_workers=self.num_workers)
+                for iteration, (noise_patch, single_coordinate) in enumerate(testloader):
+                    noise_patch = noise_patch.cuda()
+                    real_A = noise_patch
+                    real_A = Variable(real_A)
+                    fake_B = self.local_model(real_A)
+
+                    # Determine approximate time left
+                    batches_done = iteration
+                    batches_left = 1 * len(testloader) - batches_done
+                    time_left_seconds = int(batches_left * (time.time() - prev_time))
+                    time_left = datetime.timedelta(seconds=time_left_seconds)
                     prev_time = time.time()
-                    time_start = time.time()
-                    denoise_img = np.zeros(noise_img.shape)
-                    input_img = np.zeros(noise_img.shape)
 
-                    test_data = testset(name_list, coordinate_list, noise_img)
-                    testloader = DataLoader(test_data, batch_size=self.batch_size, shuffle=False,
-                                            num_workers=self.num_workers)
-                    for iteration, (noise_patch, single_coordinate) in enumerate(testloader):
-                        noise_patch = noise_patch.cuda()
-                        real_A = noise_patch
+                    if iteration % 1 == 0:
+                        time_end = time.time()
+                        time_cost = time_end - time_start  # datetime.timedelta(seconds= (time_end - time_start))
 
-                        real_A = Variable(real_A)
-                        fake_B = self.local_model(real_A)
+                        print(
+                            '\r[Model %d/%d, %s] [Stack %d/%d, %s] [Patch %d/%d] [Time Cost: %.0d s] [ETA: %s s]     '
+                            % (
+                                pth_count,
+                                self.model_list_length,
+                                pth_name,
+                                N + 1,
+                                len(self.img_list),
+                                self.img_list[N],
+                                iteration + 1,
+                                len(testloader),
+                                time_cost,
+                                time_left_seconds
+                            ), end=' ')
 
-                        # Determine approximate time left
-                        batches_done = iteration
-                        batches_left = 1 * len(testloader) - batches_done
-                        time_left_seconds = int(batches_left * (time.time() - prev_time))
-                        time_left = datetime.timedelta(seconds=time_left_seconds)
-                        prev_time = time.time()
+                    if (iteration + 1) % len(testloader) == 0:
+                        print('\n', end=' ')
 
-                        if iteration % 1 == 0:
-                            time_end = time.time()
-                            time_cost = time_end - time_start  # datetime.timedelta(seconds= (time_end - time_start))
-                            print(
-                                '\r[Model %d/%d, %s] [Stack %d/%d, %s] [Patch %d/%d] [Time Cost: %.0d s] [ETA: %s s]     '
-                                % (
-                                    pth_count,
-                                    self.model_list_length,
-                                    pth_name,
-                                    N + 1,
-                                    len(self.img_list),
-                                    self.img_list[N],
-                                    iteration + 1,
-                                    len(testloader),
-                                    time_cost,
-                                    time_left_seconds
-                                ), end=' ')
+                    # Enhanced sub-stacks are sequentially output from the network
+                    output_image = np.squeeze(fake_B.cpu().detach().numpy())
+                    raw_image = np.squeeze(real_A.cpu().detach().numpy())
+                    if (output_image.ndim == 3):
+                        postprocess_turn = 1
+                    else:
+                        postprocess_turn = output_image.shape[0]
 
-                        if (iteration + 1) % len(testloader) == 0:
-                            print('\n', end=' ')
-
-                        # Enhanced sub-stacks are sequentially output from the network
-                        output_image = np.squeeze(fake_B.cpu().detach().numpy())
-                        raw_image = np.squeeze(real_A.cpu().detach().numpy())
-                        if (output_image.ndim == 3):
-                            postprocess_turn = 1
-                        else:
-                            postprocess_turn = output_image.shape[0]
-
-                        # The final enhanced stack can be obtained by stitching all sub-stacks.
-                        if (postprocess_turn > 1):
-                            for id in range(postprocess_turn):
-                                output_patch, raw_patch, stack_start_w, stack_end_w, stack_start_h, stack_end_h, stack_start_s, stack_end_s = multibatch_test_save(
-                                    single_coordinate, id, output_image, raw_image)
-                                output_patch=output_patch+img_mean
-                                raw_patch=raw_patch+img_mean
-                                denoise_img[stack_start_s:stack_end_s, stack_start_h:stack_end_h,
-                                stack_start_w:stack_end_w] \
-                                    = output_patch * (np.sum(raw_patch) / np.sum(output_patch)) ** 0.5
-                                input_img[stack_start_s:stack_end_s, stack_start_h:stack_end_h,
-                                stack_start_w:stack_end_w] \
-                                    = raw_patch
-                        else:
-                            output_patch, raw_patch, stack_start_w, stack_end_w, stack_start_h, stack_end_h, stack_start_s, stack_end_s = singlebatch_test_save(
-                                single_coordinate, output_image, raw_image)
+                    # The final enhanced stack can be obtained by stitching all sub-stacks.
+                    if (postprocess_turn > 1):
+                        for id in range(postprocess_turn):
+                            output_patch, raw_patch, stack_start_w, stack_end_w, stack_start_h, stack_end_h, stack_start_s, stack_end_s = multibatch_test_save(
+                                single_coordinate, id, output_image, raw_image)
                             output_patch=output_patch+img_mean
                             raw_patch=raw_patch+img_mean
-                            denoise_img[stack_start_s:stack_end_s, stack_start_h:stack_end_h, stack_start_w:stack_end_w] \
+                            denoise_img[stack_start_s:stack_end_s, stack_start_h:stack_end_h,
+                            stack_start_w:stack_end_w] \
                                 = output_patch * (np.sum(raw_patch) / np.sum(output_patch)) ** 0.5
-                            input_img[stack_start_s:stack_end_s, stack_start_h:stack_end_h, stack_start_w:stack_end_w] \
+                            input_img[stack_start_s:stack_end_s, stack_start_h:stack_end_h,
+                            stack_start_w:stack_end_w] \
                                 = raw_patch
+                    else:
+                        output_patch, raw_patch, stack_start_w, stack_end_w, stack_start_h, stack_end_h, stack_start_s, stack_end_s = singlebatch_test_save(
+                            single_coordinate, output_image, raw_image)
+                        output_patch=output_patch+img_mean
+                        raw_patch=raw_patch+img_mean
+                        denoise_img[stack_start_s:stack_end_s, stack_start_h:stack_end_h, stack_start_w:stack_end_w] \
+                            = output_patch * (np.sum(raw_patch) / np.sum(output_patch)) ** 0.5
+                        input_img[stack_start_s:stack_end_s, stack_start_h:stack_end_h, stack_start_w:stack_end_w] \
+                            = raw_patch
 
-                    # Stitching finish
-                    output_img = denoise_img.squeeze().astype(np.float32) * self.scale_factor
-                    del denoise_img
-
-
-                    # Normalize and display inference image
-                    if (self.visualize_images_per_epoch):
-                        print('Displaying the denoised file ----->')
-                        display_length = 200
-                        test_img_display(output_img, display_length=display_length, norm_min_percent=1,
-                                         norm_max_percent=99)
-
-                    # Save inference image
-                    if (self.save_test_images_per_epoch):
-                        if input_data_type == 'uint16':
-                            output_img=np.clip(output_img, 0, 65535)
-                            output_img = output_img.astype('uint16')
-
-                        elif input_data_type == 'int16':
-                            output_img=np.clip(output_img, -32767, 32767)
-                            output_img = output_img.astype('int16')
-
-                         elif input_data_type == 'uint8':
-                            output_img=np.clip(output_img, 0, 255)
-                            output_img = output_img.astype('uint8')
-
-                        else:
-                            output_img = output_img.astype('int32')
+                # Stitching finish
+                output_img = denoise_img.squeeze().astype(np.float32) * self.scale_factor
+                del denoise_img
 
 
+                # Normalize and display inference image
+                if (self.visualize_images_per_epoch):
+                    print('Displaying the denoised file ----->')
+                    display_length = 200
+                    test_img_display(output_img, display_length=display_length, norm_min_percent=1,
+                                     norm_max_percent=99)
 
-                        result_name = output_path_name + '//' + self.img_list[N].replace('.tif','') + '_' + pth_name.replace(
-                            '.pth', '') + '_output.tif'
-                        io.imsave(result_name, output_img, check_contrast=False)
+                # Save inference image
 
-                    if pth_count == self.model_list_length:
-                        if self.colab_display:
-                            self.result_display = output_path_name + '//' + self.img_list[N].replace('.tif','') + '_' + pth_name.replace(
-                            '.pth', '') + '_output.tif'
+                if input_data_type == 'uint16':
+                    output_img=np.clip(output_img, 0, 65535)
+                    output_img = output_img.astype('uint16')
+
+                elif input_data_type == 'int16':
+                    output_img=np.clip(output_img, -32767, 32767)
+                    output_img = output_img.astype('int16')
+
+                elif input_data_type == 'uint8':
+                    output_img=np.clip(output_img, 0, 255)
+                    output_img = output_img.astype('uint8')
+
+                else:
+                    output_img = output_img.astype('int32')
+
+
+
+                result_name = output_path_name + '//' + self.img_list[N].replace('.tif','') + '_' + pth_name.replace(
+                    '.pth', '') + '_output.tif'
+                io.imsave(result_name, output_img, check_contrast=False)
+
+                if pth_count == self.model_list_length:
+                    if self.colab_display:
+                        self.result_display = output_path_name + '//' + self.img_list[N].replace('.tif','') + '_' + pth_name.replace(
+                        '.pth', '') + '_output.tif'
 
 
         print('Testing finished. All results saved to disk.')
