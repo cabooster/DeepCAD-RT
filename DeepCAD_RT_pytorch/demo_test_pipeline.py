@@ -16,11 +16,11 @@ from deepcad.utils import get_first_filename,download_demo
 # %% Select file(s) to be processed (download if not present)
 download_demo_file = True
 if download_demo_file:
-    file_name='fish_localbrain' # select the demo file you want to test (e.g. 'ATP_3D', 'fish_localbrain', 'NP_3D', ...)
+    file_name= 'fish_localbrain' # select the demo file you want to test (e.g. 'ATP_3D', 'fish_localbrain', 'NP_3D', ...)
     datasets_path, denoise_model = download_demo(download_filename=file_name)
 else:
     datasets_path = 'datasets/fish_localbrain_demo'  # folder containing tif files for testing
-    denoise_model = 'fish_localbrain_demo_202203051620'  # A folder containing pth models to be tested
+    denoise_model = 'fish_localbrain_best_model_demo'  # A folder containing pth models to be tested
 
 # %% First setup some parameters for testing
 test_datasize = 100000                # the number of frames to be tested (test all frames if the number exceeds the total number of frames in a .tif file)
@@ -32,8 +32,7 @@ overlap_factor = 0.6                  # the overlap factor between two adjacent 
 num_workers = 4                       # if you use Windows system, set this to 0.
 
 # %% Setup some parameters for result visualization during testing period (optional)
-visualize_images_per_epoch = True  # choose whether to display inference performance after each epoch
-save_test_images_per_epoch = True  # choose whether to save inference image after each epoch in pth path
+visualize_images_per_epoch = False  # choose whether to display inference performance after each epoch
 
 # %% Play the demo noise movie (optional)
 # playing the first noise movie using opencv.
@@ -63,8 +62,7 @@ test_dict = {
     'fmap': 16,                          # the number of feature maps
     'GPU': GPU,
     'num_workers': num_workers,
-    'visualize_images_per_epoch': visualize_images_per_epoch,
-    'save_test_images_per_epoch': save_test_images_per_epoch
+    'visualize_images_per_epoch': visualize_images_per_epoch
 }
 # %%% Testing preparation
 # first we create a testing class object with the specified parameters
