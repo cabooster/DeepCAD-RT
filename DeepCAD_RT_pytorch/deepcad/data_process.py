@@ -176,7 +176,7 @@ def train_preprocess_lessMemoryMulStacks(args):
     print('Total stack number -----> ', stack_num)
 
     print('Reading files...')   
-    print('\033[1;33mPlease check the shape of these image stacks, since some hyperstacks will have unusual shapes. In that case, you just need to re-store these images by ImageJ. \033[0m') 
+    print('\033[1;33mPlease check the shape of these image stacks, since some hyperstacks have unusual shapes. In that case, you just need to re-store these images by ImageJ. \033[0m') 
     for im_name in list(os.walk(im_folder, topdown=False))[-1][-1]:
         print(im_name)
         im_dir = im_folder + '//' + im_name
