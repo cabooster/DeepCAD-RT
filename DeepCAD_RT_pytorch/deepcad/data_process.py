@@ -144,16 +144,18 @@ def get_gap_t(args, img, stack_num):
     whole_x = img.shape[2]
     whole_y = img.shape[1]
     whole_t = img.shape[0]
-    print('whole_x -----> ', whole_x)
-    print('whole_y -----> ', whole_y)
-    print('whole_t -----> ', whole_t)
+    # print('whole_x -----> ', whole_x)
+    # print('whole_y -----> ', whole_y)
+    # print('whole_t -----> ', whole_t)
     w_num = math.floor((whole_x - args.patch_x) / args.gap_x) + 1
     h_num = math.floor((whole_y - args.patch_y) / args.gap_y) + 1
     s_num = math.ceil(args.train_datasets_size / w_num / h_num / stack_num)
+    if s_num <= 1: s_num = 2
     # print('w_num -----> ',w_num)
     # print('h_num -----> ',h_num)
     # print('s_num -----> ',s_num)
     gap_t = math.floor((whole_t - args.patch_t * 2) / (s_num - 1))
+    if gap_t < 1: gap_t = 1
     # print('gap_t -----> ',gap_t)
     return gap_t
 
