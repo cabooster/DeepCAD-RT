@@ -312,22 +312,8 @@ class testing_class():
                                      norm_max_percent=99)
 
                 # Save inference image
-
-                if input_data_type == 'uint16':
-                    output_img=np.clip(output_img, 0, 65535)
-                    output_img = output_img.astype('uint16')
-
-                elif input_data_type == 'int16':
-                    output_img=np.clip(output_img, -32767, 32767)
-                    output_img = output_img.astype('int16')
-
-                elif input_data_type == 'uint8':
-                    output_img=np.clip(output_img, 0, 255)
-                    output_img = output_img.astype('uint8')
-
-                else:
-                    output_img = output_img.astype('int32')
-
+                # print(input_data_type)
+                output_img = output_img.astype(input_data_type)
 
 
                 result_name = output_path_name + '//' + self.img_list[N].replace('.tif','') + '_' + pth_name.replace(
