@@ -83,7 +83,7 @@ Denoising performance (SNR) with the increase of training epochs on simulated ca
 <center><img src="https://github.com/cabooster/DeepCAD-RT/blob/main/images/16aug.png?raw=true" width="600" align="middle" /></center>
 
   <summary>:triangular_flag_on_post:2023/07/26: Simplified testing pipeline: Only the model of the last training epoch will be tested by default. </summary>
-  <summary>:triangular_flag_on_post:2022/06/14: Optimized result data type: Make the result keep the same data type as the input. </summary>
+  <summary>:triangular_flag_on_post:2024/10/21: Optimized result data type: Make the result keep the same data type as the input. </summary>
 </details>
 
 ### Our environment 
