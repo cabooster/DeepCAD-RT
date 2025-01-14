@@ -31,11 +31,12 @@ Denoising performance (SNR) with the increase of training epochs on simulatedc c
 
 ### 1.2 Environment configuration
 
-1. Create a virtual environment and install PyTorch. In the 3rd step, please select the correct Pytorch version that matches your CUDA version from [https://pytorch.org/get-started/previous-versions/](https://pytorch.org/get-started/previous-versions/). 
+1. Create a virtual environment and install PyTorch. In the 4th step, please select the correct Pytorch version that matches your CUDA version from [https://pytorch.org/get-started/previous-versions/](https://pytorch.org/get-started/previous-versions/). 
 
    ```
    $ conda create -n deepcadrt python=3.9
    $ conda activate deepcadrt
+   $ pip install "numpy<2.0"
    $ pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
    ```
 
