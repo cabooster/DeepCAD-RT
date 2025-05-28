@@ -236,7 +236,7 @@ class testing_class():
                 for iteration, (noise_patch, single_coordinate) in enumerate(testloader):
                     noise_patch = noise_patch.cuda()
                     real_A = noise_patch
-                    real_A = Variable(real_A)
+                    real_A = real_A.float()
                     fake_B = self.local_model(real_A)
 
                     # Determine approximate time left
